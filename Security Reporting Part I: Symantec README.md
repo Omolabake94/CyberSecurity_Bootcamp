@@ -152,4 +152,4 @@ Hacker for hire: $100+
 
 Single credit card with full details: $1–45
 
-500 social media followers: $2–6
+500 social media followers: $2–6 
