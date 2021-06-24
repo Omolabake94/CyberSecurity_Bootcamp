@@ -23,8 +23,8 @@ Question 6) Which country is the number one source of web application attacks? W
 
 Question 7) In Akamai’s State of the Internet report, it refers to a possible DDoS team that the company thought was affecting a customer in Asia (starts on page 11). 
 
-* Describe what was happening.
+* Describe what was happening: There was high volume of traffic hammering the customer’s URL and they believed this was an attack
 
-* What did the team believe the source of the attack was? 
+* What did the team believe the source of the attack was? The team believed it was a DDoS attack
 
-* What did the team actually discover? 
+* What did the team actually discover? The team discorvered it was not an attack, but a warranty tool gone haywire
