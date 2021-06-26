@@ -28,3 +28,13 @@ Question 7) In Akamai’s State of the Internet report, it refers to a possible 
 * What did the team believe the source of the attack was? The team believed it was a DDoS attack
 
 * What did the team actually discover? The team discorvered it was not an attack, but a warranty tool gone haywire
+
+Question 8) What is an example of a performance issue with bot traffic? 
+* Answer- Performance issues includes slow websites and frustrated customers
+
+Question 9) Known-good bots are bots that perform useful or helpful tasks, and not do anything malicious to sites or servers. What are the main categories of known-good bots. 
+* Answer- Main categories of known-good bots are search engine crawlers, web archives, site monitoring services, content aggregators and search engine optimization, audience analytics and marketing service. 
+
+Question 10) What are two evasion techniques that malicious bots use? 
+* Answer- evasion technique used includes altering the User Agent, or other HTTP header values allowing the bot to impersonate and changing of IP addresses used in order to mask their origin, or use multiple IP addresses
+
