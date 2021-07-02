@@ -24,11 +24,15 @@
 * Based on the above scenario, about 75% of Employees at silverCorp use their personal devices for company work. Assuming 25-30% of employees are not practicing the right behavior. the goal is to reduce that to about 10% and gradually move down to the most possible minimum.
 
 ###  Involve the Right People
-* CFO
-* COO
-* CISO
-* HR manager
-* Communication
+* CFO:
+
+* COO:
+
+* CISO:
+
+* HR manager:
+
+* Communication:
 
 
 ### Training Plan
