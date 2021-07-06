@@ -23,16 +23,16 @@
 (4) What is the goal that you would like the organization to reach regarding this behavior?
 * Based on the above scenario, about 75% of Employees at silverCorp use their personal devices for company work. Assuming 25-30% of employees are not practicing the right behavior. the goal is to reduce that to about 10% and gradually move down to the most possible minimum.
 
-###  Involve the Right People
-* Finance:
+###  Involve the Right People.
+* Finance: They are responsible for minitoring company's finances. They will be responsible for budgeting and allocation of funds for the training.
 
 * COO:
 
 * CISO:
 
-* HR manager:
+* HR manager: They help in scheduling trainings, and tracking attendance. They are also responsible for ensuring that employees comply with security policies that are designed to protect the company, clients and workforce
 
-* Internal Communication:
+* Internal Communication:They responsible for effective communication of the training to the ecmployess. They deliver messages and campaigns on behalf of management, to facilitating two-way dialogue between management and employee
 
 
 ### Training Plan
