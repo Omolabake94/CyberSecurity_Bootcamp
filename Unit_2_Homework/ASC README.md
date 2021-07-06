@@ -28,7 +28,7 @@
 
 * COO:
 
-* CISO:
+* CISO: They will be respnsible for developing and disseminating training to to employees. Also developing and disseminating information security policies
 
 * HR manager: They help in scheduling trainings, and tracking attendance. They are also responsible for ensuring that employees comply with security policies that are designed to protect the company, clients and workforce
 
@@ -45,7 +45,11 @@ What format will it take? (i.e. in-person, online, a combination of both)
 * Training will be both in-person and online for new employees and after an incident occur. 3 months interval training will be online only 
 
 What topics will you cover in your training and why? (This should be the bulk of the deliverable.)
+* Public Wi-Fi Risks
 
+* Password security best practices
+
+* 
 
 After you’ve run your training, how will you measure its effectiveness?
 
