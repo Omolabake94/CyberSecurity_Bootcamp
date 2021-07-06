@@ -24,7 +24,7 @@
 * Based on the above scenario, about 75% of Employees at silverCorp use their personal devices for company work. Assuming 25-30% of employees are not practicing the right behavior. the goal is to reduce that to about 10% and gradually move down to the most possible minimum.
 
 ###  Involve the Right People
-* CFO:
+* Finance:
 
 * COO:
 
@@ -32,12 +32,17 @@
 
 * HR manager:
 
-* Communication:
+* Internal Communication:
 
 
 ### Training Plan
-How frequently will you run training? What format will it take? (i.e. in-person, online, a combination of both)
+How frequently will you run training? 
+* When new exployees join the team
+* After an incident occurs
+* Every 3 months intervals throughout the year
 
+What format will it take? (i.e. in-person, online, a combination of both)
+* Training will be both in-person and online for new employees and after an incident occur. 3 months interval training will be online only 
 
 What topics will you cover in your training and why? (This should be the bulk of the deliverable.)
 
