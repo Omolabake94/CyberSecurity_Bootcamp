@@ -26,7 +26,7 @@
 ###  Involve the Right People.
 * Finance: They are responsible for minitoring company's finances. They will be responsible for budgeting and allocation of funds for the training.
 
-* COO:
+* COO: The COO manages day to day operations and oversees people management including hiring, promotion, firing. The COO has to be duly informed about the current changes. In situations where employees, even after numerous training, does not adhere to company's policies, the COO will be incharge of necessary desciplinary action which may lead to termination.
 
 * CISO: They will be respnsible for developing and disseminating training to to employees. Also developing and disseminating information security policies
 
@@ -54,7 +54,7 @@
 * Secure Access to Mobile Devices and Remote Wiping Features: Many employees are able to access their business email or other office applications via their smart devices. With so much sensitive and confidential information held in these devices, the potential for unauthorized access can be a big cyber security threat, inside and outside the office. Where employees are dealing with highly confidential company or client information, using remote wiping features is highly considered in the unfortunate (but plausible) case of a lost or stolen device.
 
 ##### After you’ve run your training, how will you measure its effectiveness?
-* Few months after traning, monitoring tools can be used to check on employees activities to see if they are still not behaving according to the preferred behavior. Employees' efficiency should be compared again previous efficiency. Phishing campaign should be done to determine the amount of employees that clicks on them. The target is to reduce it to about 10% of employees and with continous training, to get it as low possible
+* Few months after traning, monitoring tools can be used to check on employees activities to see if they are still not behaving according to the preferred behavior. Employees' efficiency should be compared again previous efficiency. Phishing campaign should be done to determine the amount of employees that clicks on them, then compare the new data to the previous data. The target is to reduce it to about 10% of employees and with continous training, to get it as low possible
 
 
 ## Other potential Solutions are
