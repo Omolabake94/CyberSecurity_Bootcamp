@@ -45,9 +45,9 @@ What format will it take? (i.e. in-person, online, a combination of both)
 * Training will be both in-person and online for new employees and after an incident occur. 3 months interval training will be online only 
 
 What topics will you cover in your training and why? (This should be the bulk of the deliverable.)
-* Public Wi-Fi Risks
+* Public Wi-Fi Risks: Public networks can pose a substantial risk to information security and information confidentiality. Attackers can easily intercept data transferred to public networks using ‘man-in-the-middle’ attacks. If a network is not secure, the chances of it being safe to use are very low. If employees absolutely have to make use of public Wi-Fi networks when working remotely, ensure that the organization has a VPN solution in place. This will allow users to transfer data securely through an encryption tunnel
 
-* Password security best practices: A lot of people struggle to remember their password credentials thereby leading to using one password across multiple accounts (email, laptops, office desktops, tablets, applications, and databases). As password databases are continuously being attacked using more and more sophisticated algorithms in bruteforce or dictionary attacks and password spraying, it is advisable to use a unique password for each device or account
+* Password security best practices: A lot of people struggle to remember their password credentials thereby leading to using one password across multiple accounts (email, laptops, office desktops, tablets, applications, and databases). As password databases are continuously being attacked using more and more sophisticated algorithms in bruteforce or dictionary attacks and password spraying, it is advisable to use a unique password for each device or account. Also training on the use of 2 factor authentication where possible for their accounts
 
 * 
 
