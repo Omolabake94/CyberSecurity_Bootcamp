@@ -44,7 +44,7 @@
 ##### What format will it take? (i.e. in-person, online, a combination of both)
 * Training will be both in-person and online for new employees and after an incident occur. 3 months interval training will be online only 
 
-##### What topics will you cover in your training and why? (This should be the bulk of the deliverable.)
+##### What topics will you cover in your training and why? 
 * Public Wi-Fi Risks and Solutions: Public networks can pose a substantial risk to information security and information confidentiality. Attackers can easily intercept data transferred to public networks using ‘man-in-the-middle’ attacks. If a network is not secure, the chances of it being safe to use are very low. If employees absolutely have to make use of public Wi-Fi networks when working remotely, ensure that the organization has a VPN solution in place. This will allow users to transfer data securely through an encryption tunnel
 
 * Password security best practices: A lot of people struggle to remember their password credentials thereby leading to using one password across multiple accounts (email, laptops, office desktops, tablets, applications, and databases). As password databases are continuously being attacked using more and more sophisticated algorithms in bruteforce or dictionary attacks and password spraying, it is advisable to use a unique password for each device or account. Also training on the use of 2 factor authentication where possible for their accounts
@@ -53,7 +53,9 @@
 
 * Secure Access to Mobile Devices and Remote Wiping Features: Many employees are able to access their business email or other office applications via their smart devices. With so much sensitive and confidential information held in these devices, the potential for unauthorized access can be a big cyber security threat, inside and outside the office. Where employees are dealing with highly confidential company or client information, using remote wiping features is highly considered in the unfortunate (but plausible) case of a lost or stolen device.
 
-After you’ve run your training, how will you measure its effectiveness?
+##### After you’ve run your training, how will you measure its effectiveness?
+* Few months after traning, monitoring tools can be used to check on employees activities to see if they are still not behaving according to the preferred behavior. Employees' efficiency should be compared again previous efficiency. Phishing campaign should be done to determine the amount of employees that clicks on them. The target is to reduce it to about 10% of employees and with continous training, to get it as low possible
+
 
 ## Other potential Solutions are
 ***
