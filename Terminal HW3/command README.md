@@ -134,14 +134,14 @@ chmod +x find_player_dealer.sh
 13. 0315_win_loss_player_data:02:00:00 PM	-$182,419        Mylie Schmidt, Corey Huffman
 * 02:00:00 PM Billy Jones
 
-5. cat Dealers_working_during_losses
+#### 5. cat Dealers_working_during_losses
 * primary dealer working at the times where losses occurred is Billy Jones
 * grep i 'Billy Jones' Dealers_working_during_losses > Notes_Dealer_Analysis
 * nano Notes_Dealer_Analysis
 * grep -i 'Billy Jones' Dealers_working_during_losses | wc -l 
 * The dealer worked 13 times
 
-6. cd Player_Dealer_Correlation
+#### 6. cd Player_Dealer_Correlation
 * nano Notes_Player_Dealer_Correlation
 * The player and dealer I believed are colluding to scam Lucky Duck are player Mylie Schmidt and dealer Billy Jones.
 * Both player Mylie Schmidt and dealer Billy Jones were playing and working all the 13 times major losses occurred
@@ -162,4 +162,21 @@ Result
 * 0312_win_loss_player_data:08:00:00 PM	-$65,792     Tallulah Rawlings,Josie Dawe, Mylie Schmidt,Hakim Stott, Esther Callaghan, Ciaron Villanueva	
 * 08:00:00 PM Billy Jones
 
-#### Bonus
+### Bonus
+* nano roulette_dealer_finder_by_time_and_game.sh
+* !/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, '$3', '$4'}' $1_Dealer_schedule | grep -i "$2"
+* Arguments $1 = 0312 Date
+* $2 = '08:00:00 PM' Time
+* $3 = '$3' Casino game being played first name 
+* $4 = '$4' Casino game being played last name
+* To view the dealer for Blackjack on March 10 at 8:00 a.m.
+* run: sh roulette_dealer_finder_by_time_and_game.sh 0310 '08:00:00 AM' '$3' '$4'
+* result: 08:00:00 AM Rahima Figueroa
+* To view the dealer for Roulette on March 10 at 8:00 a.m.
+* run: sh roulette_dealer_finder_by_time_and_game.sh 0310 '08:00:00 AM' '$5' '$6'
+* result: 08:00:00 AM Billy Jones
+* To view the dealer for Texas Hold 'Em on March 10 at 8:00 a.m.
+* run : sh roulette_dealer_finder_by_time_and_game.sh 0310 '08:00:00 AM' '$7' '$8'
+* result: 08:00:00 AM Madina Britton
