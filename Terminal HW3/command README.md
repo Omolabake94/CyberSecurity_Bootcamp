@@ -105,7 +105,7 @@ Shell for each day
 
 chmod +x find_player_dealer.sh
 
-4. ./find_player_dealer.sh > Dealers_working_during_losses
+#### 4. ./find_player_dealer.sh > Dealers_working_during_losses
 
 1. 0310_win_loss_player_data:05:00:00 AM	-$82,348	Amirah Schneider,Nola Portillo, Mylie Schmidt,Suhayb Maguire,Millicent Betts,Avi Graves
 * 05:00:00 AM Billy Jones
