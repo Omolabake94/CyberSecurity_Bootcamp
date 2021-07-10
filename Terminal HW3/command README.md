@@ -1,4 +1,5 @@
 ### Step 3: Correlating the Evidence
+#### Player Analysis
 1. cd Player_Analysis
 2. grep -i -$* *
 3. grep command isolate all of the losses that occurred on March 10, 12, and 15.
@@ -33,7 +34,7 @@ player that was playing during each of those times is Mylie Schmidt
 1. cd Dealer_Analysis
 2. cat 0310_Dealer_schedule  0312_Dealer_schedule  0315_Dealer_schedule
 
-nano find_player_dealer.sh
+3. nano find_player_dealer.sh
 Shell for each day
 
 * #!/bin/bash
@@ -46,22 +47,22 @@ Shell for each day
 * grep -i '0310_win_loss_player_data:08:00:00 AM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '08:00:00 AM'
- * #!/bin/bash
+* #!/bin/bash
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 * grep -i '0310_win_loss_player_data:02:00:00 PM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '02:00:00 PM'
- * #!/bin/bash
+* #!/bin/bash
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 * grep -i '0310_win_loss_player_data:08:00:00 PM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '08:00:00 PM'
- * #!/bin/bash
+* #!/bin/bash
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 * grep -i '0310_win_loss_player_data:11:00:00 PM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '11:00:00 PM'
- * #!/bin/bash
+* #!/bin/bash
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 * grep -i '0312_win_loss_player_data:05:00:00 AM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
@@ -71,27 +72,27 @@ Shell for each day
 * grep -i '0312_win_loss_player_data:08:00:00 AM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 AM'
- * #!/bin/bash
+* #!/bin/bash
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 * grep -i '0312_win_loss_player_data:02:00:00 PM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '02:00:00 PM'
- * #!/bin/bash
+* #!/bin/bash
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 * grep -i '0312_win_loss_player_data:08:00:00 PM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 PM'
- * #!/bin/bash
+* #!/bin/bash
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 * grep -i '0312_win_loss_player_data:11:00:00 PM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '11:00:00 PM'
- * #!/bin/bash
+* #!/bin/bash
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 * grep -i '0315_win_loss_player_data:05:00:00 AM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '05:00:00 AM'
- * #!/bin/bash
+* #!/bin/bash
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 * grep -i '0315_win_loss_player_data:08:00:00 AM' Roulette_Losses
 * cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
@@ -104,7 +105,7 @@ Shell for each day
 
 chmod +x find_player_dealer.sh
 
-./find_player_dealer.sh > Dealers_working_during_losses
+4. ./find_player_dealer.sh > Dealers_working_during_losses
 
 1. 0310_win_loss_player_data:05:00:00 AM	-$82,348	Amirah Schneider,Nola Portillo, Mylie Schmidt,Suhayb Maguire,Millicent Betts,Avi Graves
 * 05:00:00 AM Billy Jones
@@ -112,11 +113,11 @@ chmod +x find_player_dealer.sh
 * 08:00:00 AM Billy Jones
 3. 0310_win_loss_player_data:02:00:00 PM	-$82,348	Jaden Clarkson, Kaidan Sheridan, Mylie Schmidt 
 * 02:00:00 PM Billy Jones
-4.  0310_win_loss_player_data:08:00:00 PM	-$65,348        Mylie Schmidt, Trixie Velasquez, Jerome Klein ,Rahma Buckley
+4. 0310_win_loss_player_data:08:00:00 PM	-$65,348        Mylie Schmidt, Trixie Velasquez, Jerome Klein ,Rahma Buckley
 * 08:00:00 PM Billy Jones
-5.  0310_win_loss_player_data:11:00:00 PM	-$88,383	Mcfadden Wasim, Norman Cooper, Mylie Schmidt
+5. 0310_win_loss_player_data:11:00:00 PM	-$88,383	Mcfadden Wasim, Norman Cooper, Mylie Schmidt
 * 11:00:00 PM Billy Jones
-6.  0312_win_loss_player_data:05:00:00 AM	-$182,300	Montana Kirk, Alysia Goodman, Halima Little, Etienne Brady, Mylie Schmidt
+6. 0312_win_loss_player_data:05:00:00 AM	-$182,300	Montana Kirk, Alysia Goodman, Halima Little, Etienne Brady, Mylie Schmidt
 * 05:00:00 AM Billy Jones
 7. 0312_win_loss_player_data:08:00:00 AM	-$97,383        Rimsha Gardiner,Fern Cleveland, Mylie Schmidt,Kobe Higgins	
 * 08:00:00 AM Billy Jones
@@ -132,3 +133,33 @@ chmod +x find_player_dealer.sh
 * 08:00:00 AM Billy Jones
 13. 0315_win_loss_player_data:02:00:00 PM	-$182,419        Mylie Schmidt, Corey Huffman
 * 02:00:00 PM Billy Jones
+
+5. cat Dealers_working_during_losses
+* primary dealer working at the times where losses occurred is Billy Jones
+* grep i 'Billy Jones' Dealers_working_during_losses > Notes_Dealer_Analysis
+* nano Notes_Dealer_Analysis
+* grep -i 'Billy Jones' Dealers_working_during_losses | wc -l 
+* The dealer worked 13 times
+
+6. cd Player_Dealer_Correlation
+* nano Notes_Player_Dealer_Correlation
+* The player and dealer I believed are colluding to scam Lucky Duck are player Mylie Schmidt and dealer Billy Jones.
+* Both player Mylie Schmidt and dealer Billy Jones were playing and working all the 13 times major losses occurred
+
+### 4 Scripting Your Tasks
+* nano roulette_dealer_finder_by_time.sh
+* #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i $1_win_loss_player_data:"$2" Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' $1_Dealer_schedule | grep -i "$3"
+* Run by sh roulette_dealer_finder_by_time.sh 0310 '08:00:00 PM' '08:00:00 PM'
+* Arguments $1 = 0312
+* $2 = '08:00:00 PM'
+* $3 = '08:00:00 PM'
+
+Result
+* 0312_win_loss_player_data:08:00:00 PM	-$65,792     Tallulah Rawlings,Josie Dawe, Mylie Schmidt,Hakim Stott, Esther Callaghan, Ciaron Villanueva	
+* 08:00:00 PM Billy Jones
+
+#### Bonus
