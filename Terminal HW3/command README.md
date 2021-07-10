@@ -34,7 +34,7 @@ awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '02:00:00 PM'
 cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 grep -i '0310_win_loss_player_data:08:00:00 PM' Roulette_Losses
 cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '80:00:00 PM'
+awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '08:00:00 PM'
  
 #!/bin/bash
 cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
