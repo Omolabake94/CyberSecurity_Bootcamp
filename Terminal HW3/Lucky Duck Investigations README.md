@@ -1,3 +1,22 @@
+### Step 1: Investigation Preparation
+1. mkdir Lucky_Duck_Investigations
+2. cd Lucky_Duck_Investigations
+* mkdir Roulette_Loss_Investigation
+3. cd Roulette_Loss_Investigation
+* mkdir Player_Analysis Dealer_Analysis Player_Dealer_Correlation
+4. cd Player_Analysis
+* touch Notes_Player_Analysis
+* cd Dealer_Analysis
+* touch Notes_Dealer_Analysis
+* cd Player_Dealer_Correlation
+* touch Notes_Player_Dealer_Correlation
+
+### Step 2: Gathering Evidence
+1. cd Lucky_Duck_Investigations 
+* Run wget "https://tinyurl.com/3-HW-setup-evidence" && chmod +x ./3-HW-setup-evidence && ./3-HW-setup-evidence
+2. mv 0310_Dealer_schedule 0312_Dealer_schedule 0315_Dealer_schedule /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* mv 0310_win_loss_player_data  0312_win_loss_player_data  0315_win_loss_player_data /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+
 ### Step 3: Correlating the Evidence
 #### Player Analysis
 1. cd Player_Analysis
