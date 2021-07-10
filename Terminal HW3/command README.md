@@ -1,121 +1,134 @@
-### cd  Step 3: Correlating the Evidence
-
-grep command isolate all of the losses that occurred on March 10, 12, and 15.
+### Step 3: Correlating the Evidence
+1. cd Player_Analysis
+2. grep -i -$* *
+3. grep command isolate all of the losses that occurred on March 10, 12, and 15.
 * grep -i -$* * > Roulette_Losses
 
-* grep -i 0310* Roulette_Losses | wc -l > Note_Player_Analysis
-* grep -i 0312* Roulette_Losses | wc -l >> Note_Player_Analysis
-* grep -i 0315* Roulette_Losses | wc -l >> Note_Player_Analysis
-* grep -i 'mylie Schmidt' Roulette_Losses | wc -l >> Note_Player_Analysis
+4. Loss count for each day
+* grep -i 0310* Roulette_Losses | wc -l > Note_Player_Analysis = 5
+* grep -i 0312* Roulette_Losses | wc -l >> Note_Player_Analysis = 5
+* grep -i 0315* Roulette_Losses | wc -l >> Note_Player_Analysis = 3
+
+nano Note_Player_Analysis
+The times the losses occurred on each day:
+* 0310_:05:00:00	AM
+* 0310_:08:00:00	AM
+* 0310_:02:00:00	PM
+* 0310_:08:00:00	PM
+* 0310_:11:00:00	PM
+* 0312_:05:00:00	AM
+* 0312_:08:00:00	AM
+* 0312_:02:00:00	PM
+* 0312_:08:00:00	PM
+* 0312_:11:00:00	PM
+* 0315_:05:00:00	AM
+* 0315_:08:00:00	AM
+* 0315_:02:00:00	PM
+
+player that was playing during each of those times is Mylie Schmidt
+
+* grep -i 'mylie Schmidt' Roulette_Losses | wc -l >> Note_Player_Analysis = 13
+
+#### Complete the dealer analysis
+1. cd Dealer_Analysis
+2. cat 0310_Dealer_schedule  0312_Dealer_schedule  0315_Dealer_schedule
 
 nano find_player_dealer.sh
-
 Shell for each day
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0310_win_loss_player_data:05:00:00 AM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '05:00:00 AM'
 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0310_win_loss_player_data:08:00:00 AM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '08:00:00 AM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0310_win_loss_player_data:02:00:00 PM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '02:00:00 PM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0310_win_loss_player_data:08:00:00 PM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '08:00:00 PM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0310_win_loss_player_data:11:00:00 PM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '11:00:00 PM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0312_win_loss_player_data:05:00:00 AM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '05:00:00 AM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0312_win_loss_player_data:08:00:00 AM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 AM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0312_win_loss_player_data:02:00:00 PM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '02:00:00 PM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0312_win_loss_player_data:08:00:00 PM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 PM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0312_win_loss_player_data:11:00:00 PM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '11:00:00 PM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0315_win_loss_player_data:05:00:00 AM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '05:00:00 AM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0315_win_loss_player_data:08:00:00 AM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '08:00:00 AM'
- 
-#!/bin/bash
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0315_win_loss_player_data:02:00:00 PM' Roulette_Losses
-cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
-awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '02:00:00 PM'
+* #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0310_win_loss_player_data:05:00:00 AM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '05:00:00 AM'
+* #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0310_win_loss_player_data:08:00:00 AM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '08:00:00 AM'
+ * #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0310_win_loss_player_data:02:00:00 PM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '02:00:00 PM'
+ * #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0310_win_loss_player_data:08:00:00 PM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '08:00:00 PM'
+ * #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0310_win_loss_player_data:11:00:00 PM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '11:00:00 PM'
+ * #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0312_win_loss_player_data:05:00:00 AM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '05:00:00 AM'
+* #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0312_win_loss_player_data:08:00:00 AM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 AM'
+ * #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0312_win_loss_player_data:02:00:00 PM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '02:00:00 PM'
+ * #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0312_win_loss_player_data:08:00:00 PM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 PM'
+ * #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0312_win_loss_player_data:11:00:00 PM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '11:00:00 PM'
+ * #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0315_win_loss_player_data:05:00:00 AM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '05:00:00 AM'
+ * #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0315_win_loss_player_data:08:00:00 AM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '08:00:00 AM'
+* #!/bin/bash
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
+* grep -i '0315_win_loss_player_data:02:00:00 PM' Roulette_Losses
+* cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '02:00:00 PM'
 
 chmod +x find_player_dealer.sh
 
 ./find_player_dealer.sh > Dealers_working_during_losses
 
-0310_win_loss_player_data:05:00:00 AM	-$82,348	Amirah Schneider,Nola Portillo, Mylie Schmidt,Suhayb Maguire,Millicent Betts,Avi Graves
-05:00:00 AM Billy Jones
-0310_win_loss_player_data:08:00:00 AM	-$97,383	Chanelle Tapia, Shelley Dodson , Valentino Smith, Mylie Schmidt
-08:00:00 AM Billy Jones
-0310_win_loss_player_data:02:00:00 PM	-$82,348	Jaden Clarkson, Kaidan Sheridan, Mylie Schmidt 
-02:00:00 PM Billy Jones
-0310_win_loss_player_data:08:00:00 PM	-$65,348        Mylie Schmidt, Trixie Velasquez, Jerome Klein ,Rahma Buckley
-08:00:00 PM Billy Jones
-0310_win_loss_player_data:11:00:00 PM	-$88,383	Mcfadden Wasim, Norman Cooper, Mylie Schmidt
-11:00:00 PM Billy Jones
-0312_win_loss_player_data:05:00:00 AM	-$182,300	Montana Kirk, Alysia Goodman, Halima Little, Etienne Brady, Mylie Schmidt
-05:00:00 AM Billy Jones
-0312_win_loss_player_data:08:00:00 AM	-$97,383        Rimsha Gardiner,Fern Cleveland, Mylie Schmidt,Kobe Higgins	
-08:00:00 AM Billy Jones
-0312_win_loss_player_data:02:00:00 PM	-$82,348        Mae Hail,  Mylie Schmidt,Ayden Beil	
-02:00:00 PM Billy Jones
-0312_win_loss_player_data:08:00:00 PM	-$65,792        Tallulah Rawlings,Josie Dawe, Mylie Schmidt,Hakim Stott, Esther Callaghan, Ciaron Villanueva	
-08:00:00 PM Billy Jones
-0312_win_loss_player_data:11:00:00 PM	-$88,229        Vlad Hatfield,Kerys Frazier,Mya Butler, Mylie Schmidt,Lex Oakley,Elin Wormald	
-11:00:00 PM Billy Jones
-0315_win_loss_player_data:05:00:00 AM	-$82,844        Arjan Guzman,Sommer Mann, Mylie Schmidt	
-05:00:00 AM Billy Jones
-0315_win_loss_player_data:08:00:00 AM	-$97,001        Lilianna Devlin,Brendan Lester, Mylie Schmidt,Blade Robertson,Derrick Schroeder	
-08:00:00 AM Billy Jones
-0315_win_loss_player_data:02:00:00 PM	-$182,419        Mylie Schmidt, Corey Huffman
-02:00:00 PM Billy Jones
+1. 0310_win_loss_player_data:05:00:00 AM	-$82,348	Amirah Schneider,Nola Portillo, Mylie Schmidt,Suhayb Maguire,Millicent Betts,Avi Graves
+* 05:00:00 AM Billy Jones
+2. 0310_win_loss_player_data:08:00:00 AM	-$97,383	Chanelle Tapia, Shelley Dodson , Valentino Smith, Mylie Schmidt
+* 08:00:00 AM Billy Jones
+3. 0310_win_loss_player_data:02:00:00 PM	-$82,348	Jaden Clarkson, Kaidan Sheridan, Mylie Schmidt 
+* 02:00:00 PM Billy Jones
+4.  0310_win_loss_player_data:08:00:00 PM	-$65,348        Mylie Schmidt, Trixie Velasquez, Jerome Klein ,Rahma Buckley
+* 08:00:00 PM Billy Jones
+5.  0310_win_loss_player_data:11:00:00 PM	-$88,383	Mcfadden Wasim, Norman Cooper, Mylie Schmidt
+* 11:00:00 PM Billy Jones
+6.  0312_win_loss_player_data:05:00:00 AM	-$182,300	Montana Kirk, Alysia Goodman, Halima Little, Etienne Brady, Mylie Schmidt
+* 05:00:00 AM Billy Jones
+7. 0312_win_loss_player_data:08:00:00 AM	-$97,383        Rimsha Gardiner,Fern Cleveland, Mylie Schmidt,Kobe Higgins	
+* 08:00:00 AM Billy Jones
+8. 0312_win_loss_player_data:02:00:00 PM	-$82,348        Mae Hail,  Mylie Schmidt,Ayden Beil	
+* 02:00:00 PM Billy Jones
+9. 0312_win_loss_player_data:08:00:00 PM	-$65,792        Tallulah Rawlings,Josie Dawe, Mylie Schmidt,Hakim Stott, Esther Callaghan, Ciaron Villanueva	
+* 08:00:00 PM Billy Jones
+10. 0312_win_loss_player_data:11:00:00 PM	-$88,229        Vlad Hatfield,Kerys Frazier,Mya Butler, Mylie Schmidt,Lex Oakley,Elin Wormald	
+* 11:00:00 PM Billy Jones
+11. 0315_win_loss_player_data:05:00:00 AM	-$82,844        Arjan Guzman,Sommer Mann, Mylie Schmidt	
+* 05:00:00 AM Billy Jones
+12. 0315_win_loss_player_data:08:00:00 AM	-$97,001        Lilianna Devlin,Brendan Lester, Mylie Schmidt,Blade Robertson,Derrick Schroeder	
+* 08:00:00 AM Billy Jones
+13. 0315_win_loss_player_data:02:00:00 PM	-$182,419        Mylie Schmidt, Corey Huffman
+* 02:00:00 PM Billy Jones
