@@ -68,7 +68,7 @@ awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 PM'
  
 #!/bin/bash
 cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
-grep -i '0312_win_loss_player_data:11:00:00 AM' Roulette_Losses
+grep -i '0312_win_loss_player_data:11:00:00 PM' Roulette_Losses
 cd /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '11:00:00 PM'
  
