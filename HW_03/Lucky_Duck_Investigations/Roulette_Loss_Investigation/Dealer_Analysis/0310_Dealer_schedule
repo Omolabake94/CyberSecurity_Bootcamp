@@ -1,0 +1,26 @@
+Hour AM/PM	BlackJack_Dealer_FNAME LAST	Roulette_Dealer_FNAME LAST	Texas_Hold_EM_dealer_FNAME LAST
+
+12:00:00 AM	Izabela Parrish	Marlene Mcpherson	Madina Britton
+01:00:00 AM	Billy Jones	Saima Mcdermott	Summer-Louise Hammond
+02:00:00 AM	Summer-Louise Hammond	Abigale Rich	John-James Hayward
+03:00:00 AM	John-James Hayward	Evalyn Howell	Chyna Mercado
+04:00:00 AM	Chyna Mercado	Cleveland Hanna	Katey Bean
+05:00:00 AM	Katey Bean	Billy Jones	Evalyn Howell
+06:00:00 AM	Evalyn Howell	Saima Mcdermott	Cleveland Hanna
+07:00:00 AM	Cleveland Hanna	Abigale Rich	Billy Jones
+08:00:00 AM	Rahima Figueroa	Billy Jones	Madina Britton
+09:00:00 AM	Marlene Mcpherson	Cleveland Hanna	Summer-Louise Hammond
+10:00:00 AM	Izabela Parrish	Madina Britton	John-James Hayward
+11:00:00 AM	Madina Britton	Summer-Louise Hammond	Chyna Mercado
+12:00:00 PM	Summer-Louise Hammond	John-James Hayward	Katey Bean
+01:00:00 PM	John-James Hayward	Chyna Mercado	Evalyn Howell
+02:00:00 PM	Chyna Mercado	Billy Jones	Cleveland Hanna
+03:00:00 PM	Katey Bean	Evalyn Howell	Rahima Figueroa
+04:00:00 PM	Evalyn Howell	Cleveland Hanna	Billy Jones
+05:00:00 PM	Billy Jones	Rahima Figueroa	Summer-Louise Hammond
+06:00:00 PM	Rahima Figueroa	John-James Hayward	John-James Hayward
+07:00:00 PM	Marlene Mcpherson	Chyna Mercado	Chyna Mercado
+08:00:00 PM	Saima Mcdermott	Billy Jones	Katey Bean
+09:00:00 PM	Abigale Rich	Evalyn Howell	Billy Jones
+10:00:00 PM	Evalyn Howell	Katey Bean	Cleveland Hanna
+11:00:00 PM	Cleveland Hanna	Billy Jones	Rahima Figueroa
