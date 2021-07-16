@@ -76,7 +76,11 @@ Shell for each day
 * grep -i '0310_win_loss_player_data:02:00:00 PM' Roulette_Losses
 * cd ..
 * cd Dealer_Analysis
+<<<<<<< HEAD:HW_03/README.md
 * awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '02:00:00 PM'
+=======
+* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '02:00:00 PM' 
+>>>>>>> 851338b987b16e5b4589e35914266791e387c411:Terminal HW3/README.md
 * cd ..
 * cd Player_Analysis
 * grep -i '0310_win_loss_player_data:08:00:00 PM' Roulette_Losses
@@ -102,6 +106,12 @@ Shell for each day
 * cd Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 AM'
 * cd ..
+<<<<<<< HEAD:HW_03/README.md
+=======
+* cd Dealer_Analysis
+* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 AM'
+* cd ..
+>>>>>>> 851338b987b16e5b4589e35914266791e387c411:Terminal HW3/README.md
 * cd Player_Analysis
 * grep -i '0312_win_loss_player_data:02:00:00 PM' Roulette_Losses
 * cd ..
@@ -137,8 +147,7 @@ Shell for each day
 * cd ..
 * cd Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '02:00:00 PM'
-
-chmod +x find_player_dealer.sh
+* chmod +x find_player_dealer.sh
 
 #### 4. ./find_player_dealer.sh > Dealers_working_during_losses
 
