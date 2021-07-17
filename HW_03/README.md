@@ -12,7 +12,7 @@
 * cd Player_Dealer_Correlation
 * touch Notes_Player_Dealer_Correlation
 
-![image1](img/image1.png)
+![image1](proof-of-work.md/image1.png)
 
 ### Step 2: Gathering Evidence
 1. cd Lucky_Duck_Investigations 
