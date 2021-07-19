@@ -41,11 +41,13 @@
 2. Command to see documentation and instructions: man lynis
 3. Command to run an audit: sudo lynis audit system
 4. Screenshot of report output:
-      ![alt text](http://url/to/Screenshot_15.png)
+      
+![alt text](Screenshot_15.jpg)
 
 ### Bonus
 1. Command to install chkrootkit: sudo apt install chkrootkit
 2. Command to see documentation and instructions: man chkrootkit
 3. Command to run expert mode: sudo chkrootkit -x
 4. Screenshot of end of sample output
-      ![alt text](http://url/to/Screenshot_17.png)
+      
+![alt text](Screenshot_17.jpg)
