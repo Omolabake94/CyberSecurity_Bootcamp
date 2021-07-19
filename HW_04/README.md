@@ -42,7 +42,7 @@
 3. Command to run an audit: sudo lynis audit system
 4. Screenshot of report output:
       
-![alt text](Screenshot_15.jpg)
+![alt text](Proof_of_work.md/Screenshot_15.jpg)
 
 ### Bonus
 1. Command to install chkrootkit: sudo apt install chkrootkit
@@ -50,4 +50,4 @@
 3. Command to run expert mode: sudo chkrootkit -x
 4. Screenshot of end of sample output
       
-![alt text](Screenshot_17.jpg)
+![alt text](Proof_of_work.md/Screenshot_17.jpg)
