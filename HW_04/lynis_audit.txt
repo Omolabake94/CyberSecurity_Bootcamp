@@ -1,0 +1,714 @@
+
+[1;37m[ Lynis 2.6.2 ][0m
+
+################################################################################
+  Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+  welcome to redistribute it under the terms of the GNU General Public License.
+  See the LICENSE file for details about using this software.
+
+  2007-2018, CISOfy - https://cisofy.com/lynis/
+  Enterprise support available (compliance, plugins, interface and tools)
+################################################################################
+
+
+[+] [1;33mInitializing program[0m
+------------------------------------
+[2C- Detecting OS... [41C [ [1;32mDONE[0m ]
+[2C- Checking profiles...[37C [ [1;32mDONE[0m ]
+
+  ---------------------------------------------------
+  Program version:           2.6.2
+  Operating system:          Linux
+  Operating system name:     Ubuntu Linux
+  Operating system version:  18.04
+  Kernel version:            5.0.0
+  Hardware platform:         x86_64
+  Hostname:                  UbuntuDesktop
+  ---------------------------------------------------
+  Profiles:                  /etc/lynis/default.prf
+  Log file:                  /var/log/lynis.log
+  Report file:               /var/log/lynis-report.dat
+  Report version:            1.0
+  Plugin directory:          /etc/lynis/plugins
+  ---------------------------------------------------
+  Auditor:                   [Not Specified]
+  Language:                  en
+  Test category:             all
+  Test group:                all
+  ---------------------------------------------------
+[2C- Program update status... [32C [ [1;31mWARNING[0m ]
+
+      ===============================================================================
+        [0;36mLynis update available[0m
+      ===============================================================================
+
+        [1;33mCurrent version is more than 4 months old[0m
+
+        Current version : [1;33m262[0m   Latest version : [1;32m305[0m
+
+        [1;37mPlease update to the latest version.[0m
+        New releases include additional features, bug fixes, tests, and baselines.[0m
+
+        Download the latest version:
+
+        Packages (DEB/RPM) -  https://packages.cisofy.com
+        Website (TAR)      -  https://cisofy.com/downloads/
+        GitHub (source)    -  https://github.com/CISOfy/lynis
+
+      ===============================================================================
+
+
+[+] [1;33mSystem Tools[0m
+------------------------------------
+[2C- Scanning available tools...[30C
+[2C- Checking system binaries...[30C
+
+[+] [1;35mPlugins (phase 1)[0m
+------------------------------------
+[0CNote: plugins have more extensive tests and may take several minutes to complete[0C
+[0C [0C
+[2C- [0;36mPlugin[0m: [1;37mdebian[0m[21C
+    [
+[+] [1;33mDebian Tests[0m
+------------------------------------
+[2C- Checking for system binaries that are required by Debian Tests...[0C
+[4C- Checking /bin... [38C [ [1;32mFOUND[0m ]
+[4C- Checking /sbin... [37C [ [1;32mFOUND[0m ]
+[4C- Checking /usr/bin... [34C [ [1;32mFOUND[0m ]
+[4C- Checking /usr/sbin... [33C [ [1;32mFOUND[0m ]
+[4C- Checking /usr/local/bin... [28C [ [1;32mFOUND[0m ]
+[4C- Checking /usr/local/sbin... [27C [ [1;32mFOUND[0m ]
+[2C- Authentication:[42C
+[4C- PAM (Pluggable Authentication Modules):[16C
+[6C- libpam-tmpdir[40C [ [1;31mNot Installed[0m ]
+[6C- libpam-usb[43C [ [1;31mNot Installed[0m ]
+[2C- File System Checks:[38C
+[4C- DM-Crypt, Cryptsetup & Cryptmount:[21C
+[2C- Software:[48C
+[4C- apt-listbugs[43C [ [1;31mNot Installed[0m ]
+[4C- apt-listchanges[40C [ [1;31mNot Installed[0m ]
+[4C- checkrestart[43C [ [1;31mNot Installed[0m ]
+[4C- needrestart[44C [ [1;31mNot Installed[0m ]
+[4C- debsecan[47C [ [1;31mNot Installed[0m ]
+[4C- debsums[48C [ [1;31mNot Installed[0m ]
+[4C- fail2ban[47C [ [1;31mNot Installed[0m ]
+]
+
+[+] [1;33mBoot and services[0m
+------------------------------------
+[2C- Service Manager[42C [ [1;32msystemd[0m ]
+[2C- Checking UEFI boot[39C [ [1;37mDISABLED[0m ]
+[2C- Checking presence GRUB2[34C [ [1;32mFOUND[0m ]
+[4C- Checking for password protection[23C [ [1;31mWARNING[0m ]
+[2C- Check running services (systemctl)[23C [ [1;32mDONE[0m ]
+[8CResult: found 44 running services[20C
+[2C- Check enabled services at boot (systemctl)[15C [ [1;32mDONE[0m ]
+[8CResult: found 69 enabled services[20C
+[2C- Check startup files (permissions)[24C [ [1;32mOK[0m ]
+
+[+] [1;33mKernel[0m
+------------------------------------
+[2C- Checking default run level[31C [ [1;32mRUNLEVEL 5[0m ]
+[2C- Checking CPU support (NX/PAE)[28C
+[4CCPU support: PAE and/or NoeXecute supported[14C [ [1;32mFOUND[0m ]
+[2C- Checking kernel version and release[22C [ [1;32mDONE[0m ]
+[2C- Checking kernel type[37C [ [1;32mDONE[0m ]
+[2C- Checking loaded kernel modules[27C [ [1;32mDONE[0m ]
+[6CFound 98 active modules[32C
+[2C- Checking Linux kernel configuration file[17C [ [1;32mFOUND[0m ]
+[2C- Checking default I/O kernel scheduler[20C [ [1;37mNOT FOUND[0m ]
+[2C- Checking for available kernel update[21C [ [1;32mOK[0m ]
+[2C- Checking core dumps configuration[24C [ [1;32mDISABLED[0m ]
+[4C- Checking setuid core dumps configuration[15C [ [1;32mPROTECTED[0m ]
+[2C- Check if reboot is needed[32C [ [1;32mNO[0m ]
+
+[+] [1;33mMemory and Processes[0m
+------------------------------------
+[2C- Checking /proc/meminfo[35C [ [1;32mFOUND[0m ]
+[2C- Searching for dead/zombie processes[22C [ [1;32mOK[0m ]
+[2C- Searching for IO waiting processes[23C [ [1;32mOK[0m ]
+
+[+] [1;33mUsers, Groups and Authentication[0m
+------------------------------------
+[2C- Administrator accounts[35C [ [1;32mOK[0m ]
+[2C- Unique UIDs[46C [ [1;32mOK[0m ]
+[2C- Consistency of group files (grpck)[23C [ [1;32mOK[0m ]
+[2C- Unique group IDs[41C [ [1;32mOK[0m ]
+[2C- Unique group names[39C [ [1;32mOK[0m ]
+[2C- Password file consistency[32C [ [1;33mSUGGESTION[0m ]
+[2C- Query system users (non daemons)[25C [ [1;32mDONE[0m ]
+[2C- NIS+ authentication support[30C [ [1;37mNOT ENABLED[0m ]
+[2C- NIS authentication support[31C [ [1;37mNOT ENABLED[0m ]
+[2C- sudoers file[45C [ [1;32mFOUND[0m ]
+[4C- Check sudoers file permissions[25C [ [1;32mOK[0m ]
+[2C- PAM password strength tools[30C [ [1;33mSUGGESTION[0m ]
+[2C- PAM configuration files (pam.conf)[23C [ [1;32mFOUND[0m ]
+[2C- PAM configuration files (pam.d)[26C [ [1;32mFOUND[0m ]
+[2C- PAM modules[46C [ [1;32mFOUND[0m ]
+[2C- LDAP module in PAM[39C [ [1;37mNOT FOUND[0m ]
+[2C- Accounts without expire date[29C [ [1;32mOK[0m ]
+[2C- Accounts without password[32C [ [1;32mOK[0m ]
+[2C- Checking user password aging (minimum)[19C [ [1;33mDISABLED[0m ]
+[2C- User password aging (maximum)[28C [ [1;33mDISABLED[0m ]
+[2C- Checking expired passwords[31C [ [1;32mOK[0m ]
+[2C- Checking Linux single user mode authentication[11C [ [1;31mWARNING[0m ]
+[2C- Determining default umask[32C
+[4C- umask (/etc/profile)[35C [ [1;33mNOT FOUND[0m ]
+[4C- umask (/etc/login.defs)[32C [ [1;33mSUGGESTION[0m ]
+[2C- LDAP authentication support[30C [ [1;37mNOT ENABLED[0m ]
+[2C- Logging failed login attempts[28C [ [1;32mENABLED[0m ]
+
+[+] [1;33mShells[0m
+------------------------------------
+[2C- Checking shells from /etc/shells[25C
+[4CResult: found 4 shells (valid shells: 4).[16C
+[4C- Session timeout settings/tools[25C [ [1;33mNONE[0m ]
+[2C- Checking default umask values[28C
+[4C- Checking default umask in /etc/bash.bashrc[13C [ [1;33mNONE[0m ]
+[4C- Checking default umask in /etc/profile[17C [ [1;33mNONE[0m ]
+
+[+] [1;33mFile systems[0m
+------------------------------------
+[2C- Checking mount points[36C
+[4C- Checking /home mount point[29C [ [1;33mSUGGESTION[0m ]
+[4C- Checking /tmp mount point[30C [ [1;33mSUGGESTION[0m ]
+[4C- Checking /var mount point[30C [ [1;33mSUGGESTION[0m ]
+[2C- Query swap partitions (fstab)[28C [ [1;32mOK[0m ]
+[2C- Testing swap partitions[34C [ [1;32mOK[0m ]
+[2C- Checking for old files in /tmp[27C [ [1;32mOK[0m ]
+[2C- Checking /tmp sticky bit[33C [ [1;32mOK[0m ]
+[2C- Checking /var/tmp sticky bit[29C [ [1;32mOK[0m ]
+[2C- ACL support root file system[29C [ [1;32mENABLED[0m ]
+[2C- Mount options of /[39C [ [1;33mNON DEFAULT[0m ]
+[2C- Checking Locate database[33C [ [1;32mFOUND[0m ]
+[2C- Disable kernel support of some filesystems[15C
+[4C- Discovered kernel modules: cramfs freevxfs hfs hfsplus jffs2 udf [0C
+
+[+] [1;33mUSB Devices[0m
+------------------------------------
+[2C- Checking usb-storage driver (modprobe config)[12C [ [1;37mNOT DISABLED[0m ]
+[2C- Checking USB devices authorization[23C [ [1;33mENABLED[0m ]
+[2C- Checking USBGuard[40C [ [1;37mNOT FOUND[0m ]
+
+[+] [1;33mStorage[0m
+------------------------------------
+[2C- Checking firewire ohci driver (modprobe config)[10C [ [1;32mDISABLED[0m ]
+
+[+] [1;33mNFS[0m
+------------------------------------
+[2C- Check running NFS daemon[33C [ [1;37mNOT FOUND[0m ]
+
+[+] [1;33mName services[0m
+------------------------------------
+[2C- Searching DNS domain name[32C [ [1;33mUNKNOWN[0m ]
+[2C- Checking /etc/hosts[38C
+[4C- Checking /etc/hosts (duplicates)[23C [ [1;32mOK[0m ]
+[4C- Checking /etc/hosts (hostname)[25C [ [1;32mOK[0m ]
+[4C- Checking /etc/hosts (localhost)[24C [ [1;32mOK[0m ]
+[4C- Checking /etc/hosts (localhost to IP)[18C [ [1;32mOK[0m ]
+
+[+] [1;33mPorts and packages[0m
+------------------------------------
+[2C- Searching package managers[31C
+[4C- Searching dpkg package manager[25C [ [1;32mFOUND[0m ]
+[6C- Querying package manager[29C
+[4C- Query unpurged packages[32C [ [1;33mFOUND[0m ]
+[2C- Checking security repository in sources.list file[8C [ [1;32mOK[0m ]
+[2C- Checking APT package database[28C [ [1;32mOK[0m ]
+[2C- Checking vulnerable packages[29C [ [1;31mWARNING[0m ]
+[2C- Checking upgradeable packages[28C [ [1;37mSKIPPED[0m ]
+[2C- Checking package audit tool[30C [ [1;32mINSTALLED[0m ]
+[4CFound: apt-get[43C
+
+[+] [1;33mNetworking[0m
+------------------------------------
+[2C- Checking IPv6 configuration[30C [ [1;37mENABLED[0m ]
+[6CConfiguration method[35C [ [1;37mAUTO[0m ]
+[6CIPv6 only[46C [ [1;37mNO[0m ]
+[2C- Checking configured nameservers[26C
+[4C- Testing nameservers[36C
+[8CNameserver: 8.8.8.8[34C [ [1;32mOK[0m ]
+[8CNameserver: 127.0.0.53[31C [ [1;32mOK[0m ]
+[4C- Minimal of 2 responsive nameservers[20C [ [1;32mOK[0m ]
+[2C- Checking default gateway[33C [ [1;32mDONE[0m ]
+[2C- Getting listening ports (TCP/UDP)[24C [ [1;32mDONE[0m ]
+[6C* Found 39 ports[39C
+[2C- Checking promiscuous interfaces[26C [ [1;32mOK[0m ]
+[2C- Checking waiting connections[29C [ [1;32mOK[0m ]
+[2C- Checking status DHCP client[30C [ [1;37mRUNNING[0m ]
+[2C- Checking for ARP monitoring software[21C [ [1;33mNOT FOUND[0m ]
+
+[+] [1;33mPrinters and Spools[0m
+------------------------------------
+[2C- Checking cups daemon[37C [ [1;32mRUNNING[0m ]
+[2C- Checking CUPS configuration file[25C [ [1;32mOK[0m ]
+[4C- File permissions[39C [ [1;31mWARNING[0m ]
+[2C- Checking CUPS addresses/sockets[26C [ [1;32mFOUND[0m ]
+[2C- Checking lp daemon[39C [ [1;37mNOT RUNNING[0m ]
+
+[+] [1;33mSoftware: e-mail and messaging[0m
+------------------------------------
+[2C- Postfix status[43C [ [1;32mRUNNING[0m ]
+[4C- Postfix configuration[34C [ [1;32mFOUND[0m ]
+[6C- Postfix banner[39C [ [1;31mWARNING[0m ]
+[2C- Dovecot status[43C [ [1;32mRUNNING[0m ]
+
+[+] [1;33mSoftware: firewalls[0m
+------------------------------------
+[2C- Checking iptables kernel module[26C [ [1;32mFOUND[0m ]
+[4C- Checking iptables policies of chains[19C [ [1;32mFOUND[0m ]
+[6C- Checking chain INPUT (table: filter, policy )[8C [ [1;33mother[0m ]
+[4C- Checking for empty ruleset[29C [ [1;32mOK[0m ]
+[4C- Checking for unused rules[30C [ [1;33mFOUND[0m ]
+[2C- Checking host based firewall[29C [ [1;32mACTIVE[0m ]
+
+[+] [1;33mSoftware: webserver[0m
+------------------------------------
+[2C- Checking Apache (binary /usr/sbin/apache2)[15C [ [1;32mFOUND[0m ]
+[6CInfo: Configuration file found (/etc/apache2/apache2.conf)[0C
+[6CInfo: No virtual hosts found[27C
+[4C* Loadable modules[39C [ [1;32mFOUND (114)[0m ]
+[8C- Found 114 loadable modules[25C
+[10Cmod_evasive: anti-DoS/brute force[18C [ [1;37mNOT FOUND[0m ]
+[10Cmod_reqtimeout/mod_qos[29C [ [1;32mFOUND[0m ]
+[10CModSecurity: web application firewall[14C [ [1;37mNOT FOUND[0m ]
+[2C- Checking nginx[43C [ [1;32mFOUND[0m ]
+[4C- Searching nginx configuration file[21C [ [1;32mFOUND[0m ]
+[6C- Found nginx includes[33C [ [1;32m7 FOUND[0m ]
+[4C- Parsing configuration options[26C
+[8C- /etc/nginx/nginx.conf[30C
+[8C- /etc/nginx/modules-enabled/50-mod-http-geoip.conf[2C
+[8C- /etc/nginx/modules-enabled/50-mod-http-image-filter.conf[0C
+[8C- /etc/nginx/modules-enabled/50-mod-http-xslt-filter.conf[0C
+[8C- /etc/nginx/modules-enabled/50-mod-mail.conf[8C
+[8C- /etc/nginx/modules-enabled/50-mod-stream.conf[6C
+[8C- /etc/nginx/sites-enabled/default[19C
+[6C- SSL configured[39C [ [1;31mNO[0m ]
+[6C- Checking log file configuration[22C
+[8C- Missing log files (access_log)[21C [ [1;32mNO[0m ]
+[8C- Disabled access logging[28C [ [1;32mNO[0m ]
+[8C- Missing log files (error_log)[22C [ [1;32mNO[0m ]
+[8C- Debugging mode on error_log[24C [ [1;32mNO[0m ]
+
+[+] [1;33mSSH Support[0m
+------------------------------------
+[2C- Checking running SSH daemon[30C [ [1;32mFOUND[0m ]
+[4C- Searching SSH configuration[28C [ [1;32mFOUND[0m ]
+[4C- SSH option: AllowTcpForwarding[25C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: ClientAliveCountMax[24C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: ClientAliveInterval[24C [ [1;32mOK[0m ]
+[4C- SSH option: Compression[32C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: FingerprintHash[28C [ [1;32mOK[0m ]
+[4C- SSH option: GatewayPorts[31C [ [1;32mOK[0m ]
+[4C- SSH option: IgnoreRhosts[31C [ [1;32mOK[0m ]
+[4C- SSH option: LoginGraceTime[29C [ [1;32mOK[0m ]
+[4C- SSH option: LogLevel[35C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: MaxAuthTries[31C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: MaxSessions[32C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: PermitRootLogin[28C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: PermitUserEnvironment[22C [ [1;32mOK[0m ]
+[4C- SSH option: PermitTunnel[31C [ [1;32mOK[0m ]
+[4C- SSH option: Port[39C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: PrintLastLog[31C [ [1;32mOK[0m ]
+[4C- SSH option: Protocol[35C [ [1;37mNOT FOUND[0m ]
+[4C- SSH option: StrictModes[32C [ [1;32mOK[0m ]
+[4C- SSH option: TCPKeepAlive[31C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: UseDNS[37C [ [1;32mOK[0m ]
+[4C- SSH option: UsePrivilegeSeparation[21C [ [1;37mNOT FOUND[0m ]
+[4C- SSH option: VerifyReverseMapping[23C [ [1;37mNOT FOUND[0m ]
+[4C- SSH option: X11Forwarding[30C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: AllowAgentForwarding[23C [ [1;33mSUGGESTION[0m ]
+[4C- SSH option: AllowUsers[33C [ [1;37mNOT FOUND[0m ]
+[4C- SSH option: AllowGroups[32C [ [1;37mNOT FOUND[0m ]
+
+[+] [1;33mSNMP Support[0m
+------------------------------------
+[2C- Checking running SNMP daemon[29C [ [1;37mNOT FOUND[0m ]
+
+[+] [1;33mDatabases[0m
+------------------------------------
+[4CNo database engines found[32C
+
+[+] [1;33mLDAP Services[0m
+------------------------------------
+[2C- Checking OpenLDAP instance[31C [ [1;37mNOT FOUND[0m ]
+
+[+] [1;33mPHP[0m
+------------------------------------
+[2C- Checking PHP[45C [ [1;37mNOT FOUND[0m ]
+
+[+] [1;33mSquid Support[0m
+------------------------------------
+[2C- Checking running Squid daemon[28C [ [1;37mNOT FOUND[0m ]
+
+[+] [1;33mLogging and files[0m
+------------------------------------
+[2C- Checking for a running log daemon[24C [ [1;32mOK[0m ]
+[4C- Checking Syslog-NG status[30C [ [1;37mNOT FOUND[0m ]
+[4C- Checking systemd journal status[24C [ [1;32mFOUND[0m ]
+[4C- Checking Metalog status[32C [ [1;37mNOT FOUND[0m ]
+[4C- Checking RSyslog status[32C [ [1;32mFOUND[0m ]
+[4C- Checking RFC 3195 daemon status[24C [ [1;37mNOT FOUND[0m ]
+[4C- Checking minilogd instances[28C [ [1;37mNOT FOUND[0m ]
+[2C- Checking logrotate presence[30C [ [1;32mOK[0m ]
+[2C- Checking log directories (static list)[19C [ [1;32mDONE[0m ]
+[2C- Checking open log files[34C [ [1;32mDONE[0m ]
+[2C- Checking deleted files in use[28C [ [1;33mFILES FOUND[0m ]
+
+[+] [1;33mInsecure services[0m
+------------------------------------
+[2C- Checking inetd status[36C [ [1;32mNOT ACTIVE[0m ]
+
+[+] [1;33mBanners and identification[0m
+------------------------------------
+[2C- /etc/issue[47C [ [1;32mFOUND[0m ]
+[4C- /etc/issue contents[36C [ [1;33mWEAK[0m ]
+[2C- /etc/issue.net[43C [ [1;32mFOUND[0m ]
+[4C- /etc/issue.net contents[32C [ [1;33mWEAK[0m ]
+
+[+] [1;33mScheduled tasks[0m
+------------------------------------
+[2C- Checking crontab/cronjob[33C [ [1;32mDONE[0m ]
+
+[+] [1;33mAccounting[0m
+------------------------------------
+[2C- Checking accounting information[26C [ [1;33mNOT FOUND[0m ]
+[2C- Checking sysstat accounting data[25C [ [1;33mNOT FOUND[0m ]
+[2C- Checking auditd[42C [ [1;37mNOT FOUND[0m ]
+
+[+] [1;33mTime and Synchronization[0m
+------------------------------------
+
+[+] [1;33mCryptography[0m
+------------------------------------
+[2C- Checking for expired SSL certificates [0/4][14C [ [1;32mNONE[0m ]
+
+[+] [1;33mVirtualization[0m
+------------------------------------
+
+[+] [1;33mContainers[0m
+------------------------------------
+[4C- Docker[49C
+[6C- Docker daemon[40C [ [1;32mRUNNING[0m ]
+[8C- Docker info output (warnings)[22C [ [1;33m1[0m ]
+[6C- Containers[43C
+[8C- Total containers[35C [ [1;37m0[0m ]
+[4C- File permissions[39C [ [1;32mOK[0m ]
+
+[+] [1;33mSecurity frameworks[0m
+------------------------------------
+[2C- Checking presence AppArmor[31C [ [1;32mFOUND[0m ]
+[4C- Checking AppArmor status[31C [ [1;32mENABLED[0m ]
+[2C- Checking presence SELinux[32C [ [1;37mNOT FOUND[0m ]
+[2C- Checking presence grsecurity[29C [ [1;37mNOT FOUND[0m ]
+[2C- Checking for implemented MAC framework[19C [ [1;32mOK[0m ]
+
+[+] [1;33mSoftware: file integrity[0m
+------------------------------------
+[2C- Checking file integrity tools[28C
+[4C- Tripwire[47C [ [1;32mFOUND[0m ]
+[2C- Checking presence integrity tool[25C [ [1;32mFOUND[0m ]
+
+[+] [1;33mSoftware: System tooling[0m
+------------------------------------
+[2C- Checking automation tooling[30C
+[4C- Ansible artifact[39C [ [1;32mFOUND[0m ]
+[2C- Automation tooling[39C [ [1;32mFOUND[0m ]
+[2C- Checking for IDS/IPS tooling[29C [ [1;33mNONE[0m ]
+
+[+] [1;33mSoftware: Malware[0m
+------------------------------------
+[2C- Checking chkrootkit[38C [ [1;32mFOUND[0m ]
+
+[+] [1;33mFile Permissions[0m
+------------------------------------
+[2C- Starting file permissions check[26C
+
+[+] [1;33mHome directories[0m
+------------------------------------
+[2C- Checking shell history files[29C [ [1;32mOK[0m ]
+
+[+] [1;33mKernel Hardening[0m
+------------------------------------
+[2C- Comparing sysctl key pairs with scan profile[13C
+[4C- fs.protected_hardlinks (exp: 1)[24C [ [1;32mOK[0m ]
+[4C- fs.protected_symlinks (exp: 1)[25C [ [1;32mOK[0m ]
+[4C- fs.suid_dumpable (exp: 0)[30C [ [1;31mDIFFERENT[0m ]
+[4C- kernel.core_uses_pid (exp: 1)[26C [ [1;31mDIFFERENT[0m ]
+[4C- kernel.ctrl-alt-del (exp: 0)[27C [ [1;32mOK[0m ]
+[4C- kernel.dmesg_restrict (exp: 1)[25C [ [1;31mDIFFERENT[0m ]
+[4C- kernel.kptr_restrict (exp: 2)[26C [ [1;31mDIFFERENT[0m ]
+[4C- kernel.randomize_va_space (exp: 2)[21C [ [1;32mOK[0m ]
+[4C- kernel.sysrq (exp: 0)[34C [ [1;31mDIFFERENT[0m ]
+[4C- kernel.yama.ptrace_scope (exp: 1 2 3)[18C [ [1;32mOK[0m ]
+[4C- net.ipv4.conf.all.accept_redirects (exp: 0)[12C [ [1;32mOK[0m ]
+[4C- net.ipv4.conf.all.accept_source_route (exp: 0)[9C [ [1;32mOK[0m ]
+[4C- net.ipv4.conf.all.bootp_relay (exp: 0)[17C [ [1;32mOK[0m ]
+[4C- net.ipv4.conf.all.forwarding (exp: 0)[18C [ [1;31mDIFFERENT[0m ]
+[4C- net.ipv4.conf.all.log_martians (exp: 1)[16C [ [1;31mDIFFERENT[0m ]
+[4C- net.ipv4.conf.all.mc_forwarding (exp: 0)[15C [ [1;32mOK[0m ]
+[4C- net.ipv4.conf.all.proxy_arp (exp: 0)[19C [ [1;32mOK[0m ]
+[4C- net.ipv4.conf.all.rp_filter (exp: 1)[19C [ [1;32mOK[0m ]
+[4C- net.ipv4.conf.all.send_redirects (exp: 0)[14C [ [1;31mDIFFERENT[0m ]
+[4C- net.ipv4.conf.default.accept_redirects (exp: 0)[8C [ [1;31mDIFFERENT[0m ]
+[4C- net.ipv4.conf.default.accept_source_route (exp: 0)[5C [ [1;31mDIFFERENT[0m ]
+[4C- net.ipv4.conf.default.log_martians (exp: 1)[12C [ [1;31mDIFFERENT[0m ]
+[4C- net.ipv4.icmp_echo_ignore_broadcasts (exp: 1)[10C [ [1;32mOK[0m ]
+[4C- net.ipv4.icmp_ignore_bogus_error_responses (exp: 1)[4C [ [1;32mOK[0m ]
+[4C- net.ipv4.tcp_syncookies (exp: 1)[23C [ [1;32mOK[0m ]
+[4C- net.ipv4.tcp_timestamps (exp: 0 1)[21C [ [1;32mOK[0m ]
+[4C- net.ipv6.conf.all.accept_redirects (exp: 0)[12C [ [1;31mDIFFERENT[0m ]
+[4C- net.ipv6.conf.all.accept_source_route (exp: 0)[9C [ [1;32mOK[0m ]
+[4C- net.ipv6.conf.default.accept_redirects (exp: 0)[8C [ [1;31mDIFFERENT[0m ]
+[4C- net.ipv6.conf.default.accept_source_route (exp: 0)[5C [ [1;32mOK[0m ]
+
+[+] [1;33mHardening[0m
+------------------------------------
+[4C- Installed compiler(s)[34C [ [1;31mFOUND[0m ]
+[4C- Installed malware scanner[30C [ [1;32mFOUND[0m ]
+
+[+] [1;33mCustom Tests[0m
+------------------------------------
+[2C- Running custom tests... [33C [ [1;37mNONE[0m ]
+
+[+] [1;35mPlugins (phase 2)[0m
+------------------------------------
+
+================================================================================
+
+  -[ [1;37mLynis 2.6.2 Results[0m ]-
+
+  [1;31mWarnings[0m (4):
+  [1;37m----------------------------[0m
+  [1;31m![0m Version of Lynis is very old and should be updated [LYNIS] 
+      https://cisofy.com/controls/LYNIS/
+
+  [1;31m![0m No password set for single mode [AUTH-9308] 
+      https://cisofy.com/controls/AUTH-9308/
+
+  [1;31m![0m Found one or more vulnerable packages. [PKGS-7392] 
+      https://cisofy.com/controls/PKGS-7392/
+
+  [1;31m![0m Found some information disclosure in SMTP banner (OS or software name) [MAIL-8818] 
+      https://cisofy.com/controls/MAIL-8818/
+
+  [1;33mSuggestions[0m (53):
+  [1;37m----------------------------[0m
+  [1;33m*[0m Install libpam-tmpdir to set $TMP and $TMPDIR for PAM sessions [CUST-0280] 
+      [0;37mhttps://your-domain.example.org/controls/CUST-0280/[0m
+
+  [1;33m*[0m Install libpam-usb to enable multi-factor authentication for PAM sessions [CUST-0285] 
+      [0;37mhttps://your-domain.example.org/controls/CUST-0285/[0m
+
+  [1;33m*[0m Install apt-listbugs to display a list of critical bugs prior to each APT installation. [CUST-0810] 
+      [0;37mhttps://your-domain.example.org/controls/CUST-0810/[0m
+
+  [1;33m*[0m Install apt-listchanges to display any significant changes prior to any upgrade via APT. [CUST-0811] 
+      [0;37mhttps://your-domain.example.org/controls/CUST-0811/[0m
+
+  [1;33m*[0m Install debian-goodies so that you can run checkrestart after upgrades to determine which services are using old versions of libraries and need restarting. [CUST-0830] 
+      [0;37mhttps://your-domain.example.org/controls/CUST-0830/[0m
+
+  [1;33m*[0m Install needrestart, alternatively to debian-goodies, so that you can run needrestart after upgrades to determine which daemons are using old versions of libraries and need restarting. [CUST-0831] 
+      [0;37mhttps://your-domain.example.org/controls/CUST-0831/[0m
+
+  [1;33m*[0m Install debsecan to generate lists of vulnerabilities which affect this installation. [CUST-0870] 
+      [0;37mhttps://your-domain.example.org/controls/CUST-0870/[0m
+
+  [1;33m*[0m Install debsums for the verification of installed package files against MD5 checksums. [CUST-0875] 
+      [0;37mhttps://your-domain.example.org/controls/CUST-0875/[0m
+
+  [1;33m*[0m Install fail2ban to automatically ban hosts that commit multiple authentication errors. [DEB-0880] 
+      [0;37mhttps://cisofy.com/controls/DEB-0880/[0m
+
+  [1;33m*[0m Set a password on GRUB bootloader to prevent altering boot configuration (e.g. boot in single user mode without password) [BOOT-5122] 
+      [0;37mhttps://cisofy.com/controls/BOOT-5122/[0m
+
+  [1;33m*[0m Run pwck manually and correct any errors in the password file [AUTH-9228] 
+      [0;37mhttps://cisofy.com/controls/AUTH-9228/[0m
+
+  [1;33m*[0m Install a PAM module for password strength testing like pam_cracklib or pam_passwdqc [AUTH-9262] 
+      [0;37mhttps://cisofy.com/controls/AUTH-9262/[0m
+
+  [1;33m*[0m Configure minimum password age in /etc/login.defs [AUTH-9286] 
+      [0;37mhttps://cisofy.com/controls/AUTH-9286/[0m
+
+  [1;33m*[0m Configure maximum password age in /etc/login.defs [AUTH-9286] 
+      [0;37mhttps://cisofy.com/controls/AUTH-9286/[0m
+
+  [1;33m*[0m Set password for single user mode to minimize physical access attack surface [AUTH-9308] 
+      [0;37mhttps://cisofy.com/controls/AUTH-9308/[0m
+
+  [1;33m*[0m Default umask in /etc/login.defs could be more strict like 027 [AUTH-9328] 
+      [0;37mhttps://cisofy.com/controls/AUTH-9328/[0m
+
+  [1;33m*[0m To decrease the impact of a full /home file system, place /home on a separated partition [FILE-6310] 
+      [0;37mhttps://cisofy.com/controls/FILE-6310/[0m
+
+  [1;33m*[0m To decrease the impact of a full /tmp file system, place /tmp on a separated partition [FILE-6310] 
+      [0;37mhttps://cisofy.com/controls/FILE-6310/[0m
+
+  [1;33m*[0m To decrease the impact of a full /var file system, place /var on a separated partition [FILE-6310] 
+      [0;37mhttps://cisofy.com/controls/FILE-6310/[0m
+
+  [1;33m*[0m Disable drivers like USB storage when not used, to prevent unauthorized storage or data theft [STRG-1840] 
+      [0;37mhttps://cisofy.com/controls/STRG-1840/[0m
+
+  [1;33m*[0m Check DNS configuration for the dns domain name [NAME-4028] 
+      [0;37mhttps://cisofy.com/controls/NAME-4028/[0m
+
+  [1;33m*[0m Purge old/removed packages (1 found) with aptitude purge or dpkg --purge command. This will cleanup old configuration files, cron jobs and startup scripts. [PKGS-7346] 
+      [0;37mhttps://cisofy.com/controls/PKGS-7346/[0m
+
+  [1;33m*[0m Install debsums utility for the verification of packages with known good database. [PKGS-7370] 
+      [0;37mhttps://cisofy.com/controls/PKGS-7370/[0m
+
+  [1;33m*[0m Update your system with apt-get update, apt-get upgrade, apt-get dist-upgrade and/or unattended-upgrades [PKGS-7392] 
+      [0;37mhttps://cisofy.com/controls/PKGS-7392/[0m
+
+  [1;33m*[0m Install package apt-show-versions for patch management purposes [PKGS-7394] 
+      [0;37mhttps://cisofy.com/controls/PKGS-7394/[0m
+
+  [1;33m*[0m Consider running ARP monitoring software (arpwatch,arpon) [NETW-3032] 
+      [0;37mhttps://cisofy.com/controls/NETW-3032/[0m
+
+  [1;33m*[0m Access to CUPS configuration could be more strict. [PRNT-2307] 
+      [0;37mhttps://cisofy.com/controls/PRNT-2307/[0m
+
+  [1;33m*[0m You are advised to hide the mail_name (option: smtpd_banner) from your postfix configuration. Use postconf -e or change your main.cf file (/etc/postfix/main.cf) [MAIL-8818] 
+      [0;37mhttps://cisofy.com/controls/MAIL-8818/[0m
+
+  [1;33m*[0m Disable the 'VRFY' command [MAIL-8820:disable_vrfy_command] 
+    - Details  : [0;36mdisable_vrfy_command=no[0m
+    - Solution : run postconf -e disable_vrfy_command=yes to change the value
+      [0;37mhttps://cisofy.com/controls/MAIL-8820/[0m
+
+  [1;33m*[0m Check iptables rules to see which rules are currently not used [FIRE-4513] 
+      [0;37mhttps://cisofy.com/controls/FIRE-4513/[0m
+
+  [1;33m*[0m Install Apache mod_evasive to guard webserver against DoS/brute force attempts [HTTP-6640] 
+      [0;37mhttps://cisofy.com/controls/HTTP-6640/[0m
+
+  [1;33m*[0m Install Apache modsecurity to guard webserver against web application attacks [HTTP-6643] 
+      [0;37mhttps://cisofy.com/controls/HTTP-6643/[0m
+
+  [1;33m*[0m Add HTTPS to nginx virtual hosts for enhanced protection of sensitive data and privacy [HTTP-6710] 
+      [0;37mhttps://cisofy.com/controls/HTTP-6710/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mAllowTcpForwarding (YES --> NO)[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mClientAliveCountMax (3 --> 2)[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mCompression (YES --> (DELAYED|NO))[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mLogLevel (INFO --> VERBOSE)[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mMaxAuthTries (6 --> 2)[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mMaxSessions (10 --> 2)[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mPermitRootLogin (WITHOUT-PASSWORD --> NO)[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mPort (22 --> )[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mTCPKeepAlive (YES --> NO)[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mX11Forwarding (YES --> NO)[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Consider hardening SSH configuration [SSH-7408] 
+    - Details  : [0;36mAllowAgentForwarding (YES --> NO)[0m
+      [0;37mhttps://cisofy.com/controls/SSH-7408/[0m
+
+  [1;33m*[0m Check what deleted files are still in use and why. [LOGG-2190] 
+      [0;37mhttps://cisofy.com/controls/LOGG-2190/[0m
+
+  [1;33m*[0m Add a legal banner to /etc/issue, to warn unauthorized users [BANN-7126] 
+      [0;37mhttps://cisofy.com/controls/BANN-7126/[0m
+
+  [1;33m*[0m Add legal banner to /etc/issue.net, to warn unauthorized users [BANN-7130] 
+      [0;37mhttps://cisofy.com/controls/BANN-7130/[0m
+
+  [1;33m*[0m Enable process accounting [ACCT-9622] 
+      [0;37mhttps://cisofy.com/controls/ACCT-9622/[0m
+
+  [1;33m*[0m Enable sysstat to collect accounting (no results) [ACCT-9626] 
+      [0;37mhttps://cisofy.com/controls/ACCT-9626/[0m
+
+  [1;33m*[0m Enable auditd to collect audit information [ACCT-9628] 
+      [0;37mhttps://cisofy.com/controls/ACCT-9628/[0m
+
+  [1;33m*[0m Run 'docker info' to see warnings applicable to Docker daemon [CONT-8104] 
+      [0;37mhttps://cisofy.com/controls/CONT-8104/[0m
+
+  [1;33m*[0m One or more sysctl values differ from the scan profile and could be tweaked [KRNL-6000] 
+    - Solution : Change sysctl value or disable test (skip-test=KRNL-6000:<sysctl-key>)
+      [0;37mhttps://cisofy.com/controls/KRNL-6000/[0m
+
+  [1;33m*[0m Harden compilers like restricting access to root user only [HRDN-7222] 
+      [0;37mhttps://cisofy.com/controls/HRDN-7222/[0m
+
+  [0;36mFollow-up[0m:
+  [1;37m----------------------------[0m
+  [1;37m-[0m Show details of a test (lynis show details TEST-ID)
+  [1;37m-[0m Check the logfile for all details (less /var/log/lynis.log)
+  [1;37m-[0m Read security controls texts (https://cisofy.com)
+  [1;37m-[0m Use --upload to upload data to central system (Lynis Enterprise users)
+
+================================================================================
+
+  [1;37mLynis security scan details[0m:
+
+  [0;36mHardening index[0m : [1;37m56[0m [[1;33m###########[0m         ]
+  [0;36mTests performed[0m : [1;37m240[0m
+  [0;36mPlugins enabled[0m : [1;37m1[0m
+
+  [1;37mComponents[0m:
+  - Firewall               [[1;32mV[0m]
+  - Malware scanner        [[1;32mV[0m]
+
+  [1;33mLynis Modules[0m:
+  - Compliance Status      [[1;33m?[0m]
+  - Security Audit         [[1;32mV[0m]
+  - Vulnerability Scan     [[1;32mV[0m]
+
+  [1;33mFiles[0m:
+  - Test and debug information      : [1;37m/var/log/lynis.log[0m
+  - Report data                     : [1;37m/var/log/lynis-report.dat[0m
+
+================================================================================
+  [1;33mNotice: [1;37mLynis update available[0m
+  Current version : [1;37m262[0m    Latest version : [1;37m305[0m
+================================================================================
+
+  [1;37mLynis[0m 2.6.2
+
+  Auditing, system hardening, and compliance for UNIX-based systems
+  (Linux, macOS, BSD, and others)
+
+  2007-2018, CISOfy - https://cisofy.com/lynis/
+  [1;37mEnterprise support available (compliance, plugins, interface and tools)[0m
+
+================================================================================
+
+  [0;44m[TIP][0m: [0;94mEnhance Lynis audits by adding your settings to custom.prf (see /etc/lynis/default.prf for all settings)[0m
+
