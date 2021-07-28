@@ -57,6 +57,8 @@ df -h > ~/backups/freedisk/free_disk.txt
     endscript
 }
 ```
+[auth.log.sh](https://github.com/Omolabake94/CyberSecurity_Bootcamp_HW/blob/main/HW_05/auth.log.sh)
+
 ### Bonus: Check for Policy and File Violations
 1. Command to verify auditd is active:
 * `sudo systemctl status auditd`
