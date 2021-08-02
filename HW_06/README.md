@@ -19,7 +19,7 @@
 ### Step 2: Smooth Sailing
 1. Edit the sshd_config file:
 
-[alt text](Proof_of_work.md/image2.png)
+![alt text](proof_of_work.md/image3.png)
 
 ### Step 3: Testing Your Configuration Update
 1. Restart the SSH service:
@@ -37,3 +37,6 @@
 2. Escalate your privileges to the root user. Use John to crack the entire /etc/shadow file:
 * `sudo su`
 * `john /etc/shadow`
+
+![alt text](proof_of_work.md/image6.png)
+
