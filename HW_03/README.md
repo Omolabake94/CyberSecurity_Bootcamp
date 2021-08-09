@@ -63,92 +63,8 @@ player that was playing during each of those times is Mylie Schmidt
 2. cat 0310_Dealer_schedule  0312_Dealer_schedule  0315_Dealer_schedule
 
 3. nano find_player_dealer.sh
-Shell for each day
-
-* #!/bin/bash
-* cd Player_Analysis
-* grep -i '0310_win_loss_player_data:05:00:00 AM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '05:00:00 AM'
-* cd ..
-* cd Player_Analysis
-* grep -i '0310_win_loss_player_data:08:00:00 AM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '08:00:00 AM'
-* cd ..
-* cd Player_Analysis
-* grep -i '0310_win_loss_player_data:02:00:00 PM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '02:00:00 PM'
-* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '02:00:00 PM' 
-* cd ..
-* cd Player_Analysis
-* grep -i '0310_win_loss_player_data:08:00:00 PM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '08:00:00 PM'
-* cd ..
-* cd Player_Analysis
-* grep -i '0310_win_loss_player_data:11:00:00 PM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '11:00:00 PM'
-* cd ..
-* cd Player_Analysis
-* grep -i '0312_win_loss_player_data:05:00:00 AM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '05:00:00 AM'
-* cd ..
-* cd Player_Analysis
-* grep -i '0312_win_loss_player_data:08:00:00 AM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 AM'
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 AM'
-* cd ..
->>>>>>> 851338b987b16e5b4589e35914266791e387c411:Terminal HW3/README.md
-* cd Player_Analysis
-* grep -i '0312_win_loss_player_data:02:00:00 PM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '02:00:00 PM'
-* cd ..
-* cd Player_Analysis
-* grep -i '0312_win_loss_player_data:08:00:00 PM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 PM'
-* cd ..
-* cd Player_Analysis
-* grep -i '0312_win_loss_player_data:11:00:00 PM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '11:00:00 PM'
-* cd ..
-* cd Player_Analysis
-* grep -i '0315_win_loss_player_data:05:00:00 AM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '05:00:00 AM'
-* cd ..
-* cd Player_Analysis
-* grep -i '0315_win_loss_player_data:08:00:00 AM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '08:00:00 AM'
-* cd ..
-* cd Player_Analysis
-* grep -i '0315_win_loss_player_data:02:00:00 PM' Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '02:00:00 PM'
-* chmod +x find_player_dealer.sh
+* Shell for each day
+[find_payer_dealer.sh](https://github.com/Omolabake94/CyberSecurity_Bootcamp_HW/blob/main/HW_03/Lucky_Duck_Investigations/Roulette_Loss_Investigation/find_player_dealer.sh)
 
 ![alt text](proof-of-work.md/image7.png)
 
@@ -195,12 +111,7 @@ Shell for each day
 
 ### 4 Scripting Your Tasks
 * nano roulette_dealer_finder_by_time.sh
-* #!/bin/bash
-* cd Player_Analysis
-* grep -i $1_win_loss_player_data:"$2" Roulette_Losses
-* cd ..
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, $5, $6}' $1_Dealer_schedule | grep -i "$3"
+[roulette_dealer_finder_by_time.sh](https://github.com/Omolabake94/CyberSecurity_Bootcamp_HW/blob/main/HW_03/Lucky_Duck_Investigations/Roulette_Loss_Investigation/roulette_dealer_finder_by_time.sh)
 * Run by sh roulette_dealer_finder_by_time.sh 0310 '08:00:00 PM' '08:00:00 PM'
 * Arguments $1 = 0312
 * $2 = '08:00:00 PM'
@@ -216,9 +127,7 @@ Result
 
 ### Bonus
 * nano roulette_dealer_finder_by_time_and_game.sh
-* !/bin/bash
-* cd Dealer_Analysis
-* awk -F" " '{print $1, $2, '$3', '$4'}' $1_Dealer_schedule | grep -i "$2"
+[roulette_dealer_finder_by_time_and_game.sh](https://github.com/Omolabake94/CyberSecurity_Bootcamp_HW/blob/main/HW_03/Lucky_Duck_Investigations/Roulette_Loss_Investigation/roulette_dealer_finder_by_time_and_game.sh)
 * Arguments $1 = 0312 Date
 * $2 = '08:00:00 PM' Time
 * $3 = '$3' Casino game being played first name 
