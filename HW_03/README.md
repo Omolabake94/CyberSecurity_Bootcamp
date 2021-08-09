@@ -12,7 +12,7 @@
 * cd Player_Dealer_Correlation
 * touch Notes_Player_Dealer_Correlation
 
-![alt text](Proof-of-work.md/image1.png)
+![alt text](proof-of-work.md/image1.png)
 
 ### Step 2: Gathering Evidence
 1. cd Lucky_Duck_Investigations 
@@ -20,12 +20,16 @@
 2. mv 0310_Dealer_schedule 0312_Dealer_schedule 0315_Dealer_schedule /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis
 * mv 0310_win_loss_player_data  0312_win_loss_player_data  0315_win_loss_player_data /03-student/Lucky_Duck_Investigations/Roulette_Loss_Investigation/Player_Analysis
 
+![alt text](proof-of-work.md/image2.png)
+
 ### Step 3: Correlating the Evidence
 #### Player Analysis
 1. cd Player_Analysis
 2. grep -i -$* *
 3. grep command isolate all of the losses that occurred on March 10, 12, and 15.
 * grep -i -$* * > Roulette_Losses
+
+![alt text](proof-of-work.md/image3.png)
 
 4. Loss count for each day
 * grep -i 0310* Roulette_Losses | wc -l > Note_Player_Analysis = 5
@@ -52,6 +56,8 @@ player that was playing during each of those times is Mylie Schmidt
 
 * grep -i 'mylie Schmidt' Roulette_Losses | wc -l >> Note_Player_Analysis = 13
 
+![alt text](proof-of-work.md/image4.png)
+
 #### Complete the dealer analysis
 1. cd Dealer_Analysis
 2. cat 0310_Dealer_schedule  0312_Dealer_schedule  0315_Dealer_schedule
@@ -76,11 +82,8 @@ Shell for each day
 * grep -i '0310_win_loss_player_data:02:00:00 PM' Roulette_Losses
 * cd ..
 * cd Dealer_Analysis
-<<<<<<< HEAD:HW_03/README.md
 * awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '02:00:00 PM'
-=======
 * awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -i '02:00:00 PM' 
->>>>>>> 851338b987b16e5b4589e35914266791e387c411:Terminal HW3/README.md
 * cd ..
 * cd Player_Analysis
 * grep -i '0310_win_loss_player_data:08:00:00 PM' Roulette_Losses
@@ -106,8 +109,6 @@ Shell for each day
 * cd Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 AM'
 * cd ..
-<<<<<<< HEAD:HW_03/README.md
-=======
 * cd Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule | grep -i '08:00:00 AM'
 * cd ..
@@ -148,6 +149,8 @@ Shell for each day
 * cd Dealer_Analysis
 * awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule | grep -i '02:00:00 PM'
 * chmod +x find_player_dealer.sh
+
+![alt text](proof-of-work.md/image7.png)
 
 #### 4. ./find_player_dealer.sh > Dealers_working_during_losses
 
@@ -203,9 +206,13 @@ Shell for each day
 * $2 = '08:00:00 PM'
 * $3 = '08:00:00 PM'
 
+![alt text](proof-of-work.md/image9.png)
+
 Result
 * 0312_win_loss_player_data:08:00:00 PM	-$65,792     Tallulah Rawlings,Josie Dawe, Mylie Schmidt,Hakim Stott, Esther Callaghan, Ciaron Villanueva	
 * 08:00:00 PM Billy Jones
+
+![alt text](proof-of-work.md/image10.png)
 
 ### Bonus
 * nano roulette_dealer_finder_by_time_and_game.sh
@@ -216,6 +223,9 @@ Result
 * $2 = '08:00:00 PM' Time
 * $3 = '$3' Casino game being played first name 
 * $4 = '$4' Casino game being played last name
+
+![alt text](proof-of-work.md/image11.png)
+
 * To view the dealer for Blackjack on March 10 at 8:00 a.m.
 * run: sh roulette_dealer_finder_by_time_and_game.sh 0310 '08:00:00 AM' '$3' '$4'
 * result: 08:00:00 AM Rahima Figueroa
@@ -225,3 +235,5 @@ Result
 * To view the dealer for Texas Hold 'Em on March 10 at 8:00 a.m.
 * run : sh roulette_dealer_finder_by_time_and_game.sh 0310 '08:00:00 AM' '$7' '$8'
 * result: 08:00:00 AM Madina Britton
+
+![alt text](proof-of-work.md/image12.png)
