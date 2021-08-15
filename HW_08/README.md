@@ -17,8 +17,7 @@
 ## Phase 2
 - Command to run SYN SCAN
 - `sudo nmap -sS 167.172.144.11`
-- Determine which ports are accepting connections
-- 22/tcp   open   ssh
+- Determine which ports are accepting connections: 22/tcp   open   ssh 
 
 ### Summary of findings
 - All ports are supposed to be closed but ssh port is open which is a vulnerability
