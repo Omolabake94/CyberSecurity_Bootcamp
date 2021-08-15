@@ -3,12 +3,12 @@
 * To determine IP address for the Hollywood office run:
 * Install gnumeric to decrypt the .xlsx file
 - `sudo apt install gnumeric -y`
-
+![alt text](week_8_proof_of_work/image1.png)
 * Then run 
 - `ssconvert Rockstarserverlist.xlsx Rockstarserverlist.csv`
-
+![alt text](week_8_proof_of_work/image2.png)
 - Summary file that lists out the fping command used as well as a summary of the results.
-
+[Summary File]()
 ### Summary of findings
 - IP 167.172.144.11 is alive and responding. this is a vulnerability because RockStar Corp doesn't want to respond to any requests
 - It's recommended to use ICMP echo requests against IP 167.172.144.11 to prevent response from pings
