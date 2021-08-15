@@ -1,0 +1,70 @@
+Phase 1
+fping -g 15.199.95.91/28
+15.199.95.81 is unreachable
+15.199.95.82 is unreachable
+15.199.95.83 is unreachable
+15.199.95.84 is unreachable
+15.199.95.85 is unreachable
+15.199.95.86 is unreachable
+15.199.95.87 is unreachable
+15.199.95.88 is unreachable
+15.199.95.89 is unreachable
+15.199.95.90 is unreachable
+15.199.95.91 is unreachable
+15.199.95.92 is unreachable
+15.199.95.93 is unreachable
+15.199.95.94 is unreachable
+ 
+fping -g 15.199.94.91/28
+15.199.94.81 is unreachable
+15.199.94.82 is unreachable
+15.199.94.83 is unreachable
+15.199.94.84 is unreachable
+15.199.94.85 is unreachable
+15.199.94.86 is unreachable
+15.199.94.87 is unreachable
+15.199.94.88 is unreachable
+15.199.94.89 is unreachable
+15.199.94.90 is unreachable
+15.199.94.91 is unreachable
+15.199.94.92 is unreachable
+15.199.94.93 is unreachable
+15.199.94.94 is unreachable
+ 
+fping -g 11.199.158.91/28
+11.199.158.81 is unreachable
+11.199.158.82 is unreachable
+11.199.158.83 is unreachable
+11.199.158.84 is unreachable
+11.199.158.85 is unreachable
+11.199.158.86 is unreachable
+11.199.158.87 is unreachable
+11.199.158.88 is unreachable
+11.199.158.89 is unreachable
+11.199.158.90 is unreachable
+11.199.158.91 is unreachable
+11.199.158.92 is unreachable
+11.199.158.93 is unreachable
+11.199.158.94 is unreachable
+ 
+fping -g 167.172.144.11/32
+167.172.144.11 is alive
+ 
+fping -g 11.199.141.91/28
+11.199.141.81 is unreachable
+11.199.141.82 is unreachable
+11.199.141.83 is unreachable
+11.199.141.84 is unreachable
+11.199.141.85 is unreachable
+11.199.141.86 is unreachable
+11.199.141.87 is unreachable
+11.199.141.88 is unreachable
+11.199.141.89 is unreachable
+11.199.141.90 is unreachable
+11.199.141.91 is unreachable
+11.199.141.92 is unreachable
+11.199.141.93 is unreachable
+11.199.141.94 is unreachable
+ 
+Findings were found at Network layer because IP addresses are used on Network layer 
+

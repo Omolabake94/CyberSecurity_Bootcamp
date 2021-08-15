@@ -1,0 +1,10 @@
+Starting Nmap 7.60 ( https://nmap.org ) at 2021-08-14 17:36 EDT
+Nmap scan report for 167.172.144.11
+Host is up (0.0032s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 1 IP address (1 host up) scanned in 18.28 seconds
+
+The OSI layer is Session because 
