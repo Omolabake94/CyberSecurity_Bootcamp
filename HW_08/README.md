@@ -1,4 +1,4 @@
-cd c# Networking Fundamentals Homework: Rocking your Network
+# Networking Fundamentals Homework: Rocking your Network
 ## Phase 1
 * To determine IP address for the Hollywood office run:
 * Install gnumeric to decrypt the .xlsx file
