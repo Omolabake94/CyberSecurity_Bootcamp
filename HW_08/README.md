@@ -59,6 +59,6 @@
 - `http.request.method == "POST"`
 ![alt text](week_8_proof_of_work/image11.png)
 ### Summary 
-- Based on the message sent to Blue corp by the hacker 
-- Recommentdation
+- Based on the message sent to Blue corp by the hacker. he is about to sell rockstarcorp.com's user name and password to Blues corp
+- 
 - OSI layer is Application
