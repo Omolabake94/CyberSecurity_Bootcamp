@@ -59,6 +59,6 @@
 - `http.request.method == "POST"`
 ![alt text](week_8_proof_of_work/image11.png)
 ### Summary 
-- Based on the message sent to Blue corp by the hacker. he is about to sell rockstarcorp.com's user name and password to Blues corp
+- Based on the message sent to Blue corp by the hacker. he is about to sell rockstarcorp.com's user name and password to Blues corp and also inform them about the vulnerable port available to get access
 - Recommendations includes changing ssh port number which will help stare hacker in a wrong direction. Root login should be disabled. Use of TCP Wrappers offer a host-based ACL protection that will allow sort out and filter who is able to access the SSH server. Disable empty passwords access
 - OSI layer is Application
