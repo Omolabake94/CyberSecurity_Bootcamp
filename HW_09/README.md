@@ -68,3 +68,20 @@ Authoritative answers can be found from:
 ## Mission 5
 * The OSPF shortest path from Batuu to Jedha, this path does not include planet N
 * #### Batuu > D > G > O > R > Q > T > V > Jedha
+
+## Mission 6
+* Command to find out the Dark Side's secret wireless key: `aircrack-ng -w /usr/share/wordlists/rockyou.txt Darkside.pcap`
+
+* Key to decrypt the wireless traffic: `dictionary:linksys`
+
+* Host IP Addresses and MAC Addresses by looking at the decrypted ARP traffic.
+
+* Host IP Addresses and MAC Addresses: 172.16.0.101 (00:13:ce:55:98:ef) and 172.16.0.1 (00:0f:66:e3:e4:01)
+
+
+## Mission 7
+* Command to view DNS record from Mission #4: `nslookup -type=txt princessleia.site`
+
+* Resistance hidden message:
+
+*
