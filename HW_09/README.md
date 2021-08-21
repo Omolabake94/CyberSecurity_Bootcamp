@@ -66,3 +66,5 @@ princessleia.site	nameserver = ns2.galaxybackup.com.
 Authoritative answers can be found from:
 ```
 ## Mission 5
+* The OSPF shortest path from Batuu to Jedha, this path does not include planet N
+* #### Batuu > D > G > O > R > Q > T > V > Jedha
