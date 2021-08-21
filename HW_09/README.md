@@ -19,7 +19,7 @@ Authoritative answers can be found from:
 ```
 
 ## Mission 2
-* Command to determine the SPF for theforce.net `nslookup -type=txt theforce.net`
+* Command to determine the SPF for theforce.net: `nslookup -type=txt theforce.net`
 
 * The Force's emails are going to spam because the new ip address has not been updated on the DNS record
 * Corrected DNS record should be
@@ -28,9 +28,41 @@ Server:		8.8.8.8
 Address:	8.8.8.8#53
 
 Non-authoritative answer:
-theforce.net	text = "v=spf1 a mx mx:smtp.secureserver.net include:aspmx.googlemail.com ip4:104.156.250.80 ip4:45.63.15.159 ip4:45.63.4.215 ip4:45.23.176.21"
+theforce.net	text = "v=spf1 a mx mx:smtp.secureserver.net include:aspmx.googlemail.com ip4:45.23.176.21 ip4:104.156.250.80 ip4:45.63.15.159 ip4:45.63.4.215"
 theforce.net	text = "google-site-verification=XTU_We07Cux-6WCSOItl0c_WS29hzo92jPE341ckbOQ"
 theforce.net	text = "google-site-verification=ycgY7mtk2oUZMagcffhFL_Qaf8Lc9tMRkZZSuig0d6w"
 
 Authoritative answers can be found from:
 ```
+
+## Mission 3
+* Command to determine how a CNAME should look: `nslookup -type=cname www.theforce.net`
+
+* The sub page of resistance.theforce.net isn't redirecting to theforce.net because the DNS record does not show the the CNAME is set to resistance.theforce.net
+* Corrected DNS record should be
+```
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+www.theforce.net	canonical name = resistance.theforce.net.
+
+Authoritative answers can be found from:
+```
+
+## Mission 4
+* Command to confirm the DNS records: `nslookup -type=ns princessleia.site`
+
+* Document how you would fix the DNS record to prevent this issue from happening again.
+```
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+princessleia.site	nameserver = ns25.domaincontrol.com.
+princessleia.site	nameserver = ns26.domaincontrol.com.
+princessleia.site	nameserver = ns2.galaxybackup.com.
+
+Authoritative answers can be found from:
+```
+## Mission 5
