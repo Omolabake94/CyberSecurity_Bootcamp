@@ -1,7 +1,7 @@
 # Networks Fundamentals II Homework: In a Network Far, Far Away!
 ## Mission 1
 * Command to determine the mail servers for starwars.com: `nslookup -type=mx starwars.com`
-![alt text](proof_of_work/image1.png)
+![alt text](Proof_of_work.md/image1.png)
 * Resistance isn't receiving any emails because the DNS record has not been updated to the new mail servers
 * Corrected DNS record should be:
 ```
@@ -20,7 +20,7 @@ Authoritative answers can be found from:
 
 ## Mission 2
 * Command to determine the SPF for theforce.net: `nslookup -type=txt theforce.net`
-
+![alt text](Proof_of_work.md/image2.png)
 * The Force's emails are going to spam because the new ip address has not been updated on the DNS record
 * Corrected DNS record should be
 ```
@@ -37,7 +37,7 @@ Authoritative answers can be found from:
 
 ## Mission 3
 * Command to determine how a CNAME should look: `nslookup -type=cname www.theforce.net`
-
+![alt text](Proof_of_work.md/image3.png)
 * The sub page of resistance.theforce.net isn't redirecting to theforce.net because the DNS record does not show the the CNAME is set to resistance.theforce.net
 * Corrected DNS record should be
 ```
@@ -52,7 +52,7 @@ Authoritative answers can be found from:
 
 ## Mission 4
 * Command to confirm the DNS records: `nslookup -type=ns princessleia.site`
-
+![alt text](Proof_of_work.md/image4.png)
 * Document how you would fix the DNS record to prevent this issue from happening again.
 ```
 Server:		8.8.8.8
@@ -71,17 +71,19 @@ Authoritative answers can be found from:
 
 ## Mission 6
 * Command to find out the Dark Side's secret wireless key: `aircrack-ng -w /usr/share/wordlists/rockyou.txt Darkside.pcap`
-
+![alt text](Proof_of_work.md/image5.png)
+![alt text](Proof_of_work.md/image6.png)
 * Key to decrypt the wireless traffic: `dictionary:linksys`
-
+![alt text](Proof_of_work.md/image7.png)
 * Host IP Addresses and MAC Addresses by looking at the decrypted ARP traffic.
-
-* Host IP Addresses and MAC Addresses: 172.16.0.101 (00:13:ce:55:98:ef) and 172.16.0.1 (00:0f:66:e3:e4:01)
-
+![alt text](Proof_of_work.md/image8.png)
+* Host IP Addresses and MAC Addresses: 172.16.0.101 and (00:13:ce:55:98:ef) and 172.16.0.1 (00:0f:66:e3:e4:01)
+![alt text](Proof_of_work.md/image9.png)
 
 ## Mission 7
 * Command to view DNS record from Mission #4: `nslookup -type=txt princessleia.site`
-
+![alt text](Proof_of_work.md/image10.png)
 * Resistance hidden message:
-
-*
+![alt text](Proof_of_work.md/image10.png)
+* Screen shot of the results
+![alt text](Proof_of_work.md/image11.png)
