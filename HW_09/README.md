@@ -1,7 +1,7 @@
 # Networks Fundamentals II Homework: In a Network Far, Far Away!
 ## Mission 1
 * Command to determine the mail servers for starwars.com: `nslookup -type=mx starwars.com`
-
+![alt text](proof_of_work/image1.png)
 * Resistance isn't receiving any emails because the DNS record has not been updated to the new mail servers
 * Corrected DNS record should be:
 ```
