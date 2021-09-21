@@ -93,30 +93,20 @@ Run the commands that sets your eth interfaces to your zones.
 ## Add services to the active zones:
 Run the commands that add services to the public zone, the web zone, the sales zone, and the mail zone.
 - Public:
-* `$ <ADD COMMAND HERE>
-* `$ <ADD COMMAND HERE>
-* `$ <ADD COMMAND HERE>
-* `$ <ADD COMMAND HERE>
+* `$ sudo firewall-cmd --zone=public --add-service=http`
+* `$ sudo firewall-cmd --zone=public --add-service=https`
+* `$ sudo firewall-cmd --zone=public --add-service=pop3`
+* `$ sudo firewall-cmd --zone=public --add-service=smtp`
 - Web:
-* `$ <ADD COMMAND HERE>
-
-
+* `$ sudo firewall-cmd --zone=web --add-service=http`
 - Sales
-* `$ <ADD COMMAND HERE>
-
-
+* `$ sudo firewall-cmd --zone=sales --add-service=https`
 - Mail
-* `$ <ADD COMMAND HERE>
-* `$ <ADD COMMAND HERE>
+* `$ sudo firewall-cmd --zone=mail --add-service=pop3`
+* `$ sudo firewall-cmd --zone=mail --add-service=smtp`
+## What is the status of http, https, smtp and pop3?
 
-
-What is the status of http, https, smtp and pop3?
-
-
-
-Add your adversaries to the Drop Zone.
-
-
+## Add your adversaries to the Drop Zone.
 Run the command that will add all current and any future blacklisted IPs to the Drop Zone.
 $ <ADD COMMAND HERE>
 $ <ADD COMMAND HERE>
