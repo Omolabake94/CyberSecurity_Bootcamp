@@ -19,10 +19,10 @@ Name each of the seven stages for the Cyber Kill chain and provide a brief examp
 * Stage 1-RECONNAISSANCE: This is the step an attacker selects a target, depending on the motive(s) of the attacker and also gathering as much infomation as possible on an individual or organization in preparation for the attack
 * Stage 2-WEAPONIZATION: attackers will re-engineer some core malware to suit their purposes using sophisticated techniques. This process often involves embedding specially crafted malware into an otherwise benign or legitimate document, such as a press release or contract document, or hosting the malware on a compromised domain
 * Stage 3-DELIVERY: Attackers will then determine which methods to use in order to deliver malicious payloads. Some of the methods they might utilize are automated tools, such as exploit kits, spear phishing attacks with malicious links, or attachments and malvertizing
-* Stage 4-EXPLOITATION:
-* Stage 5:
-* Stage 6:
-* Stage 7:
+* Stage 4-EXPLOITATION: At this stage, attackers deploy an exploit against a vulnerable application or system so a to gaining remote access and compromise the user's machine
+* Stage 5-INSTALLATION: Once attackers have established an initial foothold, they will install malware in order to conduct further operations, such as maintaining access, persistence and escalating privileges
+* Stage 6-COMMAND AND CONTROL: Attackers will establish a command channel in order to communicate and pass data back and forth between the infected devices and their own infrastructure. They can now actively control the system, instructing the next stages of attack.
+* Stage 7-Actions on the Objective: Now that the adversaries have control, persistence and ongoing communication, they will act upon their motivations in order to achieve their goal. This could be data exfiltration, destruction of critical infrastructure, to deface web property, or to create fear or the means for extortion.
 
 ## Snort Rule Analysis
 Use the Snort rule to answer the following questions:
