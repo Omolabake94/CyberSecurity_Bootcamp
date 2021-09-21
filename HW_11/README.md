@@ -53,78 +53,37 @@ Your turn! Write a Snort rule that alerts when traffic is detected inbound on po
 * Answer: `alert tcp $EXTERNAL_NET 4444 -> $HOME_NET any (msg:"ET Possible Trojan, Prosiak, Oracle or Crackdown")`
 
 # Part 2: "Drop Zone" Lab
-
-Uninstall ufw
-
+## Uninstall ufw
 Before getting started, you should verify that you do not have any instances of ufw running. This will avoid conflicts with your firewalld service. This also ensures that firewalld will be your default firewall.
-
-
-Run the command that removes any running instance of ufw.
-$ <ADD COMMAND HERE>
-
-
-
-Enable and start firewalld
-
+* Run the command that removes any running instance of ufw.
+* `$ sudo apt -y remove ufw`
+## Enable and start firewalld
 By default, these service should be running. If not, then run the following commands:
-
-
 Run the commands that enable and start firewalld upon boots and reboots.
-$ <ADD COMMAND TO enable firewalld HERE>
-$ <ADD COMMAND TO  start firewalld HERE>
+* `$ sudo systemctl enable firewalld`
+* `$ sudo systemctl start firewalld`
 Note: This will ensure that firewalld remains active after each reboot.
-
-
-
-Confirm that the service is running.
-
-
+## Confirm that the service is running.
 Run the command that checks whether or not the firewalld service is up and running.
-$ <ADD COMMAND HERE>
-
-
-
-List all firewall rules currently configured.
+* $ sudo firewall-cmd --state
+## List all firewall rules currently configured.
 Next, lists all currently configured firewall rules. This will give you a good idea of what's currently configured and save you time in the long run by not doing double work.
-
-
-Run the command that lists all currently configured firewall rules:
-$ <ADD COMMAND HERE>
-
-
+* Run the command that lists all currently configured firewall rules:
+* `$ sudo firewall-cmd --list-all`
 Take note of what Zones and settings are configured. You many need to remove unneeded services and settings.
-
-
-
-List all supported service types that can be enabled.
-
-
+## List all supported service types that can be enabled.
 Run the command that lists all currently supported services to see if the service you need is available
-$ <ADD COMMAND HERE>
-
-
+* `$ sudo firewalld-cmd --get-services`
 We can see that the Home and Drop Zones are created by default.
-
-
-
-Zone Views
-
-
+## Zone Views
 Run the command that lists all currently configured zones.
-$ <ADD COMMAND HERE>
-
-
+* `$ sudo firewall-cmd --lit-all-zones`
 We can see that the Public and Drop Zones are created by default. Therefore, we will need to create Zones for Web, Sales, and Mail.
-
-
-
-Create Zones for Web, Sales and Mail.
-
-
+## Create Zones for Web, Sales and Mail.
 Run the commands that creates Web, Sales and Mail zones.
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
+* `$ <ADD COMMAND HERE>
+* `$ <ADD COMMAND HERE>
+* `$ <ADD COMMAND HERE>
 
 
 
