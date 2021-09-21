@@ -16,24 +16,12 @@ Answer: Indicator of attack shows that an attack is ongoing on a system while in
 
 ## The Cyber Kill Chain
 Name each of the seven stages for the Cyber Kill chain and provide a brief example of each.
-* Stage 1:
-
-
-* Stage 2:
-
-
-* Stage 3:
-
-
-* Stage 4:
-
-
+* Stage 1-RECONNAISSANCE: This is the step an attacker selects a target, depending on the motive(s) of the attacker and also gathering as much infomation as possible on an individual or organization in preparation for the attack
+* Stage 2-WEAPONIZATION: attackers will re-engineer some core malware to suit their purposes using sophisticated techniques. This process often involves embedding specially crafted malware into an otherwise benign or legitimate document, such as a press release or contract document, or hosting the malware on a compromised domain
+* Stage 3-DELIVERY: Attackers will then determine which methods to use in order to deliver malicious payloads. Some of the methods they might utilize are automated tools, such as exploit kits, spear phishing attacks with malicious links, or attachments and malvertizing
+* Stage 4-EXPLOITATION:
 * Stage 5:
-
-
 * Stage 6:
-
-
 * Stage 7:
 
 ## Snort Rule Analysis
