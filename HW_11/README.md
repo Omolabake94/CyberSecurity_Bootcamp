@@ -111,7 +111,7 @@ Run the command that will add all current and any future blacklisted IPs to the 
 - `$ sudo firewall-cmd --permanent --zone=drop --add-source=10.208.56.23`
 - `$ sudo firewall-cmd --permanent --zone=drop --add-source=135.95.103.76`
 - `$ sudo firewall-cmd --permanent --zone=drop --add-source=76.34.169.118`
-- Make rules permanent then reload them:
+## Make rules permanent then reload them:
 - It's good practice to ensure that your firewalld installation remains nailed up and retains its services across reboots. This ensure that the network remains secured after unplanned outages such as power failures.
 - Run the command that reloads the firewalld configurations and writes it to memory
 - `$ sudo firewall-cmd --reload`
@@ -125,7 +125,7 @@ Use a rich-rule that blocks the IP address 138.138.0.3.
 ## Block Ping/ICMP Requests
 Harden your network against ping scans by blocking icmp ehco replies.
 - Run the command that blocks pings and icmp requests in your public zone.
-- `$ sudo firewall-cmd --zone=public --add-icmp-block=echo-reply --add-icmp-block=echo-request
+- `$ sudo firewall-cmd --zone=public --add-icmp-block=echo-reply --add-icmp-block=echo-request`
 ## Rule Check
 Now that you've set up your brand new firewalld installation, it's time to verify that all of the settings have taken effect.
 - Run the command that lists all  of the rule settings. Do one command at a time for each zone.
