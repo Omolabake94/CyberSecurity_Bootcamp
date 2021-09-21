@@ -93,42 +93,32 @@ Run the commands that sets your eth interfaces to your zones.
 ## Add services to the active zones:
 Run the commands that add services to the public zone, the web zone, the sales zone, and the mail zone.
 - Public:
-* `$ sudo firewall-cmd --zone=public --add-service=http`
-* `$ sudo firewall-cmd --zone=public --add-service=https`
-* `$ sudo firewall-cmd --zone=public --add-service=pop3`
+* `$ sudo firewall-cmd --permanent --zone=public --add-service=http`
+* `$ sudo firewall-cmd --permanent --zone=public --add-service=https`
+* `$ sudo firewall-cmd --permanent --zone=public --add-service=pop3`
 * `$ sudo firewall-cmd --zone=public --add-service=smtp`
 - Web:
-* `$ sudo firewall-cmd --zone=web --add-service=http`
+* `$ sudo firewall-cmd --permanent --zone=web --add-service=http`
 - Sales
-* `$ sudo firewall-cmd --zone=sales --add-service=https`
+* `$ sudo firewall-cmd --permanent --zone=sales --add-service=https`
 - Mail
-* `$ sudo firewall-cmd --zone=mail --add-service=pop3`
-* `$ sudo firewall-cmd --zone=mail --add-service=smtp`
+* `$ sudo firewall-cmd --permanent --zone=mail --add-service=pop3`
+* `$ sudo firewall-cmd --permanent --zone=mail --add-service=smtp`
 ## What is the status of http, https, smtp and pop3?
 
 ## Add your adversaries to the Drop Zone.
 Run the command that will add all current and any future blacklisted IPs to the Drop Zone.
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-
-
-
-Make rules permanent then reload them:
-It's good practice to ensure that your firewalld installation remains nailed up and retains its services across reboots. This ensure that the network remains secured after unplanned outages such as power failures.
-
-
-Run the command that reloads the firewalld configurations and writes it to memory
-$ <ADD COMMAND HERE>
-
-
-
-View active Zones
+- `$ sudo firewall-cmd --permanent --zone=drop --add-source=10.208.56.23`
+- `$ sudo firewall-cmd --permanent --zone=drop --add-source=135.95.103.76`
+- `$ sudo firewall-cmd --permanent --zone=drop --add-source=76.34.169.118`
+- Make rules permanent then reload them:
+- It's good practice to ensure that your firewalld installation remains nailed up and retains its services across reboots. This ensure that the network remains secured after unplanned outages such as power failures.
+- Run the command that reloads the firewalld configurations and writes it to memory
+- `$ sudo firewall-cmd --reload`
+## View active Zones
 Now, we'll want to provide truncated listings of all currently active zones. This a good time to verify your zone settings.
-
-
-Run the command that displays all zone services.
-$ <ADD COMMAND HERE>
+- Run the command that displays all zone services.
+- `$ sudo firewall-cmd --get-active-zones` 
 
 
 
