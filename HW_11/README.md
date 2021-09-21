@@ -69,7 +69,7 @@ Run the command that checks whether or not the firewalld service is up and runni
 ## List all firewall rules currently configured.
 Next, lists all currently configured firewall rules. This will give you a good idea of what's currently configured and save you time in the long run by not doing double work.
 * Run the command that lists all currently configured firewall rules:
-* `$ sudo firewall-cmd --get-active-zones`
+* `$ sudo firewall-cmd --list-all`
 Take note of what Zones and settings are configured. You many need to remove unneeded services and settings.
 ## List all supported service types that can be enabled.
 Run the command that lists all currently supported services to see if the service you need is available
@@ -77,7 +77,7 @@ Run the command that lists all currently supported services to see if the servic
 We can see that the Home and Drop Zones are created by default.
 ## Zone Views
 Run the command that lists all currently configured zones.
-* `$ sudo firewall-cmd --lit-all-zones`
+* `$ sudo firewall-cmd --list-all-zones`
 We can see that the Public and Drop Zones are created by default. Therefore, we will need to create Zones for Web, Sales, and Mail.
 ## Create Zones for Web, Sales and Mail.
 Run the commands that creates Web, Sales and Mail zones.
@@ -86,37 +86,28 @@ Run the commands that creates Web, Sales and Mail zones.
 * `$ sudo firewall-cmd --permanent --new-zone=sales`
 ## Set the zones to their designated interfaces:
 Run the commands that sets your eth interfaces to your zones.
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-
-
-
-Add services to the active zones:
-
-
+* `$ sudo firewall-cmd --zone=public --change-interface=eth0`
+* `$ sudo firewall-cmd --zone=web --change-interface=eth1`
+* `$ sudo firewall-cmd --zone=sales --change-interface=eth2`
+* `$ sudo firewall-cmd --zone=mail --change-interface=eth3`
+## Add services to the active zones:
 Run the commands that add services to the public zone, the web zone, the sales zone, and the mail zone.
+- Public:
+* `$ <ADD COMMAND HERE>
+* `$ <ADD COMMAND HERE>
+* `$ <ADD COMMAND HERE>
+* `$ <ADD COMMAND HERE>
+- Web:
+* `$ <ADD COMMAND HERE>
 
 
-Public:
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
+- Sales
+* `$ <ADD COMMAND HERE>
 
 
-Web:
-$ <ADD COMMAND HERE>
-
-
-Sales
-$ <ADD COMMAND HERE>
-
-
-Mail
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
+- Mail
+* `$ <ADD COMMAND HERE>
+* `$ <ADD COMMAND HERE>
 
 
 What is the status of http, https, smtp and pop3?
