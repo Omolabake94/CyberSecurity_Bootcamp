@@ -62,23 +62,23 @@ By default, these service should be running. If not, then run the following comm
 Run the commands that enable and start firewalld upon boots and reboots.
 * `$ sudo systemctl enable firewalld`
 * `$ sudo systemctl start firewalld`
-Note: This will ensure that firewalld remains active after each reboot.
+- Note: This will ensure that firewalld remains active after each reboot.
 ## Confirm that the service is running.
 Run the command that checks whether or not the firewalld service is up and running.
-* $ sudo firewall-cmd --state
+* `$ sudo firewall-cmd --state`
 ## List all firewall rules currently configured.
 Next, lists all currently configured firewall rules. This will give you a good idea of what's currently configured and save you time in the long run by not doing double work.
 * Run the command that lists all currently configured firewall rules:
 * `$ sudo firewall-cmd --list-all`
-Take note of what Zones and settings are configured. You many need to remove unneeded services and settings.
+- Take note of what Zones and settings are configured. You many need to remove unneeded services and settings.
 ## List all supported service types that can be enabled.
 Run the command that lists all currently supported services to see if the service you need is available
 * `$ sudo firewalld-cmd --get-services`
-We can see that the Home and Drop Zones are created by default.
+- We can see that the Home and Drop Zones are created by default.
 ## Zone Views
 Run the command that lists all currently configured zones.
 * `$ sudo firewall-cmd --list-all-zones`
-We can see that the Public and Drop Zones are created by default. Therefore, we will need to create Zones for Web, Sales, and Mail.
+- We can see that the Public and Drop Zones are created by default. Therefore, we will need to create Zones for Web, Sales, and Mail.
 ## Create Zones for Web, Sales and Mail.
 Run the commands that creates Web, Sales and Mail zones.
 * `$ sudo firewall-cmd --permanent --new-zone=web`
