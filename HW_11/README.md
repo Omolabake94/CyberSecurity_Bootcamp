@@ -2,17 +2,17 @@
 ## Security Control Types
 The concept of defense in depth can be broken down into three different security control types. Identify the security control type of each set  of defense tactics.
 1) Walls, bollards, fences, guard dogs, cameras, and lighting are what type of security control?
-Answer: Preventive control
+* Answer: Physical control
 2) Security awareness programs, BYOD policies, and ethical hiring practices are what type of security control?
-Answer: Administrative control
+* Answer: Administrative control
 3) Encryption, biometric fingerprint readers, firewalls, endpoint security, and intrusion detection systems are what type of security control?
-Answer: Technical control
+* Answer: Technical control
 
 ## Intrusion Detection and Attack indicators
 1) What's the difference between an IDS and an IPS?
-Answer: Intrution Detection Systems analyze and monitor network traffic for signatures that match known cyberattacks, these tools do not take action on there own while Intrution Prevention system analyze, monitor. accepts or rejects network traffic based on ruleset. These tools can take action on their own.
+* Answer: `Intrution Detection Systems` analyze and monitor network traffic for signatures that match known cyberattacks, these tools do not take action on there own while `Intrution Prevention system` analyze, monitor. accepts or rejects network traffic based on ruleset. These tools can take action on their own.
 2) What's the difference between an Indicator of Attack and an Indicator of Compromise?
-Answer: Indicator of attack shows that an attack is ongoing on a system while indicator of compromise shows the details after an attack has been done. The information acquired can be used to mitigate future possible threats
+* Answer: `Indicator of Attack` shows that an attack is ongoing on a system. it detects the intent of what an attacker is trying to accomplish  while `Indicator of Compromise` indicates that the security of the network has been breached. It shows the details after an attack has been done. The information acquired can be used to mitigate future possible threats
 
 ## The Cyber Kill Chain
 Name each of the seven stages for the Cyber Kill chain and provide a brief example of each.
@@ -30,35 +30,203 @@ Use the Snort rule to answer the following questions:
 ```
 alert tcp $EXTERNAL_NET any -> $HOME_NET 5800:5820 (msg:"ET SCAN Potential VNC Scan 5800-5820"; flags:S,12; threshold: type both, track by_src, count 5, seconds 60; reference:url,doc.emergingthreats.net/2002910; classtype:attempted-recon; sid:2002910; rev:5; metadata:created_at 2010_07_30, updated_at 2010_07_30;)
 ```
-Break down the Sort Rule header and explain what is happening.
-Answer:
-
-
-What stage of the Cyber Kill Chain does this alert violate?
-Answer:
-
-
-What kind of attack is indicated?
-Answer:
+1) Break down the Sort Rule header and explain what is happening.
+* Answer: This type of response is an alert, the protocol is tcp. traffic coming from external network from any port going to home network on port 5800-5820
+2) What stage of the Cyber Kill Chain does this alert violate?
+* Answer: Reconnaissance
+3) What kind of attack is indicated?
+* Answer: Potential VNC Scan
 
 #### Snort Rule #2
 ```
 alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET POLICY PE EXE or DLL Windows file download HTTP"; flow:established,to_client; flowbits:isnotset,ET.http.binary; flowbits:isnotset,ET.INFO.WindowsUpdate; file_data; content:"MZ"; within:2; byte_jump:4,58,relative,little; content:"PE|00 00|"; distance:-64; within:4; flowbits:set,ET.http.binary; metadata: former_category POLICY; reference:url,doc.emergingthreats.net/bin/view/Main/2018959; classtype:policy-violation; sid:2018959; rev:4; metadata:created_at 2014_08_19, updated_at 2017_02_01;)
 ```
-Break down the Sort Rule header and explain what is happening.
-Answer:
+1) Break down the Sort Rule header and explain what is happening.
+* Answer: This type of response is an alert, the protocol is tcp. traffic coming from external network from http port or port 80 going to home network on any port
+2) What layer of the Defense in Depth model does this alert violate?
+* Answer: Administrative: policy-violation
+3) What kind of attack is indicated?
+* Answer: PE EXE or DLL Windows file download HTTP
 
-
-What layer of the Defense in Depth model does this alert violate?
-Answer:
-
-
-What kind of attack is indicated?
-Answer:
-
-
-Snort Rule #3
-
-
+#### Snort Rule #3
 Your turn! Write a Snort rule that alerts when traffic is detected inbound on port 4444 to the local network on any port. Be sure to include the msg in the Rule Option.
-Answer:
+* Answer: `alert tcp $EXTERNAL_NET 4444 -> $HOME_NET any (msg:"ET Possible Trojan, Prosiak, Oracle or Crackdown")`
+
+# Part 2: "Drop Zone" Lab
+
+Uninstall ufw
+
+Before getting started, you should verify that you do not have any instances of ufw running. This will avoid conflicts with your firewalld service. This also ensures that firewalld will be your default firewall.
+
+
+Run the command that removes any running instance of ufw.
+$ <ADD COMMAND HERE>
+
+
+
+Enable and start firewalld
+
+By default, these service should be running. If not, then run the following commands:
+
+
+Run the commands that enable and start firewalld upon boots and reboots.
+$ <ADD COMMAND TO enable firewalld HERE>
+$ <ADD COMMAND TO  start firewalld HERE>
+Note: This will ensure that firewalld remains active after each reboot.
+
+
+
+Confirm that the service is running.
+
+
+Run the command that checks whether or not the firewalld service is up and running.
+$ <ADD COMMAND HERE>
+
+
+
+List all firewall rules currently configured.
+Next, lists all currently configured firewall rules. This will give you a good idea of what's currently configured and save you time in the long run by not doing double work.
+
+
+Run the command that lists all currently configured firewall rules:
+$ <ADD COMMAND HERE>
+
+
+Take note of what Zones and settings are configured. You many need to remove unneeded services and settings.
+
+
+
+List all supported service types that can be enabled.
+
+
+Run the command that lists all currently supported services to see if the service you need is available
+$ <ADD COMMAND HERE>
+
+
+We can see that the Home and Drop Zones are created by default.
+
+
+
+Zone Views
+
+
+Run the command that lists all currently configured zones.
+$ <ADD COMMAND HERE>
+
+
+We can see that the Public and Drop Zones are created by default. Therefore, we will need to create Zones for Web, Sales, and Mail.
+
+
+
+Create Zones for Web, Sales and Mail.
+
+
+Run the commands that creates Web, Sales and Mail zones.
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+
+
+
+Set the zones to their designated interfaces:
+
+
+Run the commands that sets your eth interfaces to your zones.
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+
+
+
+Add services to the active zones:
+
+
+Run the commands that add services to the public zone, the web zone, the sales zone, and the mail zone.
+
+
+Public:
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+
+
+Web:
+$ <ADD COMMAND HERE>
+
+
+Sales
+$ <ADD COMMAND HERE>
+
+
+Mail
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+
+
+What is the status of http, https, smtp and pop3?
+
+
+
+Add your adversaries to the Drop Zone.
+
+
+Run the command that will add all current and any future blacklisted IPs to the Drop Zone.
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+
+
+
+Make rules permanent then reload them:
+It's good practice to ensure that your firewalld installation remains nailed up and retains its services across reboots. This ensure that the network remains secured after unplanned outages such as power failures.
+
+
+Run the command that reloads the firewalld configurations and writes it to memory
+$ <ADD COMMAND HERE>
+
+
+
+View active Zones
+Now, we'll want to provide truncated listings of all currently active zones. This a good time to verify your zone settings.
+
+
+Run the command that displays all zone services.
+$ <ADD COMMAND HERE>
+
+
+
+Block an IP address
+
+
+Use a rich-rule that blocks the IP address 138.138.0.3.
+$ <ADD COMMAND HERE>
+
+
+
+Block Ping/ICMP Requests
+Harden your network against ping scans by blocking icmp ehco replies.
+
+
+Run the command that blocks pings and icmp requests in your public zone.
+$ <ADD COMMAND HERE>
+
+
+
+Rule Check
+Now that you've set up your brand new firewalld installation, it's time to verify that all of the settings have taken effect.
+
+
+Run the command that lists all  of the rule settings. Do one command at a time for each zone.
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+$ <ADD COMMAND HERE>
+
+
+Are all of our rules in place? If not, then go back and make the necessary modifications before checking again.
+
+
+Congratulations! You have successfully configured and deployed a fully comprehensive firewalld installation.
