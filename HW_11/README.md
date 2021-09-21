@@ -141,14 +141,14 @@ Now that you've set up your brand new firewalld installation, it's time to verif
 Now, we will work on another lab. Before you start, complete the following review questions.
 ## IDS vs. IPS Systems
 1) Name and define two ways an IDS connects to a network.
-- Answer 1:
-- Answer 2:
+- Answer 1: Network based intrusion detection system; is deployed at a strategic point or points within the network, where it can monitor inbound and outbound traffic to and from all the devices on the network
+- Answer 2: Host intrusion detection system (HIDS) runs on all computers or devices in the network with direct access to both the internet and the enterprise's internal network.
 2) Describe how an IPS connects to a network.
-- Answer:
+- Answer: An IPS is mostly located between a company's firewall and the rest of its network and may have the ability to stop any suspected traffic from getting to the rest of the network. Intrusion prevention systems execute responses to active attacks in real time and can actively catch intruders that firewalls or antivirus software may miss
 3) What type of IDS compares patterns of traffic to predefined signatures and is unable to detect Zero-Day attacks?
-- Answer:
+- Answer: Signature based IDS
 4) Which type of IDS is beneficial for detecting all suspicious traffic that deviates from the well-known baseline and is excellent at detecting when an attacker probes or sweeps a network?
-- Answer:
+- Answer: Anomaly based
 ## Defense in Depth
 1) For each of the following scenarios, provide the layer of Defense in Depth that applies:
    1) A criminal hacker tailgates an employee through an exterior door into a secured facility, explaining that they forgot their badge at home.
