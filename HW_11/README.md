@@ -69,7 +69,7 @@ Run the command that checks whether or not the firewalld service is up and runni
 ## List all firewall rules currently configured.
 Next, lists all currently configured firewall rules. This will give you a good idea of what's currently configured and save you time in the long run by not doing double work.
 * Run the command that lists all currently configured firewall rules:
-* `$ sudo firewall-cmd --list-all`
+* `$ sudo firewall-cmd --get-active-zones`
 Take note of what Zones and settings are configured. You many need to remove unneeded services and settings.
 ## List all supported service types that can be enabled.
 Run the command that lists all currently supported services to see if the service you need is available
@@ -81,15 +81,10 @@ Run the command that lists all currently configured zones.
 We can see that the Public and Drop Zones are created by default. Therefore, we will need to create Zones for Web, Sales, and Mail.
 ## Create Zones for Web, Sales and Mail.
 Run the commands that creates Web, Sales and Mail zones.
-* `$ <ADD COMMAND HERE>
-* `$ <ADD COMMAND HERE>
-* `$ <ADD COMMAND HERE>
-
-
-
-Set the zones to their designated interfaces:
-
-
+* `$ sudo firewall-cmd --permanent --new-zone=web`
+* `$ sudo firewall-cmd --permanent --new-zone=mail`
+* `$ sudo firewall-cmd --permanent --new-zone=sales`
+## Set the zones to their designated interfaces:
 Run the commands that sets your eth interfaces to your zones.
 $ <ADD COMMAND HERE>
 $ <ADD COMMAND HERE>
