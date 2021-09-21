@@ -136,3 +136,52 @@ Now that you've set up your brand new firewalld installation, it's time to verif
 - `$ sudo firewall-cmd --list-all --zone=drop`
 - Are all of our rules in place? If not, then go back and make the necessary modifications before checking again.
 - Congratulations! You have successfully configured and deployed a fully comprehensive firewalld installation.
+
+# Part 3: IDS, IPS, DiD and Firewalls
+Now, we will work on another lab. Before you start, complete the following review questions.
+## IDS vs. IPS Systems
+1) Name and define two ways an IDS connects to a network.
+- Answer 1:
+- Answer 2:
+2) Describe how an IPS connects to a network.
+- Answer:
+3) What type of IDS compares patterns of traffic to predefined signatures and is unable to detect Zero-Day attacks?
+- Answer:
+4) Which type of IDS is beneficial for detecting all suspicious traffic that deviates from the well-known baseline and is excellent at detecting when an attacker probes or sweeps a network?
+- Answer:
+## Defense in Depth
+1) For each of the following scenarios, provide the layer of Defense in Depth that applies:
+   1) A criminal hacker tailgates an employee through an exterior door into a secured facility, explaining that they forgot their badge at home.
+   - Answer:
+   2) A zero-day goes undetected by antivirus software.
+   - Answer:
+   3) A criminal successfully gains access to HR’s database.
+   - Answer:
+   4) A criminal hacker exploits a vulnerability within an operating system.
+   - Answer:
+   5) A hacktivist organization successfully performs a DDoS attack, taking down a government website.
+   - Answer:
+   6) Data is classified at the wrong classification level.
+   - Answer:
+   7) A state sponsored hacker group successfully firewalked an organization to produce a list of active services on an email server.
+   - Answer:
+2) Name one method of protecting data-at-rest from being readable on hard drive.
+- Answer:
+3) Name one method to protect data-in-transit.
+- Answer:
+4) What technology could provide law enforcement with the ability to track and recover a stolen laptop.
+- Answer:
+5) How could you prevent an attacker from booting a stolen laptop using an external hard drive?
+- Answer:
+## Firewall Architectures and Methodologies
+1) Which type of firewall verifies the three-way TCP handshake? TCP handshake checks are designed to ensure that session packets are from legitimate sources.
+- Answer:
+2) Which type of firewall considers the connection as a whole? Meaning, instead of looking at only individual packets, these firewalls look at whole streams of packets at one time.
+- Answer:
+3) Which type of firewall intercepts all traffic prior to being forwarded to its final destination. In a sense, these firewalls act on behalf of the recipient by ensuring the traffic is safe prior to forwarding it?
+- Answer:
+4) Which type of firewall examines data within a packet as it progresses through a network interface by examining source and destination IP address, port number, and packet type- all without opening the packet to inspect its contents?
+- Answer:
+5) Which type of firewall filters based solely on source and destination MAC address?
+- Answer:
+
