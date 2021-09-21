@@ -124,26 +124,15 @@ Use a rich-rule that blocks the IP address 138.138.0.3.
 - `$ sudo firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="138.138.0.3" reject'`
 ## Block Ping/ICMP Requests
 Harden your network against ping scans by blocking icmp ehco replies.
-
-
-Run the command that blocks pings and icmp requests in your public zone.
-$ <ADD COMMAND HERE>
-
-
-
-Rule Check
+- Run the command that blocks pings and icmp requests in your public zone.
+- `$ sudo firewall-cmd --zone=public --add-icmp-block=echo-reply --add-icmp-block=echo-request
+## Rule Check
 Now that you've set up your brand new firewalld installation, it's time to verify that all of the settings have taken effect.
-
-
-Run the command that lists all  of the rule settings. Do one command at a time for each zone.
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-$ <ADD COMMAND HERE>
-
-
-Are all of our rules in place? If not, then go back and make the necessary modifications before checking again.
-
-
-Congratulations! You have successfully configured and deployed a fully comprehensive firewalld installation.
+- Run the command that lists all  of the rule settings. Do one command at a time for each zone.
+- `$ sudo firewall-cmd --list-all --zone=public`
+- `$ sudo firewall-cmd --list-all --zone=web`
+- `$ sudo firewall-cmd --list-all --zone=sales`
+- `$ sudo firewall-cmd --list-all --zone=mail`
+- `$ sudo firewall-cmd --list-all --zone=drop`
+- Are all of our rules in place? If not, then go back and make the necessary modifications before checking again.
+- Congratulations! You have successfully configured and deployed a fully comprehensive firewalld installation.
