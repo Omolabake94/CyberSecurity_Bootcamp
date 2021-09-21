@@ -119,18 +119,10 @@ Run the command that will add all current and any future blacklisted IPs to the 
 Now, we'll want to provide truncated listings of all currently active zones. This a good time to verify your zone settings.
 - Run the command that displays all zone services.
 - `$ sudo firewall-cmd --get-active-zones` 
-
-
-
-Block an IP address
-
-
+## Block an IP address
 Use a rich-rule that blocks the IP address 138.138.0.3.
-$ <ADD COMMAND HERE>
-
-
-
-Block Ping/ICMP Requests
+- `$ sudo firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="138.138.0.3" reject'`
+## Block Ping/ICMP Requests
 Harden your network against ping scans by blocking icmp ehco replies.
 
 
