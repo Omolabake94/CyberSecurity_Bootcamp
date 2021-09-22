@@ -62,7 +62,7 @@ By default, these service should be running. If not, then run the following comm
 - Run the commands that enable and start firewalld upon boots and reboots.
   * `$ sudo systemctl enable firewalld`
   * `$ sudo systemctl start firewalld`
- - ![alt text](homework_11/"Screenshot 2021-09-21 134320.png")
+ - ![alt text](homework_11/134321.png)
 - Note: This will ensure that firewalld remains active after each reboot.
 ## Confirm that the service is running.
 - Run the command that checks whether or not the firewalld service is up and running.
@@ -75,6 +75,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
 ## List all supported service types that can be enabled.
 - Run the command that lists all currently supported services to see if the service you need is available
   * `$ sudo firewalld-cmd --get-services`
+  * ![alt text](homework_11/134325.png)
 - We can see that the Home and Drop Zones are created by default.
 ## Zone Views
 - Run the command that lists all currently configured zones.
@@ -85,12 +86,14 @@ Next, lists all currently configured firewall rules. This will give you a good i
   * `$ sudo firewall-cmd --permanent --new-zone=web`
   * `$ sudo firewall-cmd --permanent --new-zone=mail`
   * `$ sudo firewall-cmd --permanent --new-zone=sales`
+  * ![alt text](homework_11/134326.png)
 ## Set the zones to their designated interfaces:
 - Run the commands that sets your eth interfaces to your zones.
   * `$ sudo firewall-cmd --zone=public --change-interface=eth0`
   * `$ sudo firewall-cmd --zone=web --change-interface=eth1`
   * `$ sudo firewall-cmd --zone=sales --change-interface=eth2`
   * `$ sudo firewall-cmd --zone=mail --change-interface=eth3`
+  * ![alt text](homework_11/134321-(8).png)
 ## Add services to the active zones:
 -Run the commands that add services to the public zone, the web zone, the sales zone, and the mail zone.
 - Public:
@@ -105,13 +108,15 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Mail
   * `$ sudo firewall-cmd --permanent --zone=mail --add-service=pop3`
   * `$ sudo firewall-cmd --permanent --zone=mail --add-service=smtp`
-## What is the status of http, https, smtp and pop3?
+  * ![alt text](homework_11/134321-(13).png)
+- What is the status of http, https, smtp and pop3?
 
 ## Add your adversaries to the Drop Zone.
 - Run the command that will add all current and any future blacklisted IPs to the Drop Zone.
   - `$ sudo firewall-cmd --permanent --zone=drop --add-source=10.208.56.23`
   - `$ sudo firewall-cmd --permanent --zone=drop --add-source=135.95.103.76`
   - `$ sudo firewall-cmd --permanent --zone=drop --add-source=76.34.169.118`
+  - ![alt text](homework_11/134321-(11).png)
 ## Make rules permanent then reload them:
 - It's good practice to ensure that your firewalld installation remains nailed up and retains its services across reboots. This ensure that the network remains secured after unplanned outages such as power failures.
 - Run the command that reloads the firewalld configurations and writes it to memory
@@ -123,18 +128,25 @@ Now, we'll want to provide truncated listings of all currently active zones. Thi
 ## Block an IP address
 - Use a rich-rule that blocks the IP address 138.138.0.3.
   - `$ sudo firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="138.138.0.3" reject'`
+  - ![alt text](homework_11/134321-(18).png)
 ## Block Ping/ICMP Requests
 Harden your network against ping scans by blocking icmp ehco replies.
 - Run the command that blocks pings and icmp requests in your public zone.
   - `$ sudo firewall-cmd --zone=public --add-icmp-block=echo-reply --add-icmp-block=echo-request`
+  - ![alt text](homework_11/134321-(19).png)
 ## Rule Check
 Now that you've set up your brand new firewalld installation, it's time to verify that all of the settings have taken effect.
 - Run the command that lists all  of the rule settings. Do one command at a time for each zone.
   - `$ sudo firewall-cmd --list-all --zone=public`
+  - ![alt text](homework_11/134321-(20).png)
   - `$ sudo firewall-cmd --list-all --zone=web`
+  - ![alt text](homework_11/134321-(21).png)
   - `$ sudo firewall-cmd --list-all --zone=sales`
+  - ![alt text](homework_11/134321-(22).png)
   - `$ sudo firewall-cmd --list-all --zone=mail`
+  - ![alt text](homework_11/134321-(23).png)
   - `$ sudo firewall-cmd --list-all --zone=drop`
+  - ![alt text](homework_11/134321-(24).png)
   - Are all of our rules in place? If not, then go back and make the necessary modifications before checking again.
   - Congratulations! You have successfully configured and deployed a fully comprehensive firewalld installation.
 
