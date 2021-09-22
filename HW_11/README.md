@@ -188,37 +188,38 @@ Now, we will work on another lab. Before you start, complete the following revie
 # Bonus Lab: "Green Eggs & SPAM"
 ## Threat Intelligence Card
 1) What was the indicator of an attack? Hint: What do the details of the reveal?
-- Answer:
+- Answer: TROJAN JS/Nemucod.M.gen downloading EXE payload, Trojan activity
 2) What was the adversarial motivation (purpose of attack)?
-- Answer:
+- Answer: To be able to gain remote access of the computer and steal information 
 3) Describe observations and indicators that may be related to the perpetrators of the intrusion. Categorize your insights according to the appropriate stage of the cyber kill chain, as structured in the following table
 - TTP- Reconnaissance
 - Example- How did they attacker locate the victim?
-- Findings
+- Findings- the campaigns are attached directly to emails inside a zip file
 -
 - TTP- Weaponization
 - Example- What was it that was downloaded?
-- Findings
+- Findings- A Trojan JavaScript, An italian spam campaigns
 -
 - TTP-Delivery
 - Example- How was it downloaded?
-- Findings
+- Findings- Using JavaScript downloader called JS/Nemucod
 - 
 - TTP-Exploitation
 - Example- What does the exploit do?
-- Findings
+- Findings- the default file type associations in Windows caused internet Explorer to open and execute the JavaScript
 -
 - TTP-Installation
 - Example- How is the exploit installed?
-- Findings
+- Findings- When the user opens the zip file and double clicks the JavaScript, the default file type associations in Windows will cause internet Explorer to open and execute the JavaScript. This version of javaScript file downloads a simple EXE file which is then invoked directly in the bacground through the WScript.Shell ActiveX control
 -
 - TTP-Command & Control (C2)
 - Example- How does the attacker gain control of the remote machine?
-- Findings
+- Findings- Once all files have been executed, the computer is rebooted after few instants and Gozi starts phoning home after the reboot. 
 -
 - TTP-Actions on Objectives
 - Example- What does the software that the attacker sent do to complete it's tasks?
-- Findings
+- Findings- The executable files downloaded by Nemucod are used to retrieve a Tronjan Downloader called Fareit or Pony Downloader, which in turn downloads another set of executables files containing the Gozi infostealer.
+
 4) What are your recommended mitigation strategies?
 - Answer:
 5) List your third-party references.
