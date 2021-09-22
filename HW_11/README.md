@@ -185,3 +185,41 @@ Now, we will work on another lab. Before you start, complete the following revie
 5) Which type of firewall filters based solely on source and destination MAC address?
 - Answer: MAC layer firewall
 
+# Bonus Lab: "Green Eggs & SPAM"
+## Threat Intelligence Card
+1) What was the indicator of an attack? Hint: What do the details of the reveal?
+- Answer:
+2) What was the adversarial motivation (purpose of attack)?
+- Answer:
+3) Describe observations and indicators that may be related to the perpetrators of the intrusion. Categorize your insights according to the appropriate stage of the cyber kill chain, as structured in the following table
+- TTP- Reconnaissance
+- Example- How did they attacker locate the victim?
+- Findings
+-
+- TTP- Weaponization
+- Example- What was it that was downloaded?
+- Findings
+-
+- TTP-Delivery
+- Example- How was it downloaded?
+- Findings
+- 
+- TTP-Exploitation
+- Example- What does the exploit do?
+- Findings
+-
+- TTP-Installation
+- Example- How is the exploit installed?
+- Findings
+-
+- TTP-Command & Control (C2)
+- Example- How does the attacker gain control of the remote machine?
+- Findings
+-
+- TTP-Actions on Objectives
+- Example- What does the software that the attacker sent do to complete it's tasks?
+- Findings
+4) What are your recommended mitigation strategies?
+- Answer:
+5) List your third-party references.
+- Answer:
