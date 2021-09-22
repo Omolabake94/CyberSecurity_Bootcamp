@@ -193,34 +193,37 @@ Now, we will work on another lab. Before you start, complete the following revie
 - Answer: To be able to gain remote access of the computer and steal information 
 3) Describe observations and indicators that may be related to the perpetrators of the intrusion. Categorize your insights according to the appropriate stage of the cyber kill chain, as structured in the following table
 - TTP- Reconnaissance
-- Example- How did they attacker locate the victim?
-- Findings- the campaigns are attached directly to emails inside a zip file
+  - Example- How did they attacker locate the victim?
+  - Findings- the campaigns are attached directly to emails inside a zip file
 -
 - TTP- Weaponization
-- Example- What was it that was downloaded?
-- Findings- A Trojan JavaScript, An italian spam campaigns
+  - Example- What was it that was downloaded?
+  - Findings- A Trojan JavaScript, An italian spam campaigns
 -
 - TTP-Delivery
-- Example- How was it downloaded?
-- Findings- Using JavaScript downloader called JS/Nemucod
+  - Example- How was it downloaded?
+  - Findings- Using JavaScript downloader called JS/Nemucod
 - 
 - TTP-Exploitation
-- Example- What does the exploit do?
-- Findings- the default file type associations in Windows caused internet Explorer to open and execute the JavaScript
+  - Example- What does the exploit do?
+  - Findings- the default file type associations in Windows caused internet Explorer to open and execute the JavaScript
 -
 - TTP-Installation
-- Example- How is the exploit installed?
-- Findings- When the user opens the zip file and double clicks the JavaScript, the default file type associations in Windows will cause internet Explorer to open and execute the JavaScript. This version of javaScript file downloads a simple EXE file which is then invoked directly in the bacground through the WScript.Shell ActiveX control
+  - Example- How is the exploit installed?
+  - Findings- When the user opens the zip file and double clicks the JavaScript, the default file type associations in Windows will cause internet Explorer to open and execute the JavaScript. This version of javaScript file downloads a simple EXE file which is then invoked directly in the bacground through the WScript.Shell ActiveX control
 -
 - TTP-Command & Control (C2)
-- Example- How does the attacker gain control of the remote machine?
-- Findings- Once all files have been executed, the computer is rebooted after few instants and Gozi starts phoning home after the reboot. 
+  - Example- How does the attacker gain control of the remote machine?
+  - Findings- Once all files have been executed, the computer is rebooted after few instants and Gozi starts phoning home after the reboot. 
 -
 - TTP-Actions on Objectives
-- Example- What does the software that the attacker sent do to complete it's tasks?
-- Findings- The executable files downloaded by Nemucod are used to retrieve a Tronjan Downloader called Fareit or Pony Downloader, which in turn downloads another set of executables files containing the Gozi infostealer.
+  - Example- What does the software that the attacker sent do to complete it's tasks?
+  - Findings- The executable files downloaded by Nemucod are used to retrieve a Tronjan Downloader called Fareit or Pony Downloader, which in turn downloads another set of executables files containing the Gozi infostealer.
 
 4) What are your recommended mitigation strategies?
-- Answer:
+- Answer: Provide ongoing education to users on spear phishing links, unknown emails, risky websites, etc.
+  - Perform continuous inspection of network traffic flows to detect and prevent port scans and host sweeps
+  - Redirect malicious outbound communication to internal sinkholes to identify and block compromised hosts
+  - Block known and unknown vulnerability exploits on the endpoint
 5) List your third-party references.
-- Answer:
+- Answer: Certago, paloaltonetworks Cyberpedia, Protech cyber security
