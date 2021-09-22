@@ -62,6 +62,7 @@ By default, these service should be running. If not, then run the following comm
 - Run the commands that enable and start firewalld upon boots and reboots.
   * `$ sudo systemctl enable firewalld`
   * `$ sudo systemctl start firewalld`
+ - ![alt text](homework_11/"Screenshot 2021-09-21 134320.png")
 - Note: This will ensure that firewalld remains active after each reboot.
 ## Confirm that the service is running.
 - Run the command that checks whether or not the firewalld service is up and running.
