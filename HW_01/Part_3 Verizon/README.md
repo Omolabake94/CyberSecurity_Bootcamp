@@ -21,7 +21,7 @@ Question 5) Define the following:
 
 * Backdoor: Backdoor is a means to access a computer system or encrypted data that bypasses the system's customary security mechanisms
 
-* Keylogger: Keylogger is a type of monitoring software designed to record keystrokes made by a user
+* Keylogger: Keylogger is a type of monitoring software designed to record keystrokes made by a user.
 
 Question 6) The time from an attacker’s first action to the initial compromise of an asset is typically measured in which one? Seconds, minutes, hours, days? 
 * Answer- Minutes
