@@ -68,6 +68,7 @@ Authoritative answers can be found from:
 ## Mission 5
 * The OSPF shortest path from Batuu to Jedha, this path does not include planet N
 * #### Batuu > D > G > O > R > Q > T > V > Jedha = 23 hops
+* Batuu > D > C > E > F > J > I > L > Q > T > V > Jedha
 
 ## Mission 6
 * Command to find out the Dark Side's secret wireless key: `aircrack-ng -w /usr/share/wordlists/rockyou.txt Darkside.pcap`
