@@ -44,7 +44,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the __JumpBox Provisioner__ machine can accept connections from the Internet. Access to this machine is only allowed from my home IP address: 24.118.75.159
 
-Machines within the network can only be accessed by __JumpBox Provisioner___.
+Machines within the network can only be accessed by __JumpBox Provisioner__.
 - Which machine did you allow to access your ELK VM? __JumpBox internal IP__
 - What was its IP address? __10.0.0.4__
 
