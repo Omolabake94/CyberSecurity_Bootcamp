@@ -1,15 +1,14 @@
 ## Automated ELK Stack Deployment
 
-The files in this repository were used to configure the network depicted below.
+* The files in this repository were used to configure the network depicted below.
 
 ![alt_text](CloudDiagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the __Playbook__ file may be used to install only certain pieces of it, such as Filebeat.
 
-  [ekl.yml](elk.yml)
-  - _TODO: Enter the playbook file._
+  [Playbook file for ELK install](elk.yml)
 
-This document contains the following details:
+### This document contains the following details:
 - Description of the Topology
 - Access Policies
 - ELK Configuration
@@ -22,31 +21,32 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly __efficient__, in addition to restricting __traffic__ to the network.
+- What aspect of security do load balancers protect? __Load balancers help to evenly distribute network traffic to prevent failure caused by overloading a particular resource. This improves the performance and availability of applications, websites, databases, and other computing resources__
+- What is the advantage of a jump box? __A Jump box serves as gateway for access to infrastructure which reduces the size of any potential attack. it is also used to maintain tools for systems__
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __Logs__ and system __metrics__.
+- What does Filebeat watch for? __Filebeat watchs for any information that has been modified and when the modification took place__
+- What does Metricbeat record? __Metricbeat watchs for change in system metrics such has change in cpu usage__
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name     | Function | IP Address | Operating System |    
+|----------|----------|------------|------------------|      
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |      
+| Web-1    | Server   | 10.0.0.5   | Linux            |
+| Web-2    | Server   | 10.0.0.6   | Linux            |
+| Elk VM   | Server   | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the __JumpBox Provisioner__ machine can accept connections from the Internet. Access to this machine is only allowed from my home IP address: 24.118.75.159
 - _TODO: Add whitelisted IP addresses_
 
-Machines within the network can only be accessed by _____.
+Machines within the network can only be accessed by __JumpBox Provisioner___.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
