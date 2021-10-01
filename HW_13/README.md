@@ -92,7 +92,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the __playbook__ file to __/etc/ansible__.
 - Update the __hosts__ file to include __webservers__ and __Elk VM__ 
-- Run the playbook, and navigate to __http://13.83.49.250:5601/app/kibana#/home__ to check that the installation worked as expected.
+- Run the playbook, and navigate to __http://[your.ELK-VM.External.IP]:5601/app/kibana__ to check that the installation worked as expected.
 
 ![alt_text](Cloud_HW/image_(1).png)
 
