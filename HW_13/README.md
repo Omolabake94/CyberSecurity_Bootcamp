@@ -29,8 +29,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - What does Filebeat watch for? __Filebeat watchs for any information that has been modified and when the modification took place__
 - What does Metricbeat record? __Metricbeat watchs for change in system metrics such has change in cpu usage__
 
-The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+#### The configuration details of each machine may be found below.
 
 | Name     | Function | IP Address | Operating System |    
 |----------|----------|------------|------------------|      
@@ -44,23 +43,22 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the __JumpBox Provisioner__ machine can accept connections from the Internet. Access to this machine is only allowed from my home IP address: 24.118.75.159
-- _TODO: Add whitelisted IP addresses_
 
 Machines within the network can only be accessed by __JumpBox Provisioner___.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- Which machine did you allow to access your ELK VM? __JumpBox internal IP__
+- What was its IP address? __10.0.0.4__
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
-
+| Name     | Publicly Accessible | Allowed IP Addresses   |
+|----------|---------------------|------------------------|
+| Jump Box |     Yes             | Home IP: 24.118.75.159 |
+| Web-1    |     No              | 10.0.0.4               |
+| Web-2    |     No              | 10.0.0.4               |
+| Elk VM   |     No              | 24.118.75.159, 10.0.0.4|
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because __Ansible allows to deploy to multiple servers using a single playbook__
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
