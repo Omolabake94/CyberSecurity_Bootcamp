@@ -4,9 +4,7 @@
 
 ![alt_text](CloudDiagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the __Playbook__ file may be used to install only certain pieces of it, such as Filebeat.
-
-  [Playbook file for ELK install](elk.yml)
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the __[Playbook file for ELK install](elk.yml)__ may be used to install only certain pieces of it, such as Filebeat.
 
 ### This document contains the following details:
 - Description of the Topology
