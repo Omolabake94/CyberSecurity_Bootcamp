@@ -26,8 +26,7 @@ Load balancing ensures that the application will be highly __efficient__, in add
 - What is the advantage of a jump box? __A Jump box serves as gateway for access to infrastructure which reduces the size of any potential attack. it is also used to maintain tools for systems__
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __Logs__ and system __metrics__.
-- What does Filebeat watch for? __Filebeat watchs for any information that has been modified and when the modification took place__
-- What does Metricbeat record? __Metricbeat watchs for change in system metrics such has change in cpu usage__
+
 
 #### The configuration details of each machine may be found below.
 
@@ -44,9 +43,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the __JumpBox Provisioner__ machine can accept connections from the Internet. Access to this machine is only allowed from my home IP address: 24.118.75.159
 
-Machines within the network can only be accessed by __JumpBox Provisioner__.
-- Which machine did you allow to access your ELK VM? __JumpBox internal IP__
-- What was its IP address? __10.0.0.4__
+Machines within the network can only be accessed by __JumpBox internal IP 10.0.0.4__
 
 A summary of the access policies in place can be found in the table below.
 
@@ -83,26 +80,20 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat helps to collect for any information that has been modified and when the modification took place
-- Metricbeat
+- Metricbeat Metricbeat watchs for change in system metrics such has change in cpu usage
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the __playbook__ file to __/etc/ansible__.
+- Copy the __[Playbook file for ELK install](elk.yml)__ file to __/etc/ansible__.
 - Update the __hosts__ file to include __webservers__ and __Elk VM__ 
-- Run the playbook, and navigate to __http://[your.ELK-VM.External.IP]:5601/app/kibana__ to check that the installation worked as expected.
-
-![alt_text](Cloud_HW/image_(1).png)
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? 
-- Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? 
-- How do I specify which machine to install the ELK server on versus which to install Filebeat on?_C
-- _Which URL do you navigate to in order to check that the ELK server is running? http://13.83.49.250:5601/app/kibana#/home
-
-
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+  - /etc/ansible/host should include:
+  -  ![alt_text](Cloud_HW/image_(18).png)
+- Run the playbook
+  - Run `ansible-playbook elk.yml`
+  - SSH into the elk vm, then run `docker ps` to check that the installation worked
+- Navigate to __http://13.83.49.250:5601/app/kibana__ to confirm ELK and kibana are running.
+- Click 'Explore On Your Own' and you should see the following:
+- ![alt_text](Cloud_HW/image_(1).png)
