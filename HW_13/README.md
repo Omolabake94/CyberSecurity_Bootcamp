@@ -50,7 +50,7 @@ A summary of the access policies in place can be found in the table below.
 | Jump Box |     Yes             | Home IP: 24.118.75.159 |
 | Web-1    |     No              | 10.0.0.4               |
 | Web-2    |     No              | 10.0.0.4               |
-| Elk VM   |     No              | 24.118.75.159, 10.0.0.4|
+| Elk VM   |     Yes             | 24.118.75.159, 10.0.0.4|
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because __Ansible allows to deploy to multiple servers using a single playbook__
