@@ -20,8 +20,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly __efficient__, in addition to restricting __traffic__ to the network.
-- What aspect of security do load balancers protect? __Load balancers help to evenly distribute network traffic to prevent failure caused by overloading a particular resource. This improves the performance and availability of applications, websites, databases, and other computing resources__
-- What is the advantage of a jump box? __A Jump box serves as gateway for access to infrastructure which reduces the size of any potential attack. it is also used to maintain tools for systems__
+- __Load balancers help to evenly distribute network traffic to prevent failure caused by overloading a particular resource. This improves the performance and availability of applications, websites, databases, and other computing resources__
+- __A Jump box serves as gateway for access to infrastructure which reduces the size of any potential attack. it is also used to maintain tools for systems__
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __Logs__ and system __metrics__.
 
@@ -78,7 +78,7 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat helps to collect system logs and it also indicates information that has been modified and when the modification took place
-- Metricbeat Metricbeat watchs for change in system metrics such has change in cpu usage
+- Metricbeat Metricbeat watchs for change in system metrics such as change in cpu usage.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -90,7 +90,7 @@ SSH into the control node and follow the steps below:
   -  ![alt_text](Cloud_HW/image_(18).png)
 - Run the playbook
   - Run `ansible-playbook elk.yml`
-  - SSH into the elk vm, then run `docker ps` to check that the installation worked
+  - SSH into the elk vm, `ssh sysadmin@13.83.49.250'  then run `docker ps` to check that the installation worked
 - Navigate to __http://13.83.49.250:5601/app/kibana__ to confirm ELK and kibana are running.
 - Click 'Explore On Your Own' and you should see the following:
 - ![alt_text](Cloud_HW/image_(1).png)
