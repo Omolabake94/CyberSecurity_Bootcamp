@@ -90,7 +90,7 @@ SSH into the control node and follow the steps below:
   -  ![alt_text](Cloud_HW/image_(18).png)
 - Run the playbook
   - Run `ansible-playbook elk.yml`
-  - SSH into the elk vm, `ssh sysadmin@13.83.49.250'  then run `docker ps` to check that the installation worked
+  - SSH into the elk vm, `ssh sysadmin@13.83.49.250` then run `docker ps` to check that the installation worked
 - Navigate to __http://13.83.49.250:5601/app/kibana__ to confirm ELK and kibana are running.
 - Click 'Explore On Your Own' and you should see the following:
 - ![alt_text](Cloud_HW/image_(1).png)
