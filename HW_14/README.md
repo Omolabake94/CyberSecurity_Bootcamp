@@ -110,4 +110,6 @@ X-XSS-Protection: 1; mode=block
 
 32) Which type of SQL query would we use to enter new data into a table? (You don't need a full query, just the first part of the statement.)
 
-33) Why would we never run DELETE FROM <table-name>; by itself?
+33) Why would we never run `DELETE FROM <table-name>;` by itself?
+
+#  Challenge Overview: The Cookie Jar
