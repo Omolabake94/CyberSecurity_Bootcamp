@@ -1,22 +1,28 @@
 # Web Development Homework
 ## HTTP Requests and Responses
 1) What type of architecture does the HTTP request and response process occur in?
-
+* Client-Server Architecture
 2) What are the different parts of an HTTP request?
-
+* Request Line 
+* Headers 
+* Body
 3) Which part of an HTTP request is optional?
-
+* Request Body
 4) What are the three parts of an HTTP response?
-
+* Status Line 
+* Headers 
+* Response Body
 5) Which number class of status codes represents errors?
-
+* 400 class
 6) What are the two most common request methods that a security professional will encounter?
-
+* Get
+* Post
 7) Which type of HTTP request method is used for sending data?
- 
+ * Post
 8) Which part of an HTTP request contains the data being sent to the server?
-
+* Body
 9) In which part of an HTTP response does the browser receive the web code to generate and style a web page?
+* Body
 
 ## Using curl
 10) What are the advantages of using curl over the browser?
