@@ -26,14 +26,17 @@
 
 ## Using curl
 10) What are the advantages of using curl over the browser?
-
+*
+* To test web server security configurations
+* To look for vulnerabilities on a web server
 11) Which curl option is used to change the request method?
-
+* -X
 12) Which curl option is used to set request headers?
-
+* -H
 13) curl option is used to view the response header?
-
+* -I
 14) Which request method might an attacker use to figure out which HTTP requests an HTTP server will accept?
+* OPTIONS
 
 ## Sessions and Cookies
 ```
