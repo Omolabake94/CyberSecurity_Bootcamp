@@ -132,46 +132,46 @@ X-XSS-Protection: 1; mode=block
 ##  BONUS Challenge Overview: The Cookie Jar
 ### Logging In and Saving Cookies with Curl
 * `curl --cookie-jar ./amandacookies.txt --form "log=Amanda" --form "pwd=password" http://localhost:8080/wp-login.php --verbose`
-* put image2
-
+* ![alt_text](screenshots014/image2.png)
+ 
 ### Using a Saved Cookie
 * `curl --cookie ./amandacookies.txt http://localhost:8080/wp-admin/users.php`
-* put image3
+* ![alt_text](screenshots014/image3.png)
 
 ## Bonus: The Cookie Jar
 ### Step 1: Set Up
 * Added new users
-* put image1
+* ![alt_text](screenshots014/image1.png)
 ### Step 2: Baselining
 1. Log into your WordPress site as sysadmin(Cherish) account and navigate to localhost:8080/wp-admin/users.php. Examine this page briefly 
-* put image5
+* ![alt_text](screenshots014/image5.png)
 2. Log into your Ryan account and attempt to navigate to localhost:8080/wp-admin/index.php. Note the wording on your Dashboard.
-* put image4
+* ![alt_text](screenshots014/image4.png)
 3. Attempt to navigate to localhost:8080/wp-admin/users.php. Note what you see now
-* put image7
+* ![alt_text](screenshots014/image7.png)
 ### Step 3: Using Forms and a Cookie Jar
 1. Curl command to login ryan
 * `curl --form "log=ryan" --form "pwd=123456" http://localhost:8080/wp-login.php`
 * No obvious confirmation of a login
-* put image10
+* ![alt_text](screenshots014/image10.png)
 2. Curl command to login and save cookie
 * `curl --cookie-jar ./ryancookies.txt --form "log=ryan" --form "pwd=123456" http://localhost:8080/wp-login.php --verbose`
-* put image8
+* ![alt_text](screenshots014/image8.png)
 3. contents of the ryancookies.txt file
 * `cat ryancookies.txt`
 * 3 itmes exist in this file
-* put image9
+* ![alt_text](screenshots014/image9.png)
 ### Step 4: Log in Using Cookies
 1. Command to use saved cookie
 * `curl --cookie ./ryancookies.txt http://localhost:8080/wp-admin/index.php`
 * Yes it is obvious that we can access the Dashboard
-* put image12
+* ![alt_text](screenshots014/image12.png)
 2. Command to use saved cookie piped to grep
 * `curl --cookie ./ryancookies.txt http://localhost:8080/wp-admin/index.php | grep Dashboard`
-* The wording on the page that seems familiar is Cherish(Sysadmin)
-* Put image13
+* The wording on the page that seems familiar is Cherish(Sysadmin), >At a Glance<, Welcome to your WordPress Dahboard
+* ![alt_text](screenshots014/image13.png)
 ### Step 5: Test the Users.php Page
 1. Command to attempt to access Users
 * `curl --cookie ./ryancookies.txt http://localhost:8080/wp-admin/users.php`
 * An error popped up 'sorry, you are not allowed to browse users'
-* put image14 
+* ![alt_text](screenshots014/image14.png) 
