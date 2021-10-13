@@ -102,26 +102,33 @@ X-XSS-Protection: 1; mode=block
 24) What kind of content is likely to be in the [page content] response body?
 * it contains the resource requested by the client, all of the web code and styling that the browser uses to format the page
 25) If your class covered security headers, what security request headers have been included?
-* 
+```
+* Strict-Transport-Security: max-age=31536000; includeSubDomains
+* X-Content-Type: NoSniff
+* X-Frame-Options: DENY
+* X-XSS-Protection: 1; mode=block
+```
 ## Monoliths and Microservices
 26) What are the individual components of microservices called?
-* 
+* Front-end, back-end, and database components
 27) What is a service that writes to a database and communicates to other services?
-* 
+* Application Programming Interfaces (APIs)
 28) What type of underlying technology allows for microservices to become scalable and have redundancy?
-* 
+* Replication of identical components allow to serve more clients and provides identical backup components if one fails
 ## Deploying and Testing a Container Set
 29) What tool can be used to deploy multiple containers at once?
-* 
+* Docker Compose
 30) What kind of file format is required for us to deploy a container set?
-* 
+* YAML file
 ## Databases
 31) Which type of SQL query would we use to see all of the information within a table called customers?
-* 
-32) Which type of SQL query would we use to enter new data into a table? (You don't need a full query, just the first part of the statement.)
-* 
+* `SELECT * FROM customers;`
+32) Which type of SQL query would we use to enter new data into a table?
+* INSERT INTO customers (column1, column2, column3, ...)
 33) Why would we never run `DELETE FROM <table-name>;` by itself?
-* 
+* It will delete the entire table. it needs to be more specific to what to delete
+
+
 #  Challenge Overview: The Cookie Jar
 
 
