@@ -170,3 +170,8 @@ X-XSS-Protection: 1; mode=block
 * `curl --cookie ./ryancookies.txt http://localhost:8080/wp-admin/index.php | grep Dashboard`
 * The wording on the page that seems familiar is Cherish(Sysadmin)
 * Put image13
+### Step 5: Test the Users.php Page
+1. Command to attempt to access Users
+* `curl --cookie ./ryancookies.txt http://localhost:8080/wp-admin/users.php`
+* An error popped up 'sorry, you are not allowed to browse users'
+* put image14 
