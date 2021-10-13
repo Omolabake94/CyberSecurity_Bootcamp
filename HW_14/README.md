@@ -143,7 +143,7 @@ X-XSS-Protection: 1; mode=block
 * Added new users
 * put image1
 ### Step 2: Baselining
-1. Log into your WordPress site as your sysadmin(Cherish) account and navigate to localhost:8080/wp-admin/users.php. Examine this page briefly 
+1. Log into your WordPress site as sysadmin(Cherish) account and navigate to localhost:8080/wp-admin/users.php. Examine this page briefly 
 * put image5
 2. Log into your Ryan account and attempt to navigate to localhost:8080/wp-admin/index.php. Note the wording on your Dashboard.
 * put image4
@@ -152,8 +152,8 @@ X-XSS-Protection: 1; mode=block
 ### Step 3: Using Forms and a Cookie Jar
 1. Curl command to login ryan
 * `curl --form "log=ryan" --form "pwd=123456" http://localhost:8080/wp-login.php`
-* put image10
 * No obvious confirmation of a login
+* put image10
 2. Curl command to login and save cookie
 * `curl --cookie-jar ./ryancookies.txt --form "log=ryan" --form "pwd=123456" http://localhost:8080/wp-login.php --verbose`
 * put image8
