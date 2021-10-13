@@ -129,6 +129,44 @@ X-XSS-Protection: 1; mode=block
 * It will delete the entire table. it needs to be more specific to what to delete
 
 
-#  Challenge Overview: The Cookie Jar
+##  BONUS Challenge Overview: The Cookie Jar
+### Logging In and Saving Cookies with Curl
+* `curl --cookie-jar ./amandacookies.txt --form "log=Amanda" --form "pwd=password" http://localhost:8080/wp-login.php --verbose`
+* put image2
 
+### Using a Saved Cookie
+* `curl --cookie ./amandacookies.txt http://localhost:8080/wp-admin/users.php`
+* put image3
 
+## Bonus: The Cookie Jar
+### Step 1: Set Up
+* Added new users
+* put image1
+### Step 2: Baselining
+1. Log into your WordPress site as your sysadmin(Cherish) account and navigate to localhost:8080/wp-admin/users.php. Examine this page briefly 
+* put image5
+2. Log into your Ryan account and attempt to navigate to localhost:8080/wp-admin/index.php. Note the wording on your Dashboard.
+* put image4
+3. Attempt to navigate to localhost:8080/wp-admin/users.php. Note what you see now
+* put image7
+### Step 3: Using Forms and a Cookie Jar
+1. Curl command to login ryan
+* `curl --form "log=ryan" --form "pwd=123456" http://localhost:8080/wp-login.php`
+* put image10
+* No obvious confirmation of a login
+2. Curl command to login and save cookie
+* `curl --cookie-jar ./ryancookies.txt --form "log=ryan" --form "pwd=123456" http://localhost:8080/wp-login.php --verbose`
+* put image8
+3. contents of the ryancookies.txt file
+* `cat ryancookies.txt`
+* 3 itmes exist in this file
+* put image9
+### Step 4: Log in Using Cookies
+1. Command to use saved cookie
+* `curl --cookie ./ryancookies.txt http://localhost:8080/wp-admin/index.php`
+* Yes it is obvious that we can access the Dashboard
+* put image12
+2. Command to use saved cookie piped to grep
+* `curl --cookie ./ryancookies.txt http://localhost:8080/wp-admin/index.php | grep Dashboard`
+* The wording on the page that seems familiar is Cherish(Sysadmin)
+* Put image13
