@@ -26,9 +26,10 @@
 
 ## Using curl
 10) What are the advantages of using curl over the browser?
-*
+* To ensure web servers don't leak sensitive data through their HTTP responses
 * To test web server security configurations
 * To look for vulnerabilities on a web server
+* To verify that servers only respond to certain request types
 11) Which curl option is used to change the request method?
 * -X
 12) Which curl option is used to set request headers?
@@ -45,13 +46,14 @@ Content-type: text/html
 Set-Cookie: cart=Bob
 ```
 15) Which response header sends a cookie to the client?
+* Set-Cookie
 ```
 GET /cart HTTP/1.1
 Host: www.example.org
 Cookie: cart=Bob
 ```
 16) Which request header will continue the client's session?
-
+* Cookie
 ## Example HTTP Requests and Responses
 ### HTTP Request
 ```
@@ -67,13 +69,13 @@ User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/5
 username=Barbara&password=password
 ```
 17) What is the request method?
-
+* POST request
 18) Which header expresses the client's preference for an encrypted response?
-
+* Upgrade-Insecure-Requests: 1
 19) Does the request have a user session associated with it?
-
+* There is no user session associated since there is no set-cookie
 20) What kind of data is being sent from this request body?
-
+* Login credentials 
 ### HTTP Response 
 ```
 HTTP/1.1 200 OK
@@ -91,34 +93,35 @@ X-XSS-Protection: 1; mode=block
 
 [page content]
 ```
-
 21) What is the response status code?
-
+* 200 OK
 22) What web server is handling this HTTP response?
-
+* Apache 
 23) Does this response have a user session associated to it?
-
+* yes it has. `Set-Cookie: SessionID=5`
 24) What kind of content is likely to be in the [page content] response body?
-
+* it contains the resource requested by the client, all of the web code and styling that the browser uses to format the page
 25) If your class covered security headers, what security request headers have been included?
-
+* 
 ## Monoliths and Microservices
 26) What are the individual components of microservices called?
-
+* 
 27) What is a service that writes to a database and communicates to other services?
-
+* 
 28) What type of underlying technology allows for microservices to become scalable and have redundancy?
-
+* 
 ## Deploying and Testing a Container Set
 29) What tool can be used to deploy multiple containers at once?
-
+* 
 30) What kind of file format is required for us to deploy a container set?
-
+* 
 ## Databases
 31) Which type of SQL query would we use to see all of the information within a table called customers?
-
+* 
 32) Which type of SQL query would we use to enter new data into a table? (You don't need a full query, just the first part of the statement.)
-
+* 
 33) Why would we never run `DELETE FROM <table-name>;` by itself?
-
+* 
 #  Challenge Overview: The Cookie Jar
+
+
