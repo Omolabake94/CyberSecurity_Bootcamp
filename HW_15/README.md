@@ -19,7 +19,9 @@
 * ![alt_text](HW_15/image8.png)
 
 ### Mitigation strategies
-1. 
+1. Limitation of login attempts
+2. Use of Two-Factor Authentication 
+3. Use Strong Passwords
 ## Web Application 3: Where's the BeEF
 * ![alt_text](HW_15/image10.png)
 * ![alt_text](HW_15/image11.png)
