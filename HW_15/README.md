@@ -38,3 +38,6 @@ Host >> Get Geolocation (Third Party)
 * ![alt_text](HW_15/image19.png)
 
 ### Mitigation strategie
+1. Use of sandboxing tool to isolate individual processes when dealing with untrusted data
+2. Upload untrusted executables and documents to an AV aggregation tool such as VirusTotal. This gives you a good early warning if the file is infected.
+3. Alter the security settings on your browser to prevent JavaScript and plugins by default
