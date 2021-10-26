@@ -34,9 +34,11 @@ Your client has asked that you help identify any vulnerabilities with their file
     - A = Agressive Scanning
     - v = Verbrose
 - Bonus command to output results into a new text file named zenmapscan.txt: 
-  - `nmap -sV -T4 -A -v -oN zenmapscan.txt 192.168.0.10`
+  - `nmap -sV -T4 -A -v 192.168.0.10 -oN zenmapscan.txt`
 
-- Zenmap vulnerability script command:
+- Zenmap vulnerability script command: 
+  - `nmap --script ftp-vsftpd-backdoor 192.168.0.10`
+    - IMAGE12
 
 - Once you have identified this vulnerability, answer the following questions for your client:
   - What is the vulnerability:
