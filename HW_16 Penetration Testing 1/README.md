@@ -39,6 +39,8 @@ Your client has asked that you help identify any vulnerabilities with their file
 - Zenmap vulnerability script command: 
   - `nmap --script ftp-vsftpd-backdoor 192.168.0.10`
     - IMAGE12
+    - image13
+    - image14
 
 - Once you have identified this vulnerability, answer the following questions for your client:
   - What is the vulnerability:
