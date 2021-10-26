@@ -15,24 +15,30 @@ Enter the IP address for demo.testfire.net into Domain Dossier and answer the fo
 - What open ports and running services did Shodan find: Ports 80/TCP, 443/TCP and 8080/TCP are open
 * Services: Apache Tomcat/Coyote JSP Engine (version 1.1)
 ## Step 4: Recon-ng
-- Install the Recon module xssed.
-- Set the source to demo.testfire.net.
-- Run the module.
-#### Is Altoro Mutual vulnerable to XSS:
+- Run recon-ng
+  - Install the Recon module xssed: `marketplace install xssed`
+       - image7
+  - Set the source to demo.testfire.net: `options set SOURCE demo.testfire.net`
+      - image8
+  - Run the module.
+      - image9
+#### Is Altoro Mutual vulnerable to XSS: Yes
+image10
 
 ## Step 5: Zenmap
 Your client has asked that you help identify any vulnerabilities with their file-sharing server. Using the Metasploitable machine to act as your client's server, complete the following:
+- Command for Zenmap to run a service scan against the Metasploitable machine:
+  - `nmap -sV -T4 -A -v 192.168.0.10` 
+    - sV = Service and Version Scanning 
+    - T(0-5): Set timing template (higher is faster) 
+    - A = Agressive Scanning
+    - v = Verbrose
+- Bonus command to output results into a new text file named zenmapscan.txt: 
+  - `nmap -sV -T4 -A -v -oN zenmapscan.txt 192.168.0.10`
 
-Command for Zenmap to run a service scan against the Metasploitable machine:
+- Zenmap vulnerability script command:
 
-Bonus command to output results into a new text file named zenmapscan.txt:
-
-Zenmap vulnerability script command:
-
-Once you have identified this vulnerability, answer the following questions for your client:
-
-What is the vulnerability:
-
-Why is it dangerous:
-
-What mitigation strategies can you recommendations for the client to protect their server:
+- Once you have identified this vulnerability, answer the following questions for your client:
+  - What is the vulnerability:
+  - Why is it dangerous:
+  - What mitigation strategies can you recommendations for the client to protect their server:
