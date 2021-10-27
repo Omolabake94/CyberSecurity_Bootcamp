@@ -44,7 +44,8 @@ Your client has asked that you help identify any vulnerabilities with their file
   - `nmap -sV -T4 -A -v 192.168.0.10 -oN zenmapscan.txt`
      * ![alt_text](HW16/image15.png)
 - Zenmap vulnerability script command: 
-- `nmap -sV -sC 192.168.0.10` This command showed that port 139 and port 445 are running the same service
+- `nmap -sV -sC 192.168.0.10` 
+- This command showed that port 139 and port 445 are running the same service
  - ![alt_text](HW16/image16.png)  
 - NetBIOS services provide access to shared resources like files and printers to anyone across the internet
 - Run this commands to check for vulnerability  
