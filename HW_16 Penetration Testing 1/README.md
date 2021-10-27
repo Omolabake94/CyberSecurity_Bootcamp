@@ -44,9 +44,17 @@ Your client has asked that you help identify any vulnerabilities with their file
   - `nmap -sV -T4 -A -v 192.168.0.10 -oN zenmapscan.txt`
      * ![alt_text](HW16/image15.png)
 - Zenmap vulnerability script command: 
-  - `nmap -sV -sC --script ftp-vsftpd-backdoor 192.168.0.10`
-    
-  
+  - `nmap -sV -sC 192.168.0.10` This command showed that port 139 and port 445 are running the same service and version
+ - image16  
+- `nmap -sV -sC -p 139 --script samba-vuln-cve-2012-1182 192.168.0.10` and `nmap -sV -sC -p 139 --script samba-vuln-cve-2012-1182 192.168.0.10` This command showed that there is no vulnulrability with this script on port 139 and 445 
+  - image 12
+  - image 
+-  `nmap -sV -sC -p 139 --script smb-enum-shares 192.168.0.10`
+  - image 13
+  - image 14
+-  `nmap -sV -sC -p 445 --script smb-enum-shares 192.168.0.10`
+  - image
+  - image
 - Once you have identified this vulnerability, answer the following questions for your client:
   - What is the vulnerability:
   - Why is it dangerous:
