@@ -44,20 +44,20 @@ Your client has asked that you help identify any vulnerabilities with their file
   - `nmap -sV -T4 -A -v 192.168.0.10 -oN zenmapscan.txt`
      * ![alt_text](HW16/image15.png)
 - Zenmap vulnerability script command: 
-- `nmap -sV -sC 192.168.0.10` This command showed that port 139 and port 445 are running the same service and version
+- `nmap -sV -sC 192.168.0.10` This command showed that port 139 and port 445 are running the same service
  - ![alt_text](HW16/image16.png)  
 - NetBIOS services provide access to shared resources like files and printers to anyone across the internet
 - Run this commands to check for vulnerability  
 - `nmap -sV -sC -p 139 --script samba-vuln-cve-2012-1182 192.168.0.10` and `nmap -sV -sC -p 445 --script samba-vuln-cve-2012-1182 192.168.0.10` This command showed that there is no vulnerability with this script on port 139 and 445 
   - ![alt_text](HW16/image12.png)
   - ![alt_text](HW16/image19.png)
-Run this command to check for access vulnerability
+- Run this command to check for access vulnerability
 -  `nmap -sV -sC -p 139 --script smb-enum-shares 192.168.0.10`
   - ![alt_text](HW16/image13.png)
   - ![alt_text](HW16/image14.png)
 -  `nmap -sV -sC -p 445 --script smb-enum-shares 192.168.0.10`
   - ![alt_text](HW16/image17.png)
-  - ![alt_text](HW16/image15.png)
+  - ![alt_text](HW16/image18.png)
 - Once you have identified this vulnerability, answer the following questions for your client:
   - What is the vulnerability:
   - Why is it dangerous:
