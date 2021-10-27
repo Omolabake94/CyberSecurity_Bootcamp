@@ -59,6 +59,9 @@ Your client has asked that you help identify any vulnerabilities with their file
   - ![alt_text](HW16/image17.png)
   - ![alt_text](HW16/image18.png)
 - Once you have identified this vulnerability, answer the following questions for your client:
-  - What is the vulnerability:
-  - Why is it dangerous:
+  - What is the vulnerability: 
+    - This script `--script smb-enum-shares` showed that the IP is vulnerable to anonymous access. The \tmp file and \IPC have read and write access available for the public
+  - Why is it dangerous: 
+    - This access is dangerous because anyone can read and write in this location. They can easily steal information, drop a Trojan or infect an exixting file
   - What mitigation strategies can you recommendations for the client to protect their server:
+    - Block public access to port 139 and 445 and put rules in place
