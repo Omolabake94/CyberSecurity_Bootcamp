@@ -45,9 +45,7 @@ Your client has asked that you help identify any vulnerabilities with their file
 
 - Zenmap vulnerability script command: 
   - `nmap --script ftp-vsftpd-backdoor 192.168.0.10`
-    * ![alt_text](HW16/image12.png)
-    * ![alt_text](HW16/image13.png)
-    * ![alt_text](HW16/image14.png)
+    
   - IP 192.168.0.10 is vulnurable to vsftpd 2.3.4, it contains a backdoor which opens a shell on port 6200/tcp 
 - Once you have identified this vulnerability, answer the following questions for your client:
   - What is the vulnerability:
