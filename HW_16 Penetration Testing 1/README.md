@@ -48,13 +48,13 @@ Your client has asked that you help identify any vulnerabilities with their file
  - image16  
 - `nmap -sV -sC -p 139 --script samba-vuln-cve-2012-1182 192.168.0.10` and `nmap -sV -sC -p 139 --script samba-vuln-cve-2012-1182 192.168.0.10` This command showed that there is no vulnulrability with this script on port 139 and 445 
   - image 12
-  - image 
+  - image 19
 -  `nmap -sV -sC -p 139 --script smb-enum-shares 192.168.0.10`
   - image 13
   - image 14
 -  `nmap -sV -sC -p 445 --script smb-enum-shares 192.168.0.10`
-  - image
-  - image
+  - image 17
+  - image 18
 - Once you have identified this vulnerability, answer the following questions for your client:
   - What is the vulnerability:
   - Why is it dangerous:
