@@ -48,7 +48,8 @@ Your client has asked that you help identify any vulnerabilities with their file
  - ![alt_text](HW16/image16.png)  
 - NetBIOS services provide access to shared resources like files and printers to anyone across the internet
 - Run this commands to check for vulnerability  
-- `nmap -sV -sC -p 139 --script samba-vuln-cve-2012-1182 192.168.0.10` and `nmap -sV -sC -p 445 --script samba-vuln-cve-2012-1182 192.168.0.10` This command showed that there is no vulnerability with this script on port 139 and 445 
+- `nmap -sV -sC -p 139 --script samba-vuln-cve-2012-1182 192.168.0.10` and `nmap -sV -sC -p 445 --script samba-vuln-cve-2012-1182 192.168.0.10` 
+- This command showed that there is no vulnerability with this script on port 139 and 445 
   - ![alt_text](HW16/image12.png)
   - ![alt_text](HW16/image19.png)
 - Run this command to check for access vulnerability
