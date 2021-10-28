@@ -9,7 +9,7 @@
 3. Permissions on /etc/group should allow only root read and write access
 * Command to inspect permissions: ls -l /etc/group
 * Command to set permissions (not needed): chmod 644 /etc/group
-4.Permissions on /etc/passwd should allow only root read and write access
+4. Permissions on /etc/passwd should allow only root read and write access
 * Command to inspect permissions: ls -l /etc/passwd
 * Command to set permissions (not needed): chmod 644 /etc/passwd
 
