@@ -16,8 +16,8 @@
 - ![alt_text](HW18/image4.png)
 - ![alt_text](HW18/image5.png)
 2. Query to create a report that shows the count of critical vulnerabilities from the customer database server IP 10.11.36.23
-- Query - `source="nessus_logs.csv" dest_ip="10.11.36.23" dest_ip="10.11.36.23" severity=critical`
-- ![alt_text](HW18/image6.png)
+- Query - `source="nessus_logs.csv" dest_ip="10.11.36.23" severity=critical`
+- ![alt_text](HW18/image.png)
 3. Alert that monitors every day to see if this server has any critical vulnerabilities, with alert being emailed to soc@vandalay.com
 - ![alt_text](HW18/image7.png)
 - ![alt_text](HW18/image8.png)
@@ -26,7 +26,8 @@
 ## Step 3: Drawing the (base)line
 1. Upload administrator login logs; Administrator_logs.csv
 - ![alt_text](HW18/image10.png)
-2. the brute force attack occur Feb 21, 2020 between the hours of 8:00am and 2:00pm
+2. The brute force attack occur Feb 21, 2020 between the hours of 8:00am and 2:00pm
+- Query - `source="Administrator_logs.csv" name="An account failed to log on"`
 - ![alt_text](HW18/image11.png)
 3. Determined baseline is approximately 20 logins in an hour and the threshold is a count greater than 30
 4. Alert that monitors potential Brute force every hour
