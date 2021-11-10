@@ -26,4 +26,8 @@
 ## Step 3: Drawing the (base)line
 1. Upload administrator login logs; Administrator_logs.csv
 - ![alt_text](HW18/image10.png)
-2. 
+2. the brute force attack occur Feb 21, 2020 between the hours of 8:00am and 2:00pm
+- image11
+3. Determined baseline is approximately 20 logins in an hour and the threshold is a count greater than 30
+4. Alert that monitors potential Brute force every hour
+- image12/13/14
