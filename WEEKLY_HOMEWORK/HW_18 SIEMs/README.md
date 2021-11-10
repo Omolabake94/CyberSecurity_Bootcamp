@@ -17,7 +17,7 @@
 - ![alt_text](HW18/image5.png)
 2. Query to create a report that shows the count of critical vulnerabilities from the customer database server IP 10.11.36.23
 - Query - `source="nessus_logs.csv" dest_ip="10.11.36.23" severity=critical`
-- ![alt_text](HW18/image6.png)
+- ![alt_text](HW18/image.png)
 3. Alert that monitors every day to see if this server has any critical vulnerabilities, with alert being emailed to soc@vandalay.com
 - ![alt_text](HW18/image7.png)
 - ![alt_text](HW18/image8.png)
