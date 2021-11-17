@@ -1,7 +1,7 @@
 # Protecting VSI from Future Attacks
 ## Part 1: Windows Server Attack
 
-### Question 1
+## Question 1
 Several users were impacted during the attack on March 25th but based on the attack signatures User K, User A, User J were mostly affected. From the screen short below. These are signs of Brute force attack.
 image01 and image1
 #### Global Mitigations for VSI
@@ -12,7 +12,7 @@ image01 and image1
 5. It is highly recommended that all global mitigations be employed on all users but specifically for User
 6. Use of Two-Factor Authentication to verify user before login and multi-factor authentication to verify user identity before allowing password changes
 7. Putting your website behind a web application firewall
-8. Increase lockout time after every lockout and after 2 lockouts their accounts would have to be manually unlocked by the IT Department
+8. Increase lockout time after every lockout and after 3 lockouts their accounts would have to be manually unlocked by the IT Department
 
 ### User K
 There were several attempts made to reset User k accounts password. The total of 2012 attempts were made. As shown in the screenshot below
@@ -28,7 +28,7 @@ image6
 ##### Mitigation
 1. It is highly recommended that all global mitigations be employed on all users but specifically for User A; 
 2. Limit Login Attempts 
-3. Increase lockout time after every lockout and after 2 lockouts the account has to be manually unlocked by the IT Department
+3. Increase lockout time after every lockout and after 3 lockouts the account has to be manually unlocked by the IT Department
 
 ### User J
 Several successful logins occurred on User J's account. This is a sign that the Bruteforce was successful. There were 302 successful logins as show in the screenshot below
@@ -37,3 +37,8 @@ image7
 1. It is highly recommended that all global mitigations be employed on all users but specifically for User J, 
 2. Use of CAPTCHAs on website 
 3. Use of Two-Factor Authentication to verify user before login
+
+## Question 2
+
+
+## Part 2: Apache Webserver Attack:
