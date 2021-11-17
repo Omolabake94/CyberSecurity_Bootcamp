@@ -9,21 +9,31 @@ image01 and image1
 2. Restrict Access to Authentication URLs
 3. Limit Login Attempts 
 4. Use of CAPTCHAs on website
-5. Use of Two-Factor Authentication to verify user before login and multi-factor authentication to verify user identity before allowing password changes
-6. Putting your website behind a web application firewall
-7. Increase lockout time after every lockout and after 2 lockouts their accounts would have to be manually unlocked by the IT Department
+5. It is highly recommended that all global mitigations be employed on all users but specifically for User
+6. Use of Two-Factor Authentication to verify user before login and multi-factor authentication to verify user identity before allowing password changes
+7. Putting your website behind a web application firewall
+8. Increase lockout time after every lockout and after 2 lockouts their accounts would have to be manually unlocked by the IT Department
 
 ### User K
 There were several attempts made to reset User k accounts password. The total of 2012 attempts were made. As shown in the screenshot below
 image5
 ##### Mitigation
-It is highly recommended that all global mitigations be employed on all users but specifically for User K, multi-factor authentication to verify user identity before allowing password changes should be employed
+1. It is highly recommended that all global mitigations be employed on all users but specifically for User K;
+2. Limit password reset Attempts 
+3. Use of multi-factor authentication to verify user identity before allowing password changes
 
 ### User A
 Several login attempts were made on User A's account which lead to being locked out several times. Account was locked out 1694 times as shown in the screen shot below
 image6
 ##### Mitigation
-It is highly recommended that all global mitigations be employed on all users but specifically for User A, Increase lockout time after every lockout and after 2 lockouts the account has to be manually unlocked by the IT Department
+1. It is highly recommended that all global mitigations be employed on all users but specifically for User A; 
+2. Limit Login Attempts 
+3. Increase lockout time after every lockout and after 2 lockouts the account has to be manually unlocked by the IT Department
 
 ### User J
-Several successful logins occurred on User J's account. This is a sign that the Bruteforce was successful. 
+Several successful logins occurred on User J's account. This is a sign that the Bruteforce was successful. There were 302 successful logins as show in the screenshot below
+image7
+##### Mitigation 
+1. It is highly recommended that all global mitigations be employed on all users but specifically for User J, 
+2. Use of CAPTCHAs on website 
+3. Use of Two-Factor Authentication to verify user before login
