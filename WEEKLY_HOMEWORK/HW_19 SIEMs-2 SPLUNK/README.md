@@ -16,7 +16,7 @@ Several users were impacted during the attack on March 25th but based on the att
 8. Increase lockout time after every lockout and after 3 lockouts their accounts would have to be manually unlocked by the IT Department
 
 ### User K
-There were several attempts made to reset User k accounts password. The total of 2012 attempts were made. As shown in the screenshot below
+There were several attempts made to reset User k accounts password. The total of 2021 attempts were made. As shown in the screenshot below
 - ![alt_text](HW19/image5.png)
 ##### Mitigation
 1. It is highly recommended that all global mitigations be employed on all users but specifically for User K;
