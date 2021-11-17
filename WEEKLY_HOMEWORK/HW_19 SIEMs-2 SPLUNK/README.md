@@ -52,7 +52,7 @@ Several successful logins occurred on User J's account. This is a sign that the 
 2. Screenshots of the geographic map that justified the rule created
 - ![alt_text](HW19/image2.png)
 - ![alt_text](HW19/image3.png)
-- ![alt_text](HW19/image4.png)
+- ![alt_text](HW19/image4.jpg)
 - ![alt_text](HW19/image8.png)
 
 ### Question 2
