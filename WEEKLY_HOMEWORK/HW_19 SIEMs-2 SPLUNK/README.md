@@ -1,7 +1,7 @@
 # Protecting VSI from Future Attacks
 ## Part 1: Windows Server Attack
 
-## Question 1
+### Question 1
 Several users were impacted during the attack on March 25th but based on the attack signatures User K, User A, User J were mostly affected. From the screen short below. These are signs of Brute force attack.
 image01 and image1
 #### Global Mitigations for VSI
@@ -38,7 +38,20 @@ image7
 2. Use of CAPTCHAs on website 
 3. Use of Two-Factor Authentication to verify user before login
 
-## Question 2
-
+### Question 2
+* Mitigations to protect VSI from possible "Bad Logins" from JobeCorp
 
 ## Part 2: Apache Webserver Attack:
+### Question 1
+1. Based on the geographic map, the recommended firewall rule is;
+* `Block all incoming HTTP traffic from Ukraine`
+2. Screenshots of the geographic map that justified the rule created
+image2
+image3
+image4
+image8
+
+### Question 2
+* Other rules to protect VSI from attacks against the webserver
+1. Block multiple GET and POST requests from the same IP Address within the space of 30 secs
+2. Whitelist all IPs within VSI network and blacklist any IP coming from other locations
