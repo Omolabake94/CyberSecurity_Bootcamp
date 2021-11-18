@@ -1,1 +1,88 @@
-<mxfile host="app.diagrams.net" modified="2021-11-17T06:38:37.951Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" version="15.4.1" etag="VWnB-z1WrPPLe6k86kPz" type="github"><diagram id="cv2z1lswoH59peXT2opw">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-11-18T06:23:53.467Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="GCkOTEjzW0xGABSeCGiF" version="15.4.1" type="github">
+  <diagram id="cv2z1lswoH59peXT2opw" name="Page-1">
+    <mxGraphModel dx="782" dy="444" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="muckkM3oSpar6D-4Fxx5-1" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#4495D1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.hyper_v_host;" vertex="1" parent="1">
+          <mxGeometry x="337" y="220" width="108" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-2" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/kibana-128.png" vertex="1" parent="1">
+          <mxGeometry x="201" y="70" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-3" value="" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="330" y="50" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-4" value="" style="image;html=1;image=img/lib/clip_art/computers/Virtual_Machine_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="550" y="223.25" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-5" value="" style="image;html=1;image=img/lib/clip_art/computers/Virtual_Machine_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="550" y="50" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-7" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/internet_cloud.svg;" vertex="1" parent="1">
+          <mxGeometry x="22.98" y="234.25" width="104.68" height="65.95" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-8" value="" style="image;html=1;image=img/lib/clip_art/computers/Laptop_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="42" y="66" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-9" value="" style="line;strokeWidth=2;direction=south;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="137" width="10" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-10" value="" style="line;strokeWidth=2;direction=south;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="108" width="10" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-11" value="" style="line;strokeWidth=2;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="259" width="80" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-12" value="" style="line;strokeWidth=2;html=1;" vertex="1" parent="1">
+          <mxGeometry x="445" y="258.25" width="110" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-13" value="" style="line;strokeWidth=2;direction=south;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="113" width="10" height="121" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-14" value="" style="line;strokeWidth=2;html=1;" vertex="1" parent="1">
+          <mxGeometry x="408" y="80" width="150" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-17" value="Workstation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="88" y="137" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-18" value="ELK Server&lt;br&gt;192.168.1.100" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="120" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-19" value="Captstone Machine&lt;br&gt;192.168.1.105" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="486" y="113" width="110" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-20" value="Attacking (Kali) Machine&lt;br&gt;192.168.1.90" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="535" y="294" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-21" value="Internet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="254" width="40" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-23" value="Port 4444" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=270;" vertex="1" parent="1">
+          <mxGeometry x="558" y="170" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-24" value="" style="whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="40" width="670" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-25" value="Azure Windows Machine&lt;br&gt;192.168.1.1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="146" y="298" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-26" value="" style="image;html=1;image=img/lib/clip_art/computers/Virtual_Machine_128x128.png;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="181" y="220" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-28" value="" style="line;strokeWidth=2;html=1;" vertex="1" parent="1">
+          <mxGeometry x="123" y="262" width="60" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-29" value="" style="line;strokeWidth=2;html=1;fillColor=#4495D1;" vertex="1" parent="1">
+          <mxGeometry x="233" y="85" width="100" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-30" value="" style="line;strokeWidth=2;direction=south;html=1;fillColor=#4495D1;" vertex="1" parent="1">
+          <mxGeometry x="221" y="130" width="10" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="muckkM3oSpar6D-4Fxx5-34" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Port 80&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="242" y="80" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
