@@ -10,10 +10,9 @@ Several users were impacted during the attack on March 25th but based on the att
 2. Restrict Access to Authentication URLs
 3. Limit failed login Attempts 
 4. Use of CAPTCHAs on website
-5. It is highly recommended that all global mitigations be employed on all users but specifically for User
-6. Use of Two-Factor Authentication to verify user before login and multi-factor authentication to verify user identity before allowing password changes
-7. Putting your website behind a web application firewall
-8. Increase lockout time after every lockout and after 3 lockouts their accounts would have to be manually unlocked by the IT Department
+5. Use of Two-Factor Authentication to verify user before login and multi-factor authentication to verify user identity before allowing password changes
+6. Putting your website behind a web application firewall
+7. Increase lockout time after every lockout and after 3 lockouts their accounts would have to be manually unlocked by the IT Department
 
 ### User K
 There were several attempts made to reset User k accounts password. The total of 2021 attempts were made. As shown in the screenshot below
