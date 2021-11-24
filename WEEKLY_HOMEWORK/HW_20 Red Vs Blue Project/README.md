@@ -1,4 +1,4 @@
-##### Note: The report of this project is attached ['Project Slide'](https://github.com/Omolabake94/CyberSecurity_Bootcamp/blob/main/WEEKLY_HOMEWORK/HW_20%20Red%20Vs%20Blue%20Project/Red%20Vs%20Blue%20Project.pdf) in pdf format
+##### Note: The report of this project is attached ['Project Slide'](Red%20Vs%20Blue%20Project.pdf) in pdf format
 # Red Vs. Blue Team Project Summary
 ## Capstone Engagement, Assessment, Analysis, and Hardening of a Vulnerable System
 ## Red Team: The Attack
