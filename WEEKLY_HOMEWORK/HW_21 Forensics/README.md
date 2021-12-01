@@ -1,4 +1,5 @@
 # Digital Forensics
+['Final Report'](Forensics%20The%20Final%20Report.pdf)
 ## Case Summary
 - Tracy is an employee at the National Gallery. Her daughter attends an expensive private high school that Tracy cannot afford on her own, and her ex-husband Joe refuses to help pay if the daughter does not live with him. Her daughter refuses to go to any other school.
 
