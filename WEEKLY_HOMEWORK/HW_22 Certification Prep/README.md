@@ -8,5 +8,6 @@
 
 
 ### Splunk 
-- ['Intro to Splunk'](Intro_to_Splunk.pdf)
-- ['What is Splunk'](What_is_Splunk.pdf)
+- ['Intro to Splunk'](Intro_to_Splunk.pdf) Certification in pdf format
+- ['What is Splunk'](What_is_Splunk.pdf) Certification in pdf format
+- ['Splunk User Behavior Analytics'](Splunk_User_Behavior_Analytics.pdf) Certification in pdf format
