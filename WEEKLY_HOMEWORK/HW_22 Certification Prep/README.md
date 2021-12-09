@@ -8,3 +8,5 @@
 
 
 ### Splunk 
+- ['Intro to Splunk'](Intro_to_Splunk.pdf)
+- ['What is Splunk'](What_is_Splunk.pdf)
