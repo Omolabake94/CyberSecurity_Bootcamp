@@ -124,16 +124,26 @@ TODO Complete this report as you complete the Network Activity on Day 3 of class
   
 ### Vulnerable Windows Machine
 1. Find the following information about the infected Windows machine:
-    - Host name
-    - IP address
-    - MAC address
+    - Host name: Rotterdam-PC.mindhammer.net
+    - IP address: 172.16.4.205 
+    - MAC address: LenovoEM_b0:63:a4 (00:59:07:b0:63:a4)
 2. What is the username of the Windows user whose computer is infected?
-3. What are the IP addresses used in the actual infection traffic?
-4. As a bonus, retrieve the desktop background of the Windows host.
+  - Usernmane of the windows user whose computer is infected : matthijs.devries
+  - We found alot of information on this website ['Palo alto'](https://unit42.paloaltonetworks.com/using-wireshark-identifying-hosts-and-users/)
 
+3. What are the IP addresses used in the actual infection traffic?
+  - We re-run the kerberos command and went to statistics and went into conversations and sort out my packets and chose the 4 IP address withte highest packets
+  - 185.243.115.84
+  - 172.16.4.205
+  - 23.43.62.169
+  - 64.187.66.143
+  - Traffic from 185.243.115.84 infected 172.16.4.205
+4. As a bonus, retrieve the desktop background of the Windows host.
+  - We export the http traffic as an object by going to `files and export as object`. We searched for `img` and saved the result and we were able to view the image
 ### Illegal Downloads
 1. Find the following information about the machine with IP address 10.0.0.201:
-    - MAC address
-    - Windows username
-    - OS version
+    - MAC address: Msi_18:66:c8 (00:16:17:18:66:c8) (Using `bootp` or the command in the screenshot)
+    - Windows username: elmer.blanco (Using Keberos)
+    - OS version: Windows NT 10.0; Win64; x64 (Using `bootp` or the command in the screenshot)
 2. Which torrent file did the user download?
+  - By exporting the http file. we searched for the possible torrent file downloaded and we found the http application/x-bitorrent link - btdownload.php?type=torrent&file=Betty_Boop_Rhythm_on_the_Reservation.avi.torrent
