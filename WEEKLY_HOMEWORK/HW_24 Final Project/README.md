@@ -103,25 +103,26 @@ TODO:
 
 
 ## Network Forensic Analysis Report
-TODO Complete this report as you complete the Network Activity on Day 3 of class.
-
 ### Time Thieves
-- You must inspect your traffic capture to answer the following questions:
-1. What is the domain name of the users' custom site?
-  - frank-n-ted-dc.frank-n-ted.com
+- At least two users on the network have been wasting time on YouTube. Usually, IT wouldn't pay much mind to this behavior, but it seems these people have created their own web server on the corporate network. So far, Security knows the following about these time thieves:
+  - They have set up an Active Directory network.
+  - They are constantly watching videos on YouTube.
+  - Their IP addresses are somewhere in the range 10.6.12.0/24
+- By Inspecting the traffic captured in ['pcap file']() we found the following evidence. We ran the curl command to get the pcap into the wire shark `curl -L -o pcap.pcap http://tinyurl.com/yaajh8o8`
+1. The domain name of the users' custom site is frank-n-ted-dc.frank-n-ted.com. We found this information by running the this query: `ip.src == 10.6.12.0/24` in the filter
+  - ![alt_text](networkSC/image1.png)
+2. Using this query: `ip.src == 10.6.12.0/24`, the IP address of the Domain Controller (DC) of the AD network is 10.6.12.12
+ - ![alt_text](networkSC/image1.png)
 
-    We ran the curl command to get the pcap in to the wire shark `curl -L -o pcap.pcap http://tinyurl.com/yaajh8o8`, this way we found the ip address for frank and ted ip: 10.6.12.12
-2. What is the IP address of the Domain Controller (DC) of the AD network?
-  - IP address: 10.6.12.12
+3. A malware was downloaded into the 10.6.12.203 machine. We ran the query `ip.src == 10.6.12.203` and found the suspicious http get file named `june11.dll` and exported objects http stream and saved the file.
+ - ![alt_text](networkSC/image2.png)  
+ - ![alt_text](networkSC/image3.png)
 
-3. What is the name of the malware downloaded to the 10.6.12.203 machine?
-  - Found the suspicious http get file named june11.dll and exported objects http. After saving we put it into virustotal.com to find the malware Trojan.Mint.Zamg.O
-   
-4. Upload the file to VirusTotal.com.
+4. After saving we put it into virustotal.com and found the malware to be `Trojan.Mint.Zamg.O`
+ - ![alt_text](networkSC/image4.png)
 
-5. What kind of malware is this classified as?
-  - The virus is Trojan.Mint.Zamg.O and it is classified as Ad-Ware
-  
+5. The virus is Trojan.Mint.Zamg.O and it is classified as Ad-Ware
+  - ![alt_text](networkSC/image4-1.png)
 ### Vulnerable Windows Machine
 1. Find the following information about the infected Windows machine:
     - Host name: Rotterdam-PC.mindhammer.net
