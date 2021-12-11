@@ -33,7 +33,7 @@ TODO: Include vulnerability scan results to prove the identified vulnerabilities
 - We plugged in the discovered ip into a web browser, while browsing around, we found `flag1.txt: 9bbcb33e11b80be759c4e844862482d` in the `192.168.1.110/service.html` file while inspecting
   - ![alt_text](finalproject/image11flag1.png)
 #### Exploit Used for flag2  
- - We ran a wpscan command: `wpscan --url http://192.168.1.110/wordpress -eu` against the target machine. This exposed the names of Michael and Steven as users on the site 
+- We ran a wpscan command: `wpscan --url http://192.168.1.110/wordpress -eu` against the target machine. This exposed the names of Michael and Steven as users on the site 
   - ![alt_text](finalproject/image8-1.png)
   - ![alt_text](finalproject/image8.png)
 - Since it was earlier discovered that ssh port 22 is open and we where able to find some users with the wpscan, we tested some password by guessing and we were able to guess Michael password to be michael   
