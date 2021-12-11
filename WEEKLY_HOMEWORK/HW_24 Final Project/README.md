@@ -119,28 +119,40 @@ TODO:
  - ![alt_text](networkSC/image3.png)
 
 4. After saving we put it into virustotal.com and found the malware to be `Trojan.Mint.Zamg.O`
- - ![alt_text](networkSC/image.png)
+ - ![alt_text](networkSC/image4.png)
 
 5. The virus is Trojan.Mint.Zamg.O and it is classified as Ad-Ware
   - ![alt_text](networkSC/image4-1.png)
+
 ### Vulnerable Windows Machine
-1. Find the following information about the infected Windows machine:
+- The Security team received reports of an infected Windows host on the network. They know the following:
+  - Machines in the network live in the range 172.16.4.0/24.
+  - The domain mind-hammer.net is associated with the infected computer.
+  - The DC for this network lives at 172.16.4.4 and is named Mind-Hammer-DC.
+  - The network has standard gateway and broadcast addresses
+- By Inspecting the traffic captured in ['pcap file']() we found the following information
+- We found few information on this website ['Palo alto'](https://unit42.paloaltonetworks.com/using-wireshark-identifying-hosts-and-users/) which helped in getting the necessary information
+
+1. The following information about the infected Windows machine are listed below:
     - Host name: Rotterdam-PC.mindhammer.net
     - IP address: 172.16.4.205 
     - MAC address: LenovoEM_b0:63:a4 (00:59:07:b0:63:a4)
-2. What is the username of the Windows user whose computer is infected?
-  - Usernmane of the windows user whose computer is infected : matthijs.devries
-  - We found alot of information on this website ['Palo alto'](https://unit42.paloaltonetworks.com/using-wireshark-identifying-hosts-and-users/)
+- We found the above information by running this query `bootp` and looking into the dhcp information
+  - ![alt_text](networkSC/image6.png)
 
-3. What are the IP addresses used in the actual infection traffic?
-  - We re-run the kerberos command and went to statistics and went into conversations and sort out my packets and chose the 4 IP address withte highest packets
+2. The username of the Windows user whose computer is infected matthijs.devries. We found this information by running the query `ip.addr == 172.16.4.205 && kerberos.CNameString`
+  - ![alt_text](networkSC/image6-1.png)
+  
+3. To find the IP addresses used in the actual infection traffic, We re-ran the kerberos command. We pulled up the statistics and went into conversations to sort out the packets and chose the 2 IP address with the highest packets
   - 185.243.115.84
-  - 172.16.4.205
-  - 23.43.62.169
-  - 64.187.66.143
-  - Traffic from 185.243.115.84 infected 172.16.4.205
-4. As a bonus, retrieve the desktop background of the Windows host.
-  - We export the http traffic as an object by going to `files and export as object`. We searched for `img` and saved the result and we were able to view the image
+  - 166.62.111.64
+  - The scrrenshot shows that alot of communication is going on between the infected machine 172.16.4.205 and this IPs 185.243.115.84, 166.62.111.64
+  - ![alt_text](networkSC/image7.png)
+
+4. We retrieved the desktop background of the Windows host by exporting the http traffic as an object.  We went into `files and export as object`. We searched for `img` and saved the result and we were able to view the image
+- ![alt_text](networkSC/image9.png)
+- ![alt_text](networkSC/image10.png)
+
 ### Illegal Downloads
 1. Find the following information about the machine with IP address 10.0.0.201:
     - MAC address: Msi_18:66:c8 (00:16:17:18:66:c8) (Using `bootp` or the command in the screenshot)
