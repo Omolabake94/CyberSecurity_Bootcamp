@@ -19,10 +19,11 @@
 ### Critical Vulnerabilities
 - The following vulnerabilities were identified on the machine:
   - CVE-2018-1000030 Python privilege escalation
-  - CVE-2019-12215 Full Path Disclosure (192.268.1.110/var/www/html/vendor)
-  - CVE-2019-15653 html password disclosure - The password hash is viewable in plaintext (192.168.1.110/service.html)
-  - CVE-2017-7760 exposed username which allowed brute force of password information. User access to the wp-config.php file via nano. This exposed the root user and password.
-  - CVE-2008-5161 ssh remote login was active at the user level with port 22 being open
+  - CVE-2021-28041 ssh remote login is active at the user level with port 22 being open
+  - CVE-2019-15653 html password disclosure - The password hash is viewable in plaintext and it is unsalted
+  - CVE-2017-7760 exposed username and weak password which allowed guessing/brute force of password information. User access to the wp-config.php file via nano. This exposed MySQL password
+  - CVE02017-8779 Open rpcbind port
+  - Network Mapping and User Enumeration (WordPress Site)
    
 TODO: Include vulnerability scan results to prove the identified vulnerabilities.
 
