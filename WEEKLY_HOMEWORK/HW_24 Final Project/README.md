@@ -90,46 +90,48 @@ _ We ssh into the target machine using the following command and credentials
 - Suggestions for Going Further
 
 ### Network Topology
-TODO: Fill out the information below.
 - The following machines were identified on the network:
   - Kali
     - Operating System: Linux
     - Purpose: Attacking Machine
     - IP Address: 192.168.1.90
-  - Target 1
+  - Apache Web Server
     - Operating System: Linux
     - Purpose: Target Machine
     - IP Address: 192.168.1.110
 
 ### Description of Targets
-TODO: Answer the questions below.
-- The target of this attack was: Target 1 IP Address: 192.168.1.110.
-- Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
+- The target of this attack was: Apache Web Server IP Address: 192.168.1.110.
+- The Apache web server has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
 
 ### Monitoring the Targets
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
-#### Name of Alert 1
-TODO: Replace Alert 1 with the name of the alert.
-- Alert 1 is implemented as follows:
+#### Excessive HTTP Errors Alert 
+- Excessive HTTP Errors Alertis implemented as follows:
   - Metric: Packetbeat - `http.response.status_code`
   - Threshold: WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes
+  - image0
   - Vulnerability Mitigated: Brute Force Attacks
   - Reliability: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
 
-#### Name of Alert 2
-- Alert 2 is implemented as follows:
+#### HTTP Request Size Monitor Alert
+- HTTP Request Size Monitor Alert is implemented as follows:
   - Metric: Packetbeat `http.request.bytes`
   - Threshold: WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute
-  - Vulnerability Mitigated: Code Injection attacks (XSS or CRLF)
+  - image1
+  - Vulnerability Mitigated: Code Injection attacks
   - Reliability: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
 
-#### Name of Alert 3
-- Alert 3 is implemented as follows:
+#### CPU Usage Monitor Alert
+- CPU Usage Monitor Alert is implemented as follows:
   - Metric: Metricbeat `system.process.cpu.total.pct`
   - Threshold: WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes
+  - image2
   - Vulnerability Mitigated: Virus or Malware
   - Reliability: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+
+- image3
 
 ### Suggestions for Going Further (Optional)
 TODO:
@@ -225,5 +227,5 @@ TODO:
   - ![alt_text](networkSC/image15.png)
 - This content shows that some contents have been downloaded and this maybe be a potential copyright infringement 
   - ![alt_text](networkSC/image16.png) 
-
+  - [BettyBoop_video](https://archive.org/details/BettyBoopTheater11)
 
