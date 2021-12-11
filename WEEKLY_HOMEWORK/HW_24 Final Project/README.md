@@ -165,11 +165,11 @@ TODO:
   - The DC is associated with the domain dogoftheyear.net.
 
 1. The following information is about the machine with IP address 10.0.0.201:
-    - MAC address: Msi_18:66:c8 (00:16:17:18:66:c8) (Using `bootp` or `ip.addr == 10.0.0.201 && dhcp`)
+    - MAC address: Msi_18:66:c8 (00:16:17:18:66:c8) (Using `bootp` or `ip.addr == 10.0.0.201 && dhcp` as query)
     - ![alt_text](networkSC/image12.png)
-    - Windows username: elmer.blanco (Using Keberos query: `ip.addr == 10.0.0.201 && kerberos.CNameString`)
+    - Windows username: elmer.blanco (Using Keberos query: `ip.addr == 10.0.0.201 && kerberos.CNameString` as query)
     - ![alt_text](networkSC/image11.png)
-    - OS version: Windows NT 10.0; Win64; x64 (Using this query: `ip.addr == 10.0.0.201 && http.request` )
+    - OS version: Windows NT 10.0; Win64; x64 (Using this query: `ip.addr == 10.0.0.201 && http.request` as query)
     - ![alt_text](networkSC/image13.png)
 2. To find the torrent file the user downloaded, we used this query: `ip.addr == 10.0.0.201 && (http.request.uri contains ".torrent")` to find out more about URI that contains torrent
  - ![alt_text](networkSC/image14-1.png)
@@ -178,6 +178,6 @@ TODO:
 - We found a jpg files with similar name to our URI information and we saved this file to view the content
   - ![alt_text](networkSC/image15.png)
 - This content shows that some contents have been downloaded and this maybe be a potential copyright infringement 
- - ![alt_text](networkSC/image16.png) 
+  - ![alt_text](networkSC/image16.png) 
 
 
