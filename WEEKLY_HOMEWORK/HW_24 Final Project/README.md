@@ -108,7 +108,7 @@ TODO:
   - They have set up an Active Directory network.
   - They are constantly watching videos on YouTube.
   - Their IP addresses are somewhere in the range 10.6.12.0/24
-- By Inspecting the traffic captured in ['pcap file']() we found the following evidence. We ran the curl command to get the pcap into the wire shark `curl -L -o pcap.pcap http://tinyurl.com/yaajh8o8`
+- By Inspecting the traffic captured in ['pcap file'](https://drive.google.com/file/d/1ggMVl1t_DZfw1WB93FO6hMLe5Ffqz40F/view) we found the following evidence. We ran the curl command to get the pcap into the wire shark `curl -L -o pcap.pcap http://tinyurl.com/yaajh8o8`
 1. The domain name of the users' custom site is frank-n-ted-dc.frank-n-ted.com. We found this information by running the this query: `ip.src == 10.6.12.0/24` in the filter
   - ![alt_text](networkSC/image1.png)
 2. Using this query: `ip.src == 10.6.12.0/24`, the IP address of the Domain Controller (DC) of the AD network is 10.6.12.12
@@ -130,7 +130,7 @@ TODO:
   - The domain mind-hammer.net is associated with the infected computer.
   - The DC for this network lives at 172.16.4.4 and is named Mind-Hammer-DC.
   - The network has standard gateway and broadcast addresses
-- By Inspecting the traffic captured in ['pcap file']() we found the following information
+- By Inspecting the traffic captured in ['pcap file'](https://drive.google.com/file/d/1ggMVl1t_DZfw1WB93FO6hMLe5Ffqz40F/view) we found the following information
 - We found few information on this website ['Palo alto'](https://unit42.paloaltonetworks.com/using-wireshark-identifying-hosts-and-users/) which helped in getting the necessary information
 
 1. The following information about the infected Windows machine are listed below:
@@ -154,9 +154,26 @@ TODO:
 - ![alt_text](networkSC/image10.png)
 
 ### Illegal Downloads
-1. Find the following information about the machine with IP address 10.0.0.201:
-    - MAC address: Msi_18:66:c8 (00:16:17:18:66:c8) (Using `bootp` or the command in the screenshot)
-    - Windows username: elmer.blanco (Using Keberos)
-    - OS version: Windows NT 10.0; Win64; x64 (Using `bootp` or the command in the screenshot)
-2. Which torrent file did the user download?
-  - By exporting the http file. we searched for the possible torrent file downloaded and we found the http application/x-bitorrent link - btdownload.php?type=torrent&file=Betty_Boop_Rhythm_on_the_Reservation.avi.torrent
+- IT was informed that some users are torrenting on the network. The Security team does not forbid the use of torrents for legitimate purposes, such as downloading operating systems. However, they have a strict policy against copyright infringement.
+- IT shared the following about the torrent activity:
+  - The machines using torrents live in the range 10.0.0.0/24 and are clients of an AD domain.
+  - The DC of this domain lives at 10.0.0.2 and is named DogOfTheYear-DC.
+  - The DC is associated with the domain dogoftheyear.net.
+
+1. The following information is about the machine with IP address 10.0.0.201:
+    - MAC address: Msi_18:66:c8 (00:16:17:18:66:c8) (Using `bootp` or `ip.addr == 10.0.0.201 && dhcp`)
+    - ![alt_text](networkSC/image12.png)
+    - Windows username: elmer.blanco (Using Keberos query: `ip.addr == 10.0.0.201 && kerberos.CNameString`)
+    - ![alt_text](networkSC/image11.png)
+    - OS version: Windows NT 10.0; Win64; x64 (Using this query: `ip.addr == 10.0.0.201 && http.request` )
+    - ![alt_text](networkSC/image13.png)
+2. To find the torrent file the user downloaded, we used this query: `ip.addr == 10.0.0.201 && (http.request.uri contains ".torrent")` to find out more about URI that contains torrent
+ - ![alt_text](networkSC/image114-1.png)
+ - By exporting the http file. we searched for the possible torrent file downloaded and we found the http application/x-bitorrent link - btdownload.php?type=torrent&file=Betty_Boop_Rhythm_on_the_Reservation.avi.torrent
+ - ![alt_text](networkSC/image14.png)
+- We found a jpg files with similar name to our URI information and we saved this file to view the content
+  - ![alt_text](networkSC/image15.png)
+- This content shows that some contents have been downloaded and this maybe be a potential copyright infringement 
+ - ![alt_text](networkSC/image16.png) 
+
+
