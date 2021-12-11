@@ -111,7 +111,7 @@ Traffic to these services should be carefully monitored. To this end, we have im
 - Excessive HTTP Errors Alertis implemented as follows:
   - Metric: Packetbeat - `http.response.status_code`
   - Threshold: WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes
-  - image0
+  - ![alt_text](finalproject/image0.png)
   - Vulnerability Mitigated: Brute Force Attacks
   - Reliability: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
 
@@ -119,7 +119,7 @@ Traffic to these services should be carefully monitored. To this end, we have im
 - HTTP Request Size Monitor Alert is implemented as follows:
   - Metric: Packetbeat `http.request.bytes`
   - Threshold: WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute
-  - image1
+  - ![alt_text](finalproject/image1.png)
   - Vulnerability Mitigated: Code Injection attacks
   - Reliability: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
 
@@ -127,11 +127,11 @@ Traffic to these services should be carefully monitored. To this end, we have im
 - CPU Usage Monitor Alert is implemented as follows:
   - Metric: Metricbeat `system.process.cpu.total.pct`
   - Threshold: WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes
-  - image2
+  - ![alt_text](finalproject/image2.png)
   - Vulnerability Mitigated: Virus or Malware
   - Reliability: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
 
-- image3
+- ![alt_text](finalproject/image3.png)
 
 ### Suggestions for Going Further (Optional)
 TODO:
