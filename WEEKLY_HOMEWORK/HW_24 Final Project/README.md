@@ -23,6 +23,7 @@
   - CVE-2019-15653 html password disclosure - The password hash is viewable in plaintext and it is unsalted
   - CVE-2017-7760 exposed username and weak password which allowed guessing/brute force of password information. User access to the wp-config.php file via nano. This exposed MySQL password
   - CVE02017-8779 Open rpcbind port
+  - CVE-2017-15710 Apache https 2.4.10
   - Network Mapping and User Enumeration (WordPress Site)
    
 TODO: Include vulnerability scan results to prove the identified vulnerabilities.
@@ -91,45 +92,44 @@ _ We ssh into the target machine using the following command and credentials
 ### Network Topology
 TODO: Fill out the information below.
 - The following machines were identified on the network:
-  - Name of VM 1
-    - Operating System:
-    - Purpose:
-    - IP Address:
-  - Name of VM 2
-    - Operating System:
-    - Purpose:
-    - IP Address:
+  - Kali
+    - Operating System: Linux
+    - Purpose: Attacking Machine
+    - IP Address: 192.168.1.90
+  - Target 1
+    - Operating System: Linux
+    - Purpose: Target Machine
+    - IP Address: 192.168.1.110
 
 ### Description of Targets
 TODO: Answer the questions below.
-- The target of this attack was: Target 1 (TODO: IP Address).
+- The target of this attack was: Target 1 IP Address: 192.168.1.110.
 - Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
 
 ### Monitoring the Targets
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
-### Name of Alert 1
+#### Name of Alert 1
 TODO: Replace Alert 1 with the name of the alert.
 - Alert 1 is implemented as follows:
-  - Metric: TODO
-  - Threshold: TODO
-  - Vulnerability Mitigated: TODO
+  - Metric: Packetbeat - `http.response.status_code`
+  - Threshold: WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes
+  - Vulnerability Mitigated: Brute Force Attacks
   - Reliability: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
 
-### Name of Alert 2
+#### Name of Alert 2
 - Alert 2 is implemented as follows:
-  - Metric: TODO
-  - Threshold: TODO
-  - Vulnerability Mitigated: TODO
+  - Metric: Packetbeat `http.request.bytes`
+  - Threshold: WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute
+  - Vulnerability Mitigated: Code Injection attacks (XSS or CRLF)
   - Reliability: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
 
-### Name of Alert 3
+#### Name of Alert 3
 - Alert 3 is implemented as follows:
-  - Metric: TODO
-  - Threshold: TODO
-  - Vulnerability Mitigated: TODO
+  - Metric: Metricbeat `system.process.cpu.total.pct`
+  - Threshold: WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes
+  - Vulnerability Mitigated: Virus or Malware
   - Reliability: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
-TODO Note: Explain at least 3 alerts. Add more if time allows.
 
 ### Suggestions for Going Further (Optional)
 TODO:
