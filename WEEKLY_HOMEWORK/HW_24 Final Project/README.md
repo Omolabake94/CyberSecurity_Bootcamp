@@ -111,7 +111,7 @@ TODO:
 - By Inspecting the traffic captured in ['pcap file'](https://drive.google.com/file/d/1ggMVl1t_DZfw1WB93FO6hMLe5Ffqz40F/view) we found the following evidence. We ran the curl command to get the pcap into the wire shark `curl -L -o pcap.pcap http://tinyurl.com/yaajh8o8`
 1. The domain name of the users' custom site is frank-n-ted-dc.frank-n-ted.com. We found this information by running the this query: `ip.src == 10.6.12.0/24` in the filter
   - ![alt_text](networkSC/image1.png)
-2. Using this query: `ip.src == 10.6.12.0/24`, the IP address of the Domain Controller (DC) of the AD network is 10.6.12.12
+2. Using this query: `ip.src == 10.6.12.0/24`, the IP address of the Domain Controller (DC) of the AD network is `10.6.12.12`
  - ![alt_text](networkSC/image1.png)
 
 3. A malware was downloaded into the 10.6.12.203 machine. We ran the query `ip.src == 10.6.12.203` and found the suspicious http get file named `june11.dll` and exported objects http stream and saved the file.
@@ -134,9 +134,11 @@ TODO:
 - We found few information on this website ['Palo alto'](https://unit42.paloaltonetworks.com/using-wireshark-identifying-hosts-and-users/) which helped in getting the necessary information
 
 1. The following information about the infected Windows machine are listed below:
+```    
     - Host name: Rotterdam-PC.mindhammer.net
-    - IP address: 172.16.4.205 
+    - IP address: 172.16.4.205     
     - MAC address: LenovoEM_b0:63:a4 (00:59:07:b0:63:a4)
+```
 - We found the above information by running this query `bootp` and looking into the dhcp information
   - ![alt_text](networkSC/image6.png)
 
@@ -144,9 +146,11 @@ TODO:
   - ![alt_text](networkSC/image6-1.png)
   
 3. To find the IP addresses used in the actual infection traffic, We re-ran the kerberos command. We pulled up the statistics and went into conversations to sort out the packets and chose the 2 IP address with the highest packets
+```  
   - 185.243.115.84
   - 166.62.111.64
-  - The scrrenshot shows that alot of communication is going on between the infected machine 172.16.4.205 and this IPs 185.243.115.84, 166.62.111.64
+```
+  - The screenshot shows that alot of communication is going on between the infected machine 172.16.4.205 and these IPs 185.243.115.84, 166.62.111.64
   - ![alt_text](networkSC/image7.png)
 
 4. We retrieved the desktop background of the Windows host by exporting the http traffic as an object.  We went into `files and export as object`. We searched for `img` and saved the result and we were able to view the image
@@ -168,7 +172,7 @@ TODO:
     - OS version: Windows NT 10.0; Win64; x64 (Using this query: `ip.addr == 10.0.0.201 && http.request` )
     - ![alt_text](networkSC/image13.png)
 2. To find the torrent file the user downloaded, we used this query: `ip.addr == 10.0.0.201 && (http.request.uri contains ".torrent")` to find out more about URI that contains torrent
- - ![alt_text](networkSC/image114-1.png)
+ - ![alt_text](networkSC/image14-1.png)
  - By exporting the http file. we searched for the possible torrent file downloaded and we found the http application/x-bitorrent link - btdownload.php?type=torrent&file=Betty_Boop_Rhythm_on_the_Reservation.avi.torrent
  - ![alt_text](networkSC/image14.png)
 - We found a jpg files with similar name to our URI information and we saved this file to view the content
