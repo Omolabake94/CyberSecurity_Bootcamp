@@ -119,7 +119,7 @@ TODO:
  - ![alt_text](networkSC/image3.png)
 
 4. After saving we put it into virustotal.com and found the malware to be `Trojan.Mint.Zamg.O`
- - ![alt_text](networkSC/image4.png)
+ - ![alt_text](networkSC/image.png)
 
 5. The virus is Trojan.Mint.Zamg.O and it is classified as Ad-Ware
   - ![alt_text](networkSC/image4-1.png)
