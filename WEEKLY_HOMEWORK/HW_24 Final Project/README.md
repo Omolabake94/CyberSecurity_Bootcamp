@@ -115,7 +115,7 @@ _ We ssh into the target machine using the following command and credentials
   - Operating System: Linux
   - Purpose: Target Machine
   - IP Address: 192.168.1.110
-image of network
+- ![alt_text](finalproject/image21.png)
 ### Description of Targets
 - The target of this attack was: Apache Web Server IP Address: 192.168.1.110.
 - The Apache web server has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
