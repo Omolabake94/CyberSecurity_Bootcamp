@@ -166,7 +166,7 @@ Traffic to these services should be carefully monitored. To this end, we have im
   - Vulnerability 3 - CPU Usage Monitor
     - Patch: Use Host Instrusion Prevention System to identify DOS attack
     - Why It Works: This stops malware by monitoring the behavior of code
-['Network Security Presentation'](https://docs.google.com/presentation/d/1uIkRMx_uSOaA3xeOu2Xa5rFT23rc4MlHDhU7_XxLK_M/edit?usp=sharing)
+- ['Network Security Presentation'](https://github.com/Omolabake94/CyberSecurity_Bootcamp/blob/main/WEEKLY_HOMEWORK/HW_24%20Final%20Project/Network%20Presentation.pdf)
 
 ## Network Forensic Analysis Report
 ### Time Thieves
