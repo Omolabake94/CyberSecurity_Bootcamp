@@ -64,7 +64,7 @@ player that was playing during each of those times is Mylie Schmidt
 
 3. nano find_player_dealer.sh
 * Shell for each day
-[find_payer_dealer.sh](https://github.com/Omolabake94/CyberSecurity_Bootcamp/blob/main/WEEKLY_HOMEWORK/HW_03%20Terminal%20High%20Stakes%20Investigation/Lucky_Duck_Investigations/Roulette_Loss_Investigation/find_player_dealer.sh)
+[find_player_dealer.sh](https://github.com/Omolabake94/CyberSecurity_Bootcamp/blob/main/WEEKLY_HOMEWORK/HW_03%20Terminal%20High%20Stakes%20Investigation/Lucky_Duck_Investigations/Roulette_Loss_Investigation/find_player_dealer.sh)
 
 ![alt text](proof-of-work.md/image7.png)
 
@@ -111,7 +111,7 @@ player that was playing during each of those times is Mylie Schmidt
 
 ### 4 Scripting Your Tasks
 * nano roulette_dealer_finder_by_time.sh
-[roulette_dealer_finder_by_time.sh](https://github.com/Omolabake94/CyberSecurity_Bootcamp_HW/blob/main/HW_03/Lucky_Duck_Investigations/Roulette_Loss_Investigation/roulette_dealer_finder_by_time.sh)
+[roulette_dealer_finder_by_time.sh](WEEKLY_HOMEWORK/HW_03 Terminal High Stakes Investigation/Lucky_Duck_Investigations/Roulette_Loss_Investigation/roulette_dealer_finder_by_time.sh)
 * Run by sh roulette_dealer_finder_by_time.sh 0310 '08:00:00 PM' '08:00:00 PM'
 * Arguments $1 = 0312
 * $2 = '08:00:00 PM'
